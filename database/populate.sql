@@ -11,22 +11,36 @@ INSERT INTO user (user_id,username,passwd,joined_on) VALUES (8,"Sean Clayton","T
 INSERT INTO user (user_id,username,passwd,joined_on) VALUES (9,"Omar Baird","I4KpcnMGtq","2019-11-08");
 INSERT INTO user (user_id,username,passwd,joined_on) VALUES (10,"Zach Mccall","WzRV9sSniC","2019-11-15");
 
-INSERT INTO tourist (tourist_id) VALUES (1);
-INSERT INTO tourist (tourist_id) VALUES (2);
-INSERT INTO tourist (tourist_id) VALUES (3);
-INSERT INTO tourist (tourist_id) VALUES (4);
-INSERT INTO tourist (tourist_id) VALUES (5);
-INSERT INTO tourist (tourist_id) VALUES (6);
-INSERT INTO tourist (tourist_id) VALUES (7);
-INSERT INTO tourist (tourist_id) VALUES (8);
-INSERT INTO tourist (tourist_id) VALUES (9);
-INSERT INTO tourist (tourist_id) VALUES (10);
+INSERT INTO client (client_id) VALUES (1);
+INSERT INTO client (client_id) VALUES (2);
+INSERT INTO client (client_id) VALUES (3);
+INSERT INTO client (client_id) VALUES (4);
+INSERT INTO client (client_id) VALUES (5);
+INSERT INTO client (client_id) VALUES (6);
+INSERT INTO client (client_id) VALUES (7);
+INSERT INTO client (client_id) VALUES (8);
+INSERT INTO client (client_id) VALUES (9);
+INSERT INTO client (client_id) VALUES (10);
 
 INSERT INTO owner (owner_id) VALUES (1);
 INSERT INTO owner (owner_id) VALUES (2);
 INSERT INTO owner (owner_id) VALUES (3);
 
----TO CREATE:
--- - habitations
--- - reservations
--- - ownerships
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (1,"Casa de Milhafre",50,4,"Travessa dos Pardais, Lourosa","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (2,"Quinta do Covelo",84,8,"Rua Dr. José Almeida Esteves, Porto","Quisque accumsan enim id erat sodales, euismod commodo elit lobortis. Curabitur posuere, metus et gravida ultrices non fringilla justo ligula id est. Vivamus ac facilisis felis.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (3,"Apartamento T3 Mobilado",30,6,"Av. da França, Porto","Aliquam mauris nisi, facilisis sed malesuada non, condimentum ut purus. In hac habitasse platea dictumst. Donec eu augue diam.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (4,"Quarto Privado Casal",15,2,"Rua das Flores, Porto ","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (5,"Classy Studio",24,3,"Rua da Trindade, Porto","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+
+INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21 15:17:42");
+INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21 10:05:27");
+INSERT INTO ownership (hab,owner,added_on) VALUES (3,2,"2019-10-21 19:24:08");
+INSERT INTO ownership (hab,owner,added_on) VALUES (4,2,"2019-10-21 19:25:11");
+INSERT INTO ownership (hab,owner,added_on) VALUES (5,3,"2019-10-28 09:31:03");
+
+INSERT into reservation (res_id,hab,client,start_date,end_date) VALUES (1,1,6,"2019-11-01","2019-11-03");
+INSERT into reservation (res_id,hab,client,start_date,end_date) VALUES (2,2,4,"2019-10-31","2019-11-01");
+INSERT into reservation (res_id,hab,client,start_date,end_date) VALUES (3,3,7,"2019-11-10","2019-11-16");
+INSERT into reservation (res_id,hab,client,start_date,end_date) VALUES (4,4,10,"2019-11-18","2019-11-19");
+INSERT into reservation (res_id,hab,client,start_date,end_date) VALUES (5,5,8,"2019-11-05","2019-11-08");
+INSERT into reservation (res_id,hab,client,start_date,end_date) VALUES (6,4,9,"2019-11-08","2019-11-10");
