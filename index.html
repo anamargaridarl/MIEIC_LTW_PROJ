@@ -1,32 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Houses Of The World!</title>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="responsive.css" rel="stylesheet">
-    <link href="comments.css" rel="stylesheet">
-    <link href="forms.css" rel="stylesheet" >
-  </head>
-  <body>
+
+<head>
+  <title>Houses Of The World!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/homepage.css" rel="stylesheet">
+  <link href="css/layout.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/comments.css" rel="stylesheet">
+  <link href="css/forms.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="bg">
     <nav id="navbar">
-      <div id="signup">
-        <a href="#signin">Sign In</a>
-        <a href="#signup">Sign Up</a>
-      </div>
       <div id="account">
+        <a href="#signup">Sign Up</a>
+        <a href="#login">Log In</a>
+      </div>
+      <div id="logged">
         <img src="profilepic.png" class="profilepic">
         <a href="profile.html">My Profile</a>
         <a href="#" id="signout">Sign Out</a>
       </div>
-    </header>
-    <section id="signin" >
-      <p>Let's get back to business.</p>
-    </section>
-    <section id="signup" >
+    </nav>
+    <form id="explore" action="search_rooms.php" method="GET">
+      <h3 id="form_title">Houses of the World!</h3>
+      <div id="whereto">
+        Where<br>
+        <input type="text" name="location">
+      </div>
+      <div id="checkin">
+        Check-In<br>
+        <input type="date" name="checkin">
+      </div>
+      <div id="checkout">
+        Check-Out<br>
+        <input type="date" name="checkout">
+      </div>
+      <div id="guests">
+        Nº guests<br>
+        <input type="number" name="guests">
+      </div>
+      <input id="search" type="submit" value="Search">
+    </form>
+    <section id="signup">
       <p>Let's go on a adventure</p>
     </section>
-  </body>
+    <section id="login">
+      <p>Let's get back to business.</p>
+    </section>
+    <footer>
+      <div id="contacts">
+        <a href="contacts.html">Contacts</a>
+      </div>
+      <div>
+        <a href="about_us.html">About Us</a>
+      </div>
+      <div id="atname">
+        <p>@2019 HousesOfTheWorld&trade;</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>
