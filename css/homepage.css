@@ -41,9 +41,16 @@ body,html {
     "checkin checkout"
     "guests search";
 }
-@media (max-width: 60em), (max-height: 50em) {
-  #explore * {
-    position: absolute;
+
+@media (max-width: 90em) {
+  #explore {
+    min-width: 20em;
+  }
+}
+
+@media (max-height: 50em) {
+  #explore {
+    min-height: 20em;
   }
 }
 
