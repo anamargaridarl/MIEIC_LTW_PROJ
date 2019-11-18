@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <title>Rooms</title>
-    <link href="css/layout.css" rel="stylesheet">
+    <!-- <link href="css/homepage.css" rel="stylesheet"> -->
     <meta charset="utf-8">
 </head>
 
