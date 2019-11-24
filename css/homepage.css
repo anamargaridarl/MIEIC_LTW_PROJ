@@ -1,7 +1,7 @@
 @import url("palette.css");
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonts);
   box-sizing: border-box;
 }
 
@@ -24,13 +24,13 @@ body,html {
 
 #explore {
   position: relative;
-  left: 160px;
-  top: 120px;
-  max-width: 700px;
-  height: 300px;
-  padding: 10px 20px 10px 20px;
+  left: 8.5%;
+  top: 13%;
+  max-width: 25%;
+  height: 45%;
+  padding: 0.5em 1em 0.5em 1em;
   background-color: var(--white-color);
-  border: 5px solid var(--blue-color);
+  border: 0.5em solid var(--blue-color);
   border-radius: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -42,24 +42,39 @@ body,html {
     "guests search";
 }
 
-#explore * {
-  max-height: 50px;
+@media (max-width: 90em) {
+  #explore {
+    min-width: 20em;
+  }
 }
 
-#explore #text {
-  margin: 10px 0;
+@media (max-height: 50em) {
+  #explore {
+    min-height: 20em;
+  }
 }
+
+#explore * {
+  max-height: 60%;
+}
+
+#explore p {
+  margin:0 0 1em 0;
+}
+
 #explore > h3 {
   margin: 0;
   font-weight: 100;
   grid-area: title;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 #explore > #whereto {
   grid-area: where;
 }
-
+#explore > #whereto * {
+  width: 95%;
+}
 #explore > #checkin {
   grid-area: checkin;
 }
@@ -68,12 +83,40 @@ body,html {
   grid-area: checkout;
 }
 
+#explore > #checkin *, #explore > #checkout * {
+  width: 90%;
+  height: 30%;
+  position: relative;
+  bottom: 1em;
+}
+
 #explore > #guests {
   grid-area: guests;
+  position: relative;
+  bottom: 1em;
+}
+
+#explore > #guests * {
+  width: 90%;
+}
+
+#explore > #guests input {
+  height: 50%;
 }
 
 #explore > #search {
   grid-area: search;
+}
+
+ #explore > #search {
+  position: relative;
+  left: 40%;
+  top: 22%;
+  height: 33%; 
+  width: 50%;
+  background-color: var(--pink-color);
+  border: 0.3em solid var(--blue-color);
+  color: var(--white-color);
 }
 
 #logged, #login, #signup {
