@@ -5,7 +5,7 @@
   </div>
 
   <div class="input-container">
-    <i class="material-icons">traffic</i>
+    <i class="material-icons">search</i>
     <input class="input-field" type="text" placeholder="Local" name="Location">
   </div>
 
@@ -14,10 +14,10 @@
 <img src="images/profile_pic_resize.jpg" alt="Profile Picture">
 <p> Nome </p>
 </div>
-
-<!-- <div id= "profile">
+<!-- 
+<div id= "profile">
 <p> SignUp </p>
 <p> LogIn </p>
-</div>  -->
+</div>   -->
 
 </nav>
