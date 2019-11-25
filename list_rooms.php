@@ -3,33 +3,21 @@
     $houses = getRooms();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>Rooms</title>
-    <!-- <link href="css/homepage.css" rel="stylesheet"> -->
-    <meta charset="utf-8">
+    <link href="css/rooms.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
-        <input type="search" id="search_bar">
-        <p>Guests</p>
-        <img src="" alt="Profile Picture">
-        <p>User</p>
-    </nav>
-
-    <?php foreach ($houses as $house): ?>
-    <section>
-        <article>
-            <h1><?= $house['title'] ?></h1>
-            <p><?= $house['description'] ?></p>
-            <img src="" alt="House Photo">
-            <p><?= $house['price_per_day']?>€/day</p>
-            <button>Check availability</button> <!-- This will probably be a link not a button-->
-        </article>
+<?php foreach ($houses as $house): ?>
+<section class="house">
+    <img src="https://picsum.photos/300/200" alt="House Photo" width="300" height=200>
+    <section class="house_description">
+        <h1><?= $house['title'] ?></h1>
+        <p><?= $house['description'] ?></p>
     </section>
-    <?php endforeach ?>
 
-</body>
-</html>
+    <section class="house_price">
+        <p><?= $house['price_per_day']?>€/day</p>
+        <a href="">Check availability</a>
+    </section>
+</section>
+<?php endforeach ?>

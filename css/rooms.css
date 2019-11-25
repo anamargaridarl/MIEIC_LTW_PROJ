@@ -1,0 +1,55 @@
+@import url("palette.css");
+
+.house {
+    width: 50em;
+    
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    
+    border: 1px;
+    border-style: solid;
+    border-radius: 1em;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "photo description description price";
+
+    align-items: center;
+
+    box-shadow: 0 4px 8px 0 var(--grey-color);
+}
+
+.house:hover {
+    box-shadow: 0 4px 8px 0 var(--blue-color);
+}
+
+.house img {
+    grid-area: photo;
+    border-radius: 1em;
+}
+
+.house .house_description {
+    grid-area: description;
+    text-align: justify;
+    padding: 1em;
+}
+
+.house .house_price {
+    grid-area: price;
+}
+
+.house .house_price p {
+    text-align: center;
+}
+
+.house .house_price a {
+    text-decoration: none;
+    background-color: var(--pink-color);
+    color: white;
+    border-radius: 1em;
+    padding: 0.5em;
+}
