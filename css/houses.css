@@ -3,10 +3,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 /* Slideshow container */
 
 .slideshow-container {
+    padding-top: 2em;
     position: relative;
     margin: auto;
     display: grid;
@@ -51,11 +56,10 @@ a {
 }
 
 .bottom {
-    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1fr 0.2fr 1fr;
-    grid-template-areas: "text1 owner map" "text2 text2 book";
-    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "text1 owner map" "text2 text2 map" "text2 text2 book";
+    grid-template-rows: 1fr 0.2fr 1fr;
 }
 
 .owner {
@@ -64,17 +68,39 @@ a {
 }
 
 .information {
-    margin: 2em 0em 2em 10em;
+    margin: 2em 0em 0em 10em;
     grid-area: text1;
 }
 
 .information h1 {
-    font-style: ar;
+    font-weight: normal;
+    font-size: 2em;
+    color: var(--pink-color);
+}
+
+.information h2 {
+    font-weight: normal;
+    font-size: 1.5em;
+    color: var(--grey-color);
+}
+
+.information p {
+    font-size: 1em;
+    padding-bottom: 0.75em;
+    border-width: 0.5px;
+    border-bottom-style: solid;
+    border-color: var(--grey-color);
 }
 
 .book {
+    padding-left: 8em;
     grid-area: book;
-    margin: 0em 10em 2em 0em;
+    margin: 0em 10em 4em 0em;
+}
+
+.book>h3 {
+    padding-left: 1em;
+    font-weight: normal;
 }
 
 .book button {
@@ -83,14 +109,16 @@ a {
     border-radius: 15px;
     border-width: 0.5px;
     color: var(--white-color);
-    padding: 0.75em 1.5em;
+    padding: 1em 2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 0.65em;
+    font-size: 1em;
 }
 
 .texthouse {
+    padding-top: 2em;
+    padding-right: 4em;
     margin-left: 10em;
     grid-area: text2;
 }

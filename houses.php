@@ -37,16 +37,17 @@ include 'templates/navBar.php';
   <a class="next" >&#10095;</a>
   </div>
 <div class="bottom">
+  
   <div class="information">
 
-  <h1>Main Title</h1>
+  <h1>Dream House Bananas</h1>
   <h2>Location</h2>
   <p> Number divisions</p>
 
   </div>
 
 <div class="texthouse">
-<p> Text about House </p>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida orci facilisis pulvinar faucibus. Maecenas fringilla aliquam eros. Ut augue justo, malesuada vel lectus eget, pharetra tristique libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque pellentesque vulputate diam in ultrices. Maecenas id mauris nec nisl tristique porttitor. Quisque quis est a ex faucibus facilisis. Nunc at bibendum massa.</p>
 </div>
 
 <div class="owner">
@@ -55,7 +56,7 @@ include 'templates/navBar.php';
 </div>
 
 <div class="book">
-  <h3>Total: 256cad<h3>
+  <h3>Total: 256cad</h3>
   <button type="button">Book Now</button>
 </div>
 
