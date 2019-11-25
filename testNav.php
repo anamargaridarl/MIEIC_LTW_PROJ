@@ -15,7 +15,7 @@
   <div class="bg">
   
       <?php
-        include('navBar.php'); 
+        include('templates/navBar.php'); 
      ?>
 
     <form id="explore" action="search_rooms.php" method="GET">
