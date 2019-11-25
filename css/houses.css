@@ -1,3 +1,4 @@
+@import url("palette.css");
 * {
     box-sizing: border-box;
 }
@@ -44,12 +45,13 @@ a {
 #map {
     width: 50%;
     height: 200px;
-    background-color: grey;
+    background-color: var(--grey-color);
     grid-area: map;
     margin: 2em 10em 2em 0em;
 }
 
 .bottom {
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 1fr 0.2fr 1fr;
     grid-template-areas: "text1 owner map" "text2 text2 book";
@@ -67,13 +69,25 @@ a {
 }
 
 .information h1 {
-    margin: 2em 0em 2em 10em;
-    grid-area: text1;
+    font-style: ar;
 }
 
 .book {
     grid-area: book;
     margin: 0em 10em 2em 0em;
+}
+
+.book button {
+    background-color: var(--pink-color);
+    border-color: var(--blue-color);
+    border-radius: 15px;
+    border-width: 0.5px;
+    color: var(--white-color);
+    padding: 0.75em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.65em;
 }
 
 .texthouse {

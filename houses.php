@@ -55,7 +55,7 @@ include 'templates/navBar.php';
 </div>
 
 <div class="book">
-  <h1>Total number<h1>
+  <h3>Total: 256cad<h3>
   <button type="button">Book Now</button>
 </div>
 
