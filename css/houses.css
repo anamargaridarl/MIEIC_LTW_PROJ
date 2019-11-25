@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "prev image next";
+    text-align: center;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    grid-area: image;
+    display: none;
+}
+
+.mySlides img {
+    width: 50vh;
+    height: 50vh;
+}
+
+a {
+    padding-top: 10em;
+}
+
+#prev {
+    grid-area: prev;
+    text-align: center;
+}
+
+#next {
+    grid-area: next;
+    text-align: center;
+}
+
+#map {
+    width: 50%;
+    height: 200px;
+    background-color: grey;
+    grid-area: map;
+    margin: 2em 10em 2em 0em;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    grid-template-areas: "text1 owner map" "text2 text2 book";
+    grid-template-rows: 1fr 1fr;
+}
+
+.owner {
+    margin: 2em 2em 2em 0em;
+    grid-area: owner;
+}
+
+.information {
+    margin: 2em 0em 2em 10em;
+    grid-area: text1;
+}
+
+.information h1 {
+    margin: 2em 0em 2em 10em;
+    grid-area: text1;
+}
+
+.book {
+    grid-area: book;
+    margin: 0em 10em 2em 0em;
+}
+
+.texthouse {
+    margin-left: 10em;
+    grid-area: text2;
+}
