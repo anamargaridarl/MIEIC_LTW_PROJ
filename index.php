@@ -53,24 +53,31 @@
     <p>Explore</p>
     <div>
       <a id="north" href="list_rooms/north.php">
-        <img src="/images/porto_explore.jpg" >
+        <div class="landscape">
+          <img src="/images/porto_explore.jpg" >
+        </div>
         <p>North</p>
       </a>
       <a id="center" href="list_rooms/center.php">
-        <img src="/images/viseu_explore.jpg" >
+        <div class="landscape">  
+          <img src="/images/viseu_explore.jpg" >
+        </div>  
         <p>Center</p>
       </a>
       <a id="south" href="list_rooms/south.php">
-        <img src="/images/algarve_explore.jpg" >
+        <div class="landscape">  
+          <img src="/images/algarve_explore.jpg" >
+        </div>
         <p>South</p>
       </a>
       <a id="islands" href="list_rooms/islands.php">
-        <img src="/images/madeira_explore.jpg" >
+        <div class="landscape">
+          <img src="/images/madeira_explore.jpg" >
+        </div>
         <p>Islands</p>
       </a>
     </div>
   </section>  
   <?php include('./templates/footer.php') ?>
 </body>
-
 </html>
