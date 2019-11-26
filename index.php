@@ -6,14 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/homepage.css" rel="stylesheet">
-  <link href="css/layout.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
-  <link href="css/comments.css" rel="stylesheet">
-  <link href="css/forms.css" rel="stylesheet">
+  <link href="css/navfooter.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="bg">
+  <section class="welcome">
     <nav id="navbar">
       <div id="account">
         <a href="#signup">Sign Up</a>
@@ -51,9 +48,29 @@
     <section id="login">
       <p>Let's get back to business.</p>
     </section>
-    
-    <?php include('./templates/footer.php') ?>
-  </div>
+  </section>
+  <section class="explore">
+    <p>Explore</p>
+    <div>
+      <a id="north" href="list_rooms/north.php">
+        <img src="/images/porto_explore.jpg" >
+        <p>North</p>
+      </a>
+      <a id="center" href="list_rooms/center.php">
+        <img src="/images/viseu_explore.jpg" >
+        <p>Center</p>
+      </a>
+      <a id="south" href="list_rooms/south.php">
+        <img src="/images/algarve_explore.jpg" >
+        <p>South</p>
+      </a>
+      <a id="islands" href="list_rooms/islands.php">
+        <img src="/images/madeira_explore.jpg" >
+        <p>Islands</p>
+      </a>
+    </div>
+  </section>  
+  <?php include('./templates/footer.php') ?>
 </body>
 
 </html>
