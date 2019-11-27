@@ -6,6 +6,6 @@
     <a href="about_us.html">About Us</a>
   </div>
   <div id="atname">
-    <p>@2019 HousesOfTheWorld&trade;</p>
+    <p>&copy;2019 HousesOfTheWorld&trade;</p>
   </div>
 </footer>
