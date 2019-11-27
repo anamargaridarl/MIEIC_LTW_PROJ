@@ -39,7 +39,7 @@ include 'templates/navBar.php';
 <div class="bottom">
   
   <div class="title">
-  <h1>Dream House Bananas</h1>
+  <h1> Dream House Bananas </h1>
   </div>
 
   <div class="title2">
