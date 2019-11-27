@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
+<?php
+  include_once('templates/head.php');
+  include_once('templates/footer.php');
 
-<head>
-  <title>Houses Of The World!</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/homepage.css" rel="stylesheet">
-  <link href="css/navfooter.css" rel="stylesheet">
-</head>
+  drawHead(array("css/homepage.css", "css/navfooter.css"), array());
+?>
 
 <body>
   <section class="welcome">
@@ -78,6 +74,8 @@
       </a>
     </div>
   </section>  
-  <?php include('./templates/footer.php') ?>
+  
+  <?php drawFooter() ?>
+
 </body>
 </html>

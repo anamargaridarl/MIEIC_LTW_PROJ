@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html>
+<?php 
+  include_once('templates/nav_bar.php');
+  include_once('templates/head.php');
+  include_once('templates/footer.php');
 
-<head>
-  <title>Houses Of The World!</title>
-  <script defer src="carrosel.js" type="module"></script>
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/houses.css" rel="stylesheet">
-  <link href="css/navfooter.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-</head>
+  drawHead(array("css/houses.css", "css/navfooter.css"), array("carousel.js"));
+?>
 
 <body>
-  <?php
-include 'templates/navBar.php';
-?>
+  <?php drawNavBar() ?>
+
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -78,11 +70,7 @@ include 'templates/navBar.php';
   </script>
 </div>
 
-
-  <?php
-include 'templates/footer.php';
-?>
+<?php drawFooter() ?>
 
 </body>
-
 </html>
