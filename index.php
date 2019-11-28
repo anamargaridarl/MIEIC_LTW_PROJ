@@ -5,7 +5,6 @@
   drawHead(array("css/homepage.css", "css/navfooter.css"), array("modalBox.js"));
 ?>
 
-<body>
   <section class="welcome">
     <nav id="navbar">
       <div id="account">
@@ -105,6 +104,4 @@
     </div>
   </section>  
   
-  <?php drawFooter() ?>
-</body>
-</html>
+  <?php drawFooter(); ?>
