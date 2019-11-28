@@ -28,4 +28,13 @@
         $images = $stmt->fetchAll();
         return $images;
     }
+
+    function getReservations()
+    {
+        global $db;
+        $stmt = $db->prepare('SELECT * FROM images WHERE hab_id = ?');
+        $stmt->execute(array($id));
+        $images = $stmt->fetchAll();
+        return $images;
+    }
 ?>

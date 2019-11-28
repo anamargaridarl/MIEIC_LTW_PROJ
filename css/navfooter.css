@@ -80,7 +80,8 @@ p {
     grid-area: signin;
 }
 
-#profile p {
+#profile a {
+    text-decoration: none;
     margin-right: 0.5em;
     margin-left: 0.5em;
     padding-top: 0.5em;
