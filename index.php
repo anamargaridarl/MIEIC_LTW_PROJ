@@ -2,15 +2,15 @@
   include_once('templates/head.php');
   include_once('templates/footer.php');
 
-  drawHead(array("css/homepage.css", "css/navfooter.css"), array());
+  drawHead(array("css/homepage.css", "css/navfooter.css"), array("modalBox.js"));
 ?>
 
 <body>
   <section class="welcome">
     <nav id="navbar">
       <div id="account">
-        <a href="#signup">Sign Up</a>
-        <a href="#login">Log In</a>
+        <a id="signupbtn" href="#signup">Sign Up</a>
+        <a id="loginbtn" href="#login">Sign In</a>
       </div>
       <div id="logged">
         <img src="profilepic.png" class="profilepic">
@@ -22,7 +22,7 @@
       <h3 id="form_title">Houses of the World!</h3>
       <div id="whereto">
         <p>Where</p>
-        <input type="text" name="location">
+        <input type="text" name="location" placeholder="Choose your next destination...">
       </div>
       <div id="checkin">
         <p>Check-In</p>
@@ -34,15 +34,45 @@
       </div>
       <div id="guests">
         <p>Nº guests</p>
-        <input type="number" name="guests" min="1" max="8">
+        <input type="number" name="guests" min="1" max="8" placeholder="1">
       </div>
       <input id="search" type="submit" value="Search">
     </form>
-    <section id="signup">
-      <p>Let's go on a adventure</p>
+    <section id="modalSignup">
+      <div id="signup">
+        <p id="signTitle">Sign Up</p>
+        <div id="username">
+          <p>Name</p>
+          <input type="text" name="username" placeholder="Enter your Username...">
+        </div>
+        <div id="email">
+          <p>Email</p>
+          <input type="text" name="email" placeholder="Enter a valid email...">
+        </div>
+        <div id="password">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Enter a valid password...">
+        </div>
+        <div id="register">
+          <input type="submit" value="Register">
+        </div>
+      </div>
     </section>
-    <section id="login">
-      <p>Let's get back to business.</p>
+    <section id="modalLogin">
+      <div id="login">
+        <p id="loginTitle">Sign In</p>
+        <div id="email">
+          <p>Email</p>
+          <input type="text" name="email" placeholder="Enter your email account...">
+        </div>
+        <div id="password">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Enter your password...">
+        </div>
+        <div id="log">
+          <input type="submit" value="Login">
+        </div>
+      </div>
     </section>
   </section>
   <section class="explore">
@@ -76,6 +106,5 @@
   </section>  
   
   <?php drawFooter() ?>
-
 </body>
 </html>

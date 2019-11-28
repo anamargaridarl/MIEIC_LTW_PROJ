@@ -29,7 +29,7 @@ CREATE TABLE owner (
 
 DROP TABLE IF EXISTS habitation;
 CREATE TABLE habitation (
-  hab_id PRIMARY KEY,
+  hab_id INTEGER PRIMARY KEY,
   title TEXT NOT NULL,
   price_per_day REAL NOT NULL,
   capacity INT NOT NULL,
@@ -37,6 +37,12 @@ CREATE TABLE habitation (
   description TEXT
   -- rate?
   -- comments?
+);
+
+DROP TABLE IF EXISTS images;
+CREATE TABLE images (
+  link TEXT PRIMARY KEY,
+  hab_id int REFERENCES habitation ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 DROP TABLE IF EXISTS ownership;
