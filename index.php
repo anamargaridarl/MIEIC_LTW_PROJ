@@ -5,8 +5,8 @@
   <title>Houses Of The World!</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/homepage.css" rel="stylesheet">
   <link href="css/navfooter.css" rel="stylesheet">
+  <link href="css/homepage.css" rel="stylesheet">
 </head>
 
 <body>
