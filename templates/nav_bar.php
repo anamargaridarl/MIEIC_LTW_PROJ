@@ -1,4 +1,5 @@
 <?php
+  include_once('templates/modalBoxes.php');
   function drawNavBar() {
 ?>
 
@@ -14,16 +15,19 @@
   </div>
   </form>
 
-<div id= "profile">
-  <img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
-  <a href="profile_reservation_page.php"> Nome </a>
-</div>
-<!-- 
-<div id= "profile">
-<p> SignUp </p>
-<p> LogIn </p>
-</div>   -->
+  <div id="account">
+    <a id="signupbtn" href="#signup">Sign Up</a>
+    <a id="loginbtn" href="#login">Sign In</a>
+  </div>
+  <div id="logged">
+    <img src="profilepic.png" class="profilepic">
+    <a href="profile.php">My Profile</a>
+    <a href="signout.php" id="signout">Sign Out</a>
+  </div>
 
 </nav>
 
-<?php } ?>
+<?php 
+    drawModal();
+  } 
+?>
