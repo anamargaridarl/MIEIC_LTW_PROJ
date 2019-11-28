@@ -1,10 +1,10 @@
 <?php
-    include_once('database/rooms.php');
+    include_once('../database/rooms.php');
     $houses = getRooms();
 ?>
 
 <head>
-    <link href="css/rooms.css" rel="stylesheet">
+    <link href="../css/rooms.css" rel="stylesheet">
 </head>
 
 <?php foreach ($houses as $house): ?>

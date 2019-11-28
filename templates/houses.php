@@ -2,31 +2,29 @@
 <html>
 
 <?php
-    include_once('database/rooms.php');
+    include_once('../database/rooms.php');
     if(isset($_GET['id'])){
       $product_id = $_GET['id'];
-      echo $product_id;
     } else {
-      echo "failed";
     }
     $houses = getRoom($product_id);
 ?>
 
 <head>
   <title>Houses Of The World!</title>
-  <script defer src="carrosel.js" type="module"></script>
+  <script defer src="../carrosel.js" type="module"></script>
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/houses.css" rel="stylesheet">
-  <link href="css/navfooter.css" rel="stylesheet">
+  <link href="../css/houses.css" rel="stylesheet">
+  <link href="../css/navfooter.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 
 <body>
   <?php
-include 'templates/navBar.php';
+include 'navBar.php';
 
 ?>
   <div class="slideshow-container">
@@ -34,15 +32,15 @@ include 'templates/navBar.php';
 
   <div id="Images">
     <div class="mySlides">
-      <img src="images/minimal_kitchen.jpg" >
+      <img src="../images/minimal_kitchen.jpg" >
     </div>
 
     <div class="mySlides">
-      <img src="images/fancy_living_room.jpg" >
+      <img src="../images/fancy_living_room.jpg" >
     </div>
 
     <div class="mySlides">
-      <img src="images/spacey_living_room.jpg" >
+      <img src="../images/spacey_living_room.jpg" >
     </div>
   </div>
 
@@ -65,7 +63,7 @@ include 'templates/navBar.php';
 </div>
 
 <div class="owner">
-<img src="images/profile_pic_resize.jpg" alt="Profile Picture">
+<img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
   <p>Joana</p>
 </div>
 
@@ -92,7 +90,7 @@ include 'templates/navBar.php';
 
 
   <?php
-include 'templates/footer.php';
+include 'footer.php';
 ?>
 
 </body>

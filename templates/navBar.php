@@ -1,7 +1,7 @@
 <nav id="navbar">
 
   <div id="logo">
-  <img src="images/logodemo.png" alt="Logo">
+  <img src="../images/logodemo.png" alt="Logo">
   </div>
 
   <div class="input-container">
@@ -11,7 +11,7 @@
 
 
 <div id= "profile">
-<img src="images/profile_pic_resize.jpg" alt="Profile Picture">
+<img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
 <p> Nome </p>
 </div>
 <!-- 
