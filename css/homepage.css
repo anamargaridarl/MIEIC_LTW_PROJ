@@ -125,12 +125,6 @@ html {
     color: var(--white-color);
 }
 
-#logged,
-#modalLogin,
-#modalSignup{
-    display: none;
-}
-
 .explore {
   width: 100%;
   height: 50%;
