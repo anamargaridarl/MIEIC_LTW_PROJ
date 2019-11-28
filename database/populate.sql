@@ -32,6 +32,11 @@ INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description
 INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (4,"Quarto Privado Casal",15,2,"Rua das Flores, Porto ","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");
 INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (5,"Classy Studio",24,3,"Rua da Trindade, Porto","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
 
+INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",1);
+
 INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21 15:17:42");
 INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21 10:05:27");
 INSERT INTO ownership (hab,owner,added_on) VALUES (3,2,"2019-10-21 19:24:08");

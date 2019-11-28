@@ -21,6 +21,16 @@
         $house = $stmt->fetch();
         return $house;
     }
+
+    function getImages($id)
+    {
+        $db = new PDO('sqlite:../database/database.db');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $stmt = $db->prepare('SELECT link FROM images WHERE hab_id = ?');
+        $stmt->execute(array($id));
+        $images = $stmt->fetchAll();
+        return $images;
+    }
     
 
 ?>

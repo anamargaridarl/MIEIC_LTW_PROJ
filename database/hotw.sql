@@ -39,6 +39,12 @@ CREATE TABLE habitation (
   -- comments?
 );
 
+DROP TABLE IF EXISTS images;
+CREATE TABLE images (
+  link TEXT PRIMARY KEY,
+  hab_id int REFERENCES habitation ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
 DROP TABLE IF EXISTS ownership;
 CREATE TABLE ownership (
   hab INT NOT NULL REFERENCES habitation ON DELETE RESTRICT ON UPDATE CASCADE,

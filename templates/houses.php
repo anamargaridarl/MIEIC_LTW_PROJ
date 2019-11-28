@@ -8,6 +8,7 @@
     } else {
     }
     $houses = getRoom($product_id);
+    $images = getImages($product_id);
 ?>
 
 <head>
@@ -31,17 +32,12 @@ include 'navBar.php';
     <a class="prev" >&#10094;</a>
 
   <div id="Images">
+   <?php foreach ($images as $image): ?>
     <div class="mySlides">
-      <img src="../images/minimal_kitchen.jpg" >
+      <img src=<?= $image['link'] ?> >
     </div>
+  <?php endforeach ?>
 
-    <div class="mySlides">
-      <img src="../images/fancy_living_room.jpg" >
-    </div>
-
-    <div class="mySlides">
-      <img src="../images/spacey_living_room.jpg" >
-    </div>
   </div>
 
   <a class="next" >&#10095;</a>

@@ -7,8 +7,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/profilereservation.css" rel="stylesheet">
-  <link href="css/navfooter.css" rel="stylesheet">
+  <link href="../css/profilereservation.css" rel="stylesheet">
+  <link href="../css/navfooter.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
@@ -16,7 +16,7 @@
 <body>
 
   <?php
-include 'templates/navBar.php';
+include 'navBar.php';
 ?>
 <h1>Reservations</h1>
 
@@ -34,7 +34,7 @@ include 'templates/navBar.php';
 </div>
 
   <?php
-include 'templates/footer.php';
+include 'footer.php';
 ?>
 
 </body>
