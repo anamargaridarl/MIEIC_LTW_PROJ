@@ -11,4 +11,6 @@
         <p>&copy;2019 HousesOfTheWorld&trade;</p>
       </div>
     </footer>
+  </body>
+</html>
 <?php } ?>

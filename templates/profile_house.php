@@ -4,10 +4,9 @@
   include_once('templates/nav_bar.php');
 
   drawHead(array("css/profilehouse.css", "css/navfooter.css"), array());
+  drawNavBar();
 ?>
 
-<body>
-  <?php drawNavBar() ?>
 <h1>Houses</h1>
 
 <div class="reservation">
@@ -20,9 +19,4 @@
   <p>Local</p>
 </div>
 </div>
-
-  <?php drawFooter() ?>
-
-</body>
-
-</html>
+<?php drawFooter() ?>

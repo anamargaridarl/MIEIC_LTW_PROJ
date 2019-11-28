@@ -14,8 +14,6 @@
   drawHead(array("css/houses.css", "css/navfooter.css"), array("carousel.js"));
 ?>
 
-<body>
-
 <?php drawNavBar() ?>
 
   <div class="slideshow-container">
@@ -75,6 +73,3 @@
 </div>
 
 <?php drawFooter() ?>
-
-</body>
-</html>
