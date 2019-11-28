@@ -7,17 +7,17 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../css/profilehouse.css" rel="stylesheet">
-  <link href="../css/navfooter.css" rel="stylesheet">
+  <link href="css/profilereservation.css" rel="stylesheet">
+  <link href="css/navfooter.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 
 <body>
   <?php
-include 'navBar.php';
+include 'templates/navBar.php';
 ?>
-<h1>Houses</h1>
+<h1>Reservations</h1>
 
 <div class="reservation">
 <div class="img">
@@ -27,11 +27,13 @@ include 'navBar.php';
 <div class="text">
   <p>Title</p>
   <p>Local</p>
+  <p>Number Nights: 2 </p>
+  <p>Total: 256€</p>
 </div>
 </div>
 
   <?php
-include 'footer.php';
+include 'templates/footer.php';
 ?>
 
 </body>

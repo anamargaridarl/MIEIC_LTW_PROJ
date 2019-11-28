@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html>
+<?php 
+  include_once('nav_bar.php');
+  include_once('head.php');
+  include_once('footer.php');
 
-<?php
-    include_once('../database/rooms.php');
-    if(isset($_GET['id'])){
-      $product_id = $_GET['id'];
-    } else {
-    }
-    $houses = getRoom($product_id);
-    $images = getImages($product_id);
-?>
 
-<head>
-  <title>Houses Of The World!</title>
-  <script defer src="../carrosel.js" type="module"></script>
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../css/houses.css" rel="stylesheet">
-  <link href="../css/navfooter.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-</head>
-
-<body>
-  <?php
-include 'navBar.php';
-
-?>
+ function drawHouse($houses, $images) {?>
+   
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -84,11 +62,4 @@ include 'navBar.php';
   </script>
 </div>
 
-
-  <?php
-include 'footer.php';
-?>
-
-</body>
-
-</html>
+<?php } ?>

@@ -1,11 +1,10 @@
 <?php
-    include_once('../database/connection.php');
+    include_once('database/connection.php');
 
-    function getRooms() {
-        $db = new PDO('sqlite:../database/database.db');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $stmt = $db->prepare('SELECT hab_id,title, description, price_per_day FROM habitation');
-        $stmt->execute();
+    function getRooms($location) {
+        global $db;        
+        $stmt = $db->prepare('SELECT hab_id,title, description, price_per_day FROM habitation WHERE location = ?');
+        $stmt->execute(array($location));
 
         $houses = $stmt->fetchAll();
         return $houses;
@@ -13,8 +12,7 @@
 
     function getRoom($id)
     {
-        $db = new PDO('sqlite:../database/database.db');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        global $db;
         $stmt = $db->prepare('SELECT title, description,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
@@ -24,13 +22,10 @@
 
     function getImages($id)
     {
-        $db = new PDO('sqlite:../database/database.db');
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        global $db;
         $stmt = $db->prepare('SELECT link FROM images WHERE hab_id = ?');
         $stmt->execute(array($id));
         $images = $stmt->fetchAll();
         return $images;
     }
-    
-
 ?>
