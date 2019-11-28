@@ -113,13 +113,13 @@ html {
     height: 33%;
     width: 50%;
     background-color: var(--pink-color);
-    border: 0.3em solid var(--blue-color);
+    border: 0.2em solid var(--blue-color);
     color: var(--white-color);
 }
 
 #logged,
-#login,
-#signup {
+#modalLogin,
+#modalSignup{
     display: none;
 }
 
@@ -144,7 +144,6 @@ html {
 .explore {
   width: 100%;
   height: 50%;
-  /* border-bottom: 1em solid var(--grey-color); */
   position: relative;
   box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
@@ -226,4 +225,96 @@ html {
   border: 0.1em solid var(--blue-color);
   border-radius: 2em;
   overflow: hidden;
+}
+
+#modalLogin,
+#modalSignup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+#signup, #login {
+  background-color: var(--white-color);
+  border: 0.2em solid var(--blue-color);
+  border-radius: 1em;
+  padding: 2em 2em 0em 2em;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  position: relative;
+  left: 30%;
+  top: 20%;
+}
+
+#signup {
+  grid-template-areas: "title" "user" "email" "pass" "submit";
+}
+
+#login {
+  grid-template-areas: "title" "email" "pass" "submit";
+}
+
+#signup > #signTitle, #login > #loginTitle {
+  grid-area: title;
+  font-size: 2em;
+  width: 50%;
+  margin-bottom: 1em;
+  word-wrap: break-word;
+}
+
+#signup > div, #login > div {
+  padding-bottom: 2em;
+  width: 100%;
+}
+
+#signup > div > *, #login > div > * {
+  position: relative;
+  width: 100%;
+}
+
+#signup > div > p, #login > div > p {
+  padding-bottom: 0.8em;
+  font-size: 1.5em;
+}
+
+#signup > div > input, #login > div > input {
+  height: 60%;
+}
+
+#signup > #username, #login > #username {
+  grid-area: user;
+}
+
+#signup > #email, #login > #email {
+  grid-area: email;
+}
+
+#signup > #password, #login > #password {
+  grid-area: pass;
+  padding-bottom: 3em;
+}
+
+#signup > #register, #login > #log {
+  grid-area: submit;
+  width: 100%;
+  height: 6em;
+}
+
+#signup > #register > input, #login > #log > input {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: var(--pink-color);
+  border: 0.1em solid var(--blue-color);
+  color: var(--white-color);
+  font-size: 1.5em;
 }
