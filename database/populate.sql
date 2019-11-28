@@ -26,11 +26,11 @@ INSERT INTO owner (owner_id) VALUES (1);
 INSERT INTO owner (owner_id) VALUES (2);
 INSERT INTO owner (owner_id) VALUES (3);
 
-INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (1,"Casa de Milhafre",50,4,"Porto","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
-INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (2,"Quinta do Covelo",84,8,"Rua Dr. José Almeida Esteves, Porto","Quisque accumsan enim id erat sodales, euismod commodo elit lobortis. Curabitur posuere, metus et gravida ultrices non fringilla justo ligula id est. Vivamus ac facilisis felis.");
-INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (3,"Apartamento T3 Mobilado",30,6,"Av. da França, Porto","Aliquam mauris nisi, facilisis sed malesuada non, condimentum ut purus. In hac habitasse platea dictumst. Donec eu augue diam.");
-INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (4,"Quarto Privado Casal",15,2,"Rua das Flores, Porto ","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");
-INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (5,"Classy Studio",24,3,"Rua da Trindade, Porto","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,addr,region,description) VALUES (1,"Casa de Milhafre",50,4,"Rua Visconde de Videne","Porto", "Norte","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,addr,region,description) VALUES (2,"Quinta do Covelo",84,8,"Rua Dr. José Almeida Esteves", "Porto","Norte","Quisque accumsan enim id erat sodales, euismod commodo elit lobortis. Curabitur posuere, metus et gravida ultrices non fringilla justo ligula id est. Vivamus ac facilisis felis.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,addr,region,description) VALUES (3,"Apartamento T3 Mobilado",30,6,"Av. da França" "Porto","Norte","Aliquam mauris nisi, facilisis sed malesuada non, condimentum ut purus. In hac habitasse platea dictumst. Donec eu augue diam.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,addr,region,description) VALUES (4,"Quarto Privado Casal",15,2,"Rua das Flores","Porto", "Norte","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,addr,region,description) VALUES (5,"Classy Studio",24,3,"Rua da Trindade","Porto","Norte","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
 
 INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",1);
 INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",1);

@@ -34,6 +34,8 @@ CREATE TABLE habitation (
   price_per_day REAL NOT NULL,
   capacity INT NOT NULL,
   location TEXT NOT NULL,
+  addr TEXT NOT NULL,
+  region TEXT NOT NULL,
   description TEXT
   -- rate?
   -- comments?
