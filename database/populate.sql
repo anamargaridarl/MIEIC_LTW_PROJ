@@ -26,7 +26,7 @@ INSERT INTO owner (owner_id) VALUES (1);
 INSERT INTO owner (owner_id) VALUES (2);
 INSERT INTO owner (owner_id) VALUES (3);
 
-INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (1,"Casa de Milhafre",50,4,"Travessa dos Pardais, Lourosa","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
+INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (1,"Casa de Milhafre",50,4,"Porto","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
 INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (2,"Quinta do Covelo",84,8,"Rua Dr. José Almeida Esteves, Porto","Quisque accumsan enim id erat sodales, euismod commodo elit lobortis. Curabitur posuere, metus et gravida ultrices non fringilla justo ligula id est. Vivamus ac facilisis felis.");
 INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (3,"Apartamento T3 Mobilado",30,6,"Av. da França, Porto","Aliquam mauris nisi, facilisis sed malesuada non, condimentum ut purus. In hac habitasse platea dictumst. Donec eu augue diam.");
 INSERT INTO habitation (hab_id,title,price_per_day,capacity,location,description) VALUES (4,"Quarto Privado Casal",15,2,"Rua das Flores, Porto ","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");

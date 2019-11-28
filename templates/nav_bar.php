@@ -1,5 +1,8 @@
-<nav id="navbar">
+<?php
+  function drawNavBar() {
+?>
 
+<nav id="navbar">
   <div id="logo">
   <img src="../images/logodemo.png" alt="Logo">
   </div>
@@ -8,7 +11,6 @@
     <i class="material-icons">search</i>
     <input class="input-field" type="text" placeholder="Local" name="Location">
   </div>
-
 
 <div id= "profile">
 <img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
@@ -21,3 +23,5 @@
 </div>   -->
 
 </nav>
+
+<?php } ?>

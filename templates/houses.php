@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html>
+<?php 
+  include_once('nav_bar.php');
+  include_once('head.php');
+  include_once('footer.php');
+  include_once('../database/rooms.php');
+  
+  if(isset($_GET['id'])){
+    $product_id = $_GET['id'];
+  }
 
-<?php
-    include_once('../database/rooms.php');
-    if(isset($_GET['id'])){
-      $product_id = $_GET['id'];
-    } else {
-    }
-    $houses = getRoom($product_id);
-    $images = getImages($product_id);
+  $houses = getRoom($product_id);
+  $images = getImages($product_id);
+
+  drawHead(array("css/houses.css", "css/navfooter.css"), array("carousel.js"));
 ?>
-
-<head>
-  <title>Houses Of The World!</title>
-  <script defer src="../carrosel.js" type="module"></script>
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../css/houses.css" rel="stylesheet">
-  <link href="../css/navfooter.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-</head>
 
 <body>
-  <?php
-include 'navBar.php';
 
-?>
+<?php drawNavBar() ?>
+
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -84,11 +74,7 @@ include 'navBar.php';
   </script>
 </div>
 
-
-  <?php
-include 'footer.php';
-?>
+<?php drawFooter() ?>
 
 </body>
-
 </html>
