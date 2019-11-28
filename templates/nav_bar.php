@@ -8,12 +8,10 @@
   <img src="../images/logodemo.png" alt="Logo">
   </div>
 
-  <form id="explore" action="search_rooms.php" method="GET">
   <div class="input-container">
     <i class="material-icons">search</i>
     <input class="input-field" type="text" placeholder="Local" name="Location">
   </div>
-  </form>
 
   <div id="account">
     <a id="signupbtn" href="#signup">Sign Up</a>
