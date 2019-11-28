@@ -29,7 +29,7 @@ CREATE TABLE owner (
 
 DROP TABLE IF EXISTS habitation;
 CREATE TABLE habitation (
-  hab_id PRIMARY KEY,
+  hab_id INTEGER PRIMARY KEY,
   title TEXT NOT NULL,
   price_per_day REAL NOT NULL,
   capacity INT NOT NULL,

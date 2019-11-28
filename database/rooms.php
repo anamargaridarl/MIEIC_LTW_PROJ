@@ -2,24 +2,24 @@
     include_once('database/connection.php');
 
     function getRooms() {
-        global $db;
-        $stmt = $db->prepare('SELECT title, description, price_per_day FROM habitation');
+        $db = new PDO('sqlite:database/database.db');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $stmt = $db->prepare('SELECT hab_id,title, description, price_per_day FROM habitation');
         $stmt->execute();
 
         $houses = $stmt->fetchAll();
-        
         return $houses;
     }
 
     function getRoom($id)
     {
-        global $db;
-        $stmt = $db->prepare('SELECT title, description, price_per_day FROM habitation WHERE hab_id = ?');
+        $db = new PDO('sqlite:database/database.db');
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $stmt = $db->prepare('SELECT title, description,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
-        $houses = $stmt->fetch();
-        
-        return $houses;
+        $house = $stmt->fetch();
+        return $house;
     }
     
 

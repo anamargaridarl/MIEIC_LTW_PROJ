@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
   <?php
 include 'templates/navBar.php';
 ?>

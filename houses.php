@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 
+<?php
+    include_once('database/rooms.php');
+    if(isset($_GET['id'])){
+      $product_id = $_GET['id'];
+      echo $product_id;
+    } else {
+      echo "failed";
+    }
+    $houses = getRoom($product_id);
+?>
+
 <head>
   <title>Houses Of The World!</title>
   <script defer src="carrosel.js" type="module"></script>
@@ -16,6 +27,7 @@
 <body>
   <?php
 include 'templates/navBar.php';
+
 ?>
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
@@ -39,17 +51,17 @@ include 'templates/navBar.php';
 <div class="bottom">
   
   <div class="title">
-  <h1> Dream House Bananas </h1>
+  <h1> <?= $houses['title'] ?> </h1>
   </div>
 
   <div class="title2">
-  <h2>Location</h2>
+  <h2><?= $houses['location'] ?></h2>
   <p> Number divisions</p>
   </div>
 
 
 <div class="texthouse">
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida orci facilisis pulvinar faucibus. Maecenas fringilla aliquam eros. Ut augue justo, malesuada vel lectus eget, pharetra tristique libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque pellentesque vulputate diam in ultrices. Maecenas id mauris nec nisl tristique porttitor. Quisque quis est a ex faucibus facilisis. Nunc at bibendum massa.</p>
+<p> <?= $houses['description'] ?> </p>
 </div>
 
 <div class="owner">
@@ -58,8 +70,8 @@ include 'templates/navBar.php';
 </div>
 
 <div class="book">
-  <h2>Nights: 2*128€ </h2>
-  <h3>Total: 256€</h3>
+  <h2>Nights: 2*<?= $houses['price_per_day'] ?> €</h2>
+  <h3>Total:  <?= $houses['price_per_day'] * 2 ?> € </h3>
   <button type="button">Book Now</button>
 </div>
 
