@@ -2,20 +2,10 @@
   include_once('nav_bar.php');
   include_once('head.php');
   include_once('footer.php');
-  include_once('../database/rooms.php');
-  
-  if(isset($_GET['id'])){
-    $product_id = $_GET['id'];
-  }
 
-  $houses = getRoom($product_id);
-  $images = getImages($product_id);
 
-  drawHead(array("css/houses.css", "css/navfooter.css"), array("carousel.js"));
-?>
-
-<?php drawNavBar() ?>
-
+ function drawHouse($houses, $images) {?>
+   
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -72,4 +62,4 @@
   </script>
 </div>
 
-<?php drawFooter() ?>
+<?php } ?>

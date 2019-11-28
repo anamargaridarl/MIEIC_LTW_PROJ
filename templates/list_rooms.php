@@ -4,7 +4,7 @@
         <section class="house">
             <img src="https://picsum.photos/300/200" alt="House Photo" width="300" height=200>
             <section class="house_description">
-            <a href="templates/houses.php?id=<?= $house['hab_id'] ?>"> <?= $house['title'] ?> </a>
+            <a href="houses_page.php?id=<?= $house['hab_id'] ?>"> <?= $house['title'] ?> </a>
                 <p><?= $house['description'] ?></p>
             </section>
 
