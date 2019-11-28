@@ -2,7 +2,7 @@
   include_once('templates/head.php');
   include_once('templates/footer.php');
 
-  drawHead(array("css/homepage.css", "css/navfooter.css"), array("modalBox.js"));
+  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modalBox.js"));
 ?>
 
   <section class="welcome">
