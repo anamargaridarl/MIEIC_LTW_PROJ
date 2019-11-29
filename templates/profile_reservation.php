@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <title>Houses Of The World!</title>
-  <script defer src="carrosel.js" type="module"></script>
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/profilereservation.css" rel="stylesheet">
-  <link href="css/navfooter.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-</head>
-
-<body>
   <?php
-include 'templates/navBar.php';
-?>
+
+  function drawReservations($reservations) { ?>
+
+
 <h1>Reservations</h1>
 
 <div class="reservation">
@@ -31,11 +18,4 @@ include 'templates/navBar.php';
   <p>Total: 256€</p>
 </div>
 </div>
-
-  <?php
-include 'templates/footer.php';
-?>
-
-</body>
-
-</html>
+ <?php } ?>
