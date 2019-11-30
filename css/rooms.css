@@ -1,22 +1,19 @@
 @import url("palette.css");
-
 .house {
     width: 50em;
     margin: 0 auto;
     margin-bottom: 1em;
     margin-top: 1em;
     padding: 1em;
-
-    border: 1px solid var(--grey-color);
+    border: 0.5px solid var(--grey-color);
     border-radius: 1em;
-
     position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "photo description description price";
     align-items: center;
-    box-shadow: 0 4px 8px 0 var(--grey-color);
+    box-shadow: 0 4px 4px 0 var(--grey-color);
 }
 
 body {
