@@ -28,7 +28,7 @@
 
   <div class="title2">
   <h2><?= $houses['location'] ?></h2>
-  <p> Number divisions</p>
+  <p> <?= $houses['capacity'] ?> guests <?= $houses['nr_rooms'] ?> bedrooms <?= $houses['nr_bathrooms'] ?> bathrooms </p>
   </div>
 
 
