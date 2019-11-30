@@ -8,19 +8,19 @@ const login = document.querySelector('#loginbtn');
 
 const explore = document.querySelector('#explore');
 
-sgnup.addEventListener("click", function() {
-  modalSignup.style.display = "block";
-  explore.style.display = "none";
+sgnup.addEventListener('click', function() {
+  modalSignup.style.display = 'block';
+  explore.style.display = 'none';
 });
 
-login.addEventListener("click", function() {
-  modalLogin.style.display = "block";
-  explore.style.display = "none";
+login.addEventListener('click', function() {
+  modalLogin.style.display = 'block';
+  explore.style.display = 'none';
 });
 
-window.addEventListener("click", function(event) {
-  if(event.target == modalSignup || event.target == modalLogin) {
-    event.target.style.display = "none";
-    this.explore.style.display = "grid";
+window.addEventListener('click', function(event) {
+  if (event.target == modalSignup || event.target == modalLogin) {
+    event.target.style.display = 'none';
+    explore.style.display = 'grid';
   }
 });
