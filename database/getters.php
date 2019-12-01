@@ -52,7 +52,7 @@
     function getRoom($id)
     {
         global $db;
-        $stmt = $db->prepare('SELECT title, description,location, price_per_day FROM habitation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT title, nr_rooms,nr_bathrooms,capacity,description,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
         $house = $stmt->fetch();
@@ -71,7 +71,7 @@
     function getReservations()
     {
         global $db;
-        $stmt = $db->prepare('SELECT * FROM images WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT * FROM reservations WHERE hab_id = ?');
         $stmt->execute(array($id));
         $images = $stmt->fetchAll();
         return $images;

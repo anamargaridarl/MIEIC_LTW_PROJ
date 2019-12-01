@@ -32,6 +32,8 @@ CREATE TABLE habitation (
   hab_id INTEGER PRIMARY KEY,
   title TEXT NOT NULL,
   price_per_day REAL NOT NULL,
+  nr_rooms INT NOT NULL,
+  nr_bathrooms INT NOT NULL,
   capacity INT NOT NULL,
   location TEXT NOT NULL,
   addr TEXT NOT NULL,
@@ -43,8 +45,9 @@ CREATE TABLE habitation (
 
 DROP TABLE IF EXISTS images;
 CREATE TABLE images (
-  link TEXT PRIMARY KEY,
-  hab_id int REFERENCES habitation ON DELETE RESTRICT ON UPDATE CASCADE
+  link TEXT NOT NULL,
+  hab_id int REFERENCES habitation ON DELETE RESTRICT ON UPDATE CASCADE,
+  PRIMARY KEY(link,hab_id)
 );
 
 DROP TABLE IF EXISTS ownership;
