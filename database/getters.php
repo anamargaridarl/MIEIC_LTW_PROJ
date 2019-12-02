@@ -6,6 +6,13 @@
     function getRooms($location,$checkin,$checkout,$guests,$region) {
         global $db;        
         
+        if($region != NULL) {
+            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ?');
+            $stmt->execute(array($region));
+            $inRegion = $stmt->fetchAll();
+            return $inRegion;
+        }
+        
         $houses = [];
         if($location != NULL) {
             $stmt = $db->prepare('SELECT DISTINCT hab_id,title, description, price_per_day FROM habitation WHERE location = ? COLLATE NOCASE');
@@ -30,17 +37,6 @@
             $nGuests = $stmt->fetchAll();
             foreach($houses as $key => $value) {
                 if(!in_array($value,$nGuests)) {
-                    unset($houses[$key]);
-                }
-            }
-        }
-
-        if($region != NULL) {
-            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ?');
-            $stmt->execute(array($region));
-            $inRegion = $stmt->fetchAll();
-            foreach($houses as $key => $value) {
-                if(!in_array($value,$inRegion)) {
                     unset($houses[$key]);
                 }
             }
