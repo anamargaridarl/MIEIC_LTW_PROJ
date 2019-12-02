@@ -1,30 +1,10 @@
 @import url("palette.css");
-
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     display: flex;
-}
-
-.side-menu {
-    width: 10em;
-    background-color: var(--blue-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.side-menu a {
-    width: 100%;
-    background-color: var(--pink-color);
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    border: 0.5px solid white;
-    padding: 1em;
-    margin: 0;
 }
 
 .profile-info {

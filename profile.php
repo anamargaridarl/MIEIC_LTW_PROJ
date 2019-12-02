@@ -3,24 +3,23 @@
     include_once('templates/head.php');
     include_once('templates/footer.php');
     include_once('templates/nav_bar.php');
+    include_once('templates/profile_sidemenu.php');
+
 
     // Uncomment in production
     // if (!isset($_SESSION['username'])) {
     //     die(header('Location: /index.php'));
     // }
 
-    drawHead(array("css/navfooter.css", "css/profile.css"), array());
+    drawHead(array("css/navfooter.css", "css/profile.css" ,"css/profile_sidemenu.css"), array());
     drawNavBar();
     // drawProfile();
 ?>
 
 <section class="container">
-    <nav class="side-menu">
-        <a id="reservations" href="">Reservations</a>
-        <a id="info" href="">Info</a>
-        <a id="houses" href="">Houses</a>
-    </nav>
     
+<?php drawSideMenu() ?>
+
     <section class="profile-info">
         <section class="profile-image">
             <img src="images/profile_pic_resize.jpg" alt="profile picture">
