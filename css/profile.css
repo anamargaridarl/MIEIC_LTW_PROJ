@@ -38,6 +38,7 @@ body {
 
 .profile-info .profile-image {
     margin: auto;
+    text-align: center;
 }
 
 .profile-info label {
@@ -59,10 +60,10 @@ body {
     box-sizing: border-box;
     border: 0.15em solid var(--grey-color);
     border-radius: 1em;
-    transition: 0.5s;
     outline: none;
-  }
-  
+}
+
 .profile-info input:focus {
+    transition: 0.5s;
     border: 0.15em solid var(--blue-color);
 }
