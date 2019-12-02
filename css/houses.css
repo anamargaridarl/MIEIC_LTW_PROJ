@@ -14,9 +14,9 @@ body {
     padding-top: 2em;
     position: relative;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "prev image next";
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     text-align: center;
 }
 
@@ -24,8 +24,8 @@ body {
 /* Hide the images by default */
 
 .mySlides {
-    grid-area: image;
     display: none;
+    margin: 0 2em;
 }
 
 .mySlides img {
@@ -38,12 +38,10 @@ a {
 }
 
 #prev {
-    grid-area: prev;
     text-align: center;
 }
 
 #next {
-    grid-area: next;
     text-align: center;
 }
 
