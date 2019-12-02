@@ -91,7 +91,7 @@ p {
 }
 
 footer {
-    padding: 1em 1em 1em 1em;
+    padding: 1em 1em 0em 1em;
     width: 100%;
     background-color: var(--blue-color);
     text-align: center;

@@ -13,19 +13,27 @@ h1 {
     color: var(--pink-color);
 }
 
+.house_page {
+    margin: auto;
+}
+
 .house {
     display: flex;
     flex-direction: row;
-    width: 50%;
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 20px;
     border-width: 0.5px;
     border-style: solid;
     border-color: var(--grey-color);
-    margin: 1em auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    margin: 1em 1em auto;
+    padding: 1em;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .img img {
@@ -48,13 +56,13 @@ h1 {
 }
 
 .addhouse {
-    width: 50%;
+    height: 12em;
     border-radius: 20px;
     border-width: 0.5px;
     border-style: solid;
     border-color: var(--grey-color);
     text-align: center;
-    margin: 1em auto;
+    margin: 1em;
 }
 
 .addhouse a {

@@ -11,6 +11,17 @@ h1 {
     font-weight: normal;
     text-align: center;
     color: var(--pink-color);
+    width: 50%;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.res_page {
+    margin: auto;
 }
 
 .reservation {
@@ -19,7 +30,6 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%;
     margin: 1em auto;
     border-radius: 20px;
     border-width: 0.5px;

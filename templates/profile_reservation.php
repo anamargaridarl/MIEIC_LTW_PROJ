@@ -3,6 +3,7 @@
 
   function drawReservations($reservations) { ?>
 
+<div class="res_page">
 <h1>Reservations</h1>
 
  <?php foreach ($reservations as $reservation): 
@@ -21,5 +22,8 @@
   <p>Total: <?= $reservation['price_per_day'] ?> € </p>
 </div>
 </div>
+
+
 <?php endforeach ?>
+</div>
  <?php } ?>

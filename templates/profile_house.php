@@ -2,6 +2,7 @@
 
 function drawHouses($houses) { ?>
 
+<div class="house_page">
 <h1>Houses</h1>
 
 <?php foreach ($houses as $house): 
@@ -24,6 +25,8 @@ function drawHouses($houses) { ?>
 
 <div class="addhouse">
 <a href="profile.php"> + </a>
+</div>
+
 </div>
 
 

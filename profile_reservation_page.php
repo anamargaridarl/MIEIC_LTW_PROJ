@@ -6,19 +6,12 @@
     include_once('templates/nav_bar.php');
     include_once('templates/profile_sidemenu.php');
 
-
+    
     drawHead(array("css/profilereservation.css", "css/profile_sidemenu.css", "css/navfooter.css"), array('modalBox.js'));
-
+    
     drawNavBar();?>
-
-<style>
-        .middle{
-            display:flex;
-            flex-direction: row;
-        }
-    </style>
-
-    <div id="middle">
+  
+    <div class="middle">
     
     <?php drawSideMenu();
 
@@ -31,4 +24,3 @@
     <?php drawFooter(); ?>
 
    
-?>
