@@ -9,7 +9,7 @@
 
     drawNavBar();
 
-    $reservations = getReservations($id_person); 
+    $reservations = getReservations(6); 
 
     drawReservations($reservations);
     

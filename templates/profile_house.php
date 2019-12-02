@@ -1,22 +1,22 @@
 <?php
-  include_once('templates/head.php');
-  include_once('templates/footer.php');
-  include_once('templates/nav_bar.php');
 
-  drawHead(array("css/profilehouse.css", "css/navfooter.css"), array());
-  drawNavBar();
-?>
+function drawHouses($houses) { ?>
 
 <h1>Houses</h1>
 
+<?php foreach ($houses as $house): 
+  $images = getImages($house['hab']);?>
 <div class="reservation">
 <div class="img">
-<img src="https://picsum.photos/300/200" alt="House Photo" width="250em" height="150em">
+<img src=<?= $images[0]['link'] ?> alt="House Photo" width="250em" height="150em">
 </div>
-
 <div class="text">
-  <p>Title</p>
-  <p>Local</p>
+  <p><?= $house['title'] ?></p>
+  <p><?= $house['location'] ?></p>
+  <p>Capacity:<?= $house['capacity'] ?></p>
+  <p>Price: <?= $house['price_per_day'] ?>€/night</p>
 </div>
 </div>
-<?php drawFooter() ?>
+<?php endforeach ?>
+<?php } ?>
+
