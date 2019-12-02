@@ -66,18 +66,8 @@ p {
 }
 
 #account {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "login", "signin";
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#account:first-child {
-    grid-area: login;
-}
-
-#account:second-child {
-    grid-area: signin;
 }
 
 #account a {
