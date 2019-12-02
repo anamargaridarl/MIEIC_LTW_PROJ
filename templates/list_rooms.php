@@ -1,8 +1,9 @@
 <?php
     function drawRooms($houses) {
-        foreach ($houses as $house): ?>
+        foreach ($houses as $house): 
+        $images = getImages($house['hab_id'])?>
         <section class="house">
-            <img src="https://picsum.photos/300/200" alt="House Photo" width="300" height=200>
+            <img src=<?= $images[0]['link'] ?> alt="House Photo" width="300" height=200>
             <section class="house_description">
             <a href="houses_page.php?id=<?= $house['hab_id'] ?>"> <?= $house['title'] ?> </a>
                 <p><?= $house['description'] ?></p>

@@ -68,6 +68,7 @@
         return $house;
     }
 
+    //get images based on the id of an habitation
     function getImages($id)
     {
         global $db;
@@ -77,12 +78,26 @@
         return $images;
     }
 
-    function getReservations()
+
+    //profile_reservation_page
+    function getReservations($client_id)
     {
         global $db;
-        $stmt = $db->prepare('SELECT * FROM reservations WHERE hab_id = ?');
-        $stmt->execute(array($id));
-        $images = $stmt->fetchAll();
-        return $images;
+        $stmt = $db->prepare('SELECT title, location,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE client = ? AND hab_id = hab');
+        $stmt->execute(array($client_id));
+        $reservations = $stmt->fetchAll();
+
+        return $reservations;
+    }
+
+    //profile_houses_page
+    function get_owner_houses($owner_id)
+    {
+        global $db;
+        $stmt = $db->prepare('SELECT hab, title, hab_id,price_per_day, capacity, location FROM ownership, habitation WHERE owner = ? and hab_id =hab');
+        $stmt->execute(array($owner_id));
+
+        $houses = $stmt->fetchAll();
+        return $houses;
     }
 ?>
