@@ -34,25 +34,25 @@
     <section class="explore">
       <p>Explore</p>
       <div>
-        <a id="north"  href="search_rooms.php?region=north">
+        <a id="north"  href="explore_rooms.php?region=north">
           <div class="landscape">
             <img src="/images/porto_explore.jpg" >
           </div>
           <p>North</p>
         </a>
-        <a id="center" href="search_rooms.php?region=center">
+        <a id="center" href="explore_rooms.php?region=center">
           <div class="landscape">  
             <img src="/images/viseu_explore.jpg" >
           </div>  
           <p>Center</p>
         </a>
-        <a id="south" href="search_rooms.php?region=south">
+        <a id="south" href="explore_rooms.php?region=south">
           <div class="landscape">  
             <img src="/images/algarve_explore.jpg" >
           </div>
           <p>South</p>
         </a>
-        <a id="islands" href="search_rooms.php?region=islands">
+        <a id="islands" href="explore_rooms.php?region=islands">
           <div class="landscape">
             <img src="/images/madeira_explore.jpg" >
           </div>
