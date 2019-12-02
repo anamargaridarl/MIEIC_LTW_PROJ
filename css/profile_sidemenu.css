@@ -1,11 +1,10 @@
 @import url("palette.css");
 .side-menu {
-    width: 10em;
     background-color: var(--blue-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 15%
+    width: 20%
 }
 
 .side-menu a {
@@ -15,6 +14,6 @@
     text-decoration: none;
     text-align: center;
     border: 0.5px solid white;
-    padding: 1em;
+    padding: 3em;
     margin: 0;
 }
