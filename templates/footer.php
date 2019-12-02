@@ -2,10 +2,10 @@
   function drawFooter() { ?>
     <footer>
       <div id="contacts">
-        <a href="contacts.html">Contacts</a>
+        <a href="https://www.youtube.com/watch?v=fWNaR-rxAic">Contacts</a>
       </div>
       <div>
-        <a href="about_us.html">About Us</a>
+        <a href="https://www.youtube.com/watch?v=QNJL6nfu__Q">About Us</a>
       </div>
       <div id="atname">
         <p>&copy;2019 HousesOfTheWorld&trade;</p>
