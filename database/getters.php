@@ -68,6 +68,7 @@
         return $house;
     }
 
+    //get images based on the id of an habitation
     function getImages($id)
     {
         global $db;

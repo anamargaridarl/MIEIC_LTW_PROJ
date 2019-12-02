@@ -13,7 +13,7 @@ h1 {
     color: var(--pink-color);
 }
 
-.reservation {
+.house {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-areas: "img text1";
@@ -48,5 +48,23 @@ h1 {
     text-align: center;
     padding: 0.5em 0.5em 0em 0.5em;
     font-size: 1.15em;
+    color: var(--grey-color);
+}
+
+.addhouse {
+    margin: 2em 20em 2em 25em;
+    border-radius: 20px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--grey-color);
+    padding: 1em;
+    text-align: center;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+}
+
+.addhouse a {
+    text-decoration: none;
+    font-size: 8em;
     color: var(--grey-color);
 }
