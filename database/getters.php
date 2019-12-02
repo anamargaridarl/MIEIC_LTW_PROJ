@@ -94,7 +94,7 @@
     function get_owner_houses($owner_id)
     {
         global $db;
-        $stmt = $db->prepare('SELECT hab, title, hab_id,price_per_day, capacity, location FROM ownership, habitation WHERE owner = ? and hab_id =hab');
+        $stmt = $db->prepare('SELECT hab, title, addr, region,hab_id,price_per_day, capacity, location FROM ownership, habitation WHERE owner = ? and hab_id =hab');
         $stmt->execute(array($owner_id));
 
         $houses = $stmt->fetchAll();

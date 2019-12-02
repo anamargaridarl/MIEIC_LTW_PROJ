@@ -14,53 +14,47 @@ h1 {
 }
 
 .house {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-areas: "img text1";
-    margin: 2em 20em 2em 25em;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
     border-radius: 20px;
     border-width: 0.5px;
     border-style: solid;
     border-color: var(--grey-color);
-    padding: 1em;
-}
-
-.img {
-    grid-area: img;
+    margin: 1em auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .img img {
     border-radius: 10px;
-}
-
-.text {
-    grid-area: text1;
+    display: block;
+    height: auto;
+    object-fit: contain;
 }
 
 .text p:nth-child(1) {
     text-align: center;
-    padding: 1em 0.5em 0em 0.25em;
     font-size: 1.75em;
     color: var(--pink-color);
 }
 
 .text p:nth-child(2) {
-    text-align: center;
-    padding: 0.5em 0.5em 0em 0.5em;
     font-size: 1.15em;
     color: var(--grey-color);
+    padding-bottom: 2em;
 }
 
 .addhouse {
-    margin: 2em 20em 2em 25em;
+    width: 50%;
     border-radius: 20px;
     border-width: 0.5px;
     border-style: solid;
     border-color: var(--grey-color);
-    padding: 1em;
     text-align: center;
-    padding-top: 0.65em;
-    padding-bottom: 0.65em;
+    margin: 1em auto;
 }
 
 .addhouse a {
