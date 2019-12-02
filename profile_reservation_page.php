@@ -5,7 +5,7 @@
     include_once('templates/profile_reservation.php');
     include_once('templates/nav_bar.php');
 
-    drawHead(array("css/profilereservation.css", "css/navfooter.css"), array());
+    drawHead(array("css/profilereservation.css", "css/navfooter.css"), array('modalBox.js'));
 
     drawNavBar();
 

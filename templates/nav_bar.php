@@ -14,8 +14,8 @@
   </div>
 
   <div id="account">
-    <a id="signupbtn" href="#signup">Sign Up</a>
-    <a id="loginbtn" href="#login">Sign In</a>
+    <a id="signupbtn" ">Sign Up</a>
+    <a id="loginbtn" ">Sign In</a>
   </div>
   <div id="logged">
     <img src="profilepic.png" class="profilepic">
