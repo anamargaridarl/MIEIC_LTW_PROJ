@@ -60,6 +60,7 @@ CREATE TABLE ownership (
 DROP TABLE IF EXISTS reservation;
 CREATE TABLE reservation (
   res_id AUTO PRIMARY KEY,
+  nr_guests INT NOT NULL,
   hab INT NOT NULL REFERENCES habitation ON DELETE RESTRICT ON UPDATE CASCADE,
   client INT NOT NULL REFERENCES client ON DELETE RESTRICT ON UPDATE CASCADE,
   start_date DATE NOT NULL,
@@ -68,6 +69,7 @@ CREATE TABLE reservation (
   CHECK (start_date < end_date)
   -- discount REAL ?
   -- total price? derived attribute
+  -- check number guest is lower or equal to habitation capacity
 );
 
 -- Possible tables
