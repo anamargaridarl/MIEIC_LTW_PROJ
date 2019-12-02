@@ -9,13 +9,26 @@
 
     drawHead(array("css/profilereservation.css", "css/profile_sidemenu.css", "css/navfooter.css"), array('modalBox.js'));
 
-    drawNavBar();
+    drawNavBar();?>
 
-    drawSideMenu();
+<style>
+        .middle{
+            display:flex;
+            flex-direction: row;
+        }
+    </style>
+
+    <div id="middle">
+    
+    <?php drawSideMenu();
 
     $reservations = getReservations(6); 
 
-    drawReservations($reservations);
+    drawReservations($reservations);?>
+
+    </div>
     
-    drawFooter();
+    <?php drawFooter(); ?>
+
+   
 ?>
