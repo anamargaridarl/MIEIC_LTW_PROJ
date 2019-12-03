@@ -14,6 +14,7 @@
           <p>Where</p>
           <input type="text" name="location" placeholder="Choose your next destination...">
         </div>
+        <div id="check">
         <div id="checkin">
           <p>Check-In</p>
           <input type="date" name="checkin">
@@ -22,6 +23,8 @@
           <p>Check-Out</p>
           <input type="date" name="checkout">
         </div>
+        </div>
+        <div id="guestbot">
         <div id="guests">
           <p>Nº guests</p>
           <input type="number" name="guests" min="1" max="8" placeholder="1">
@@ -29,11 +32,13 @@
         <div id="button">
         <input id="search" type="submit" value="Search">
         </div>
+        </div>
+
       </form>
     </section>
     <section class="explore">
       <p>Explore</p>
-      <div>
+      <div id="regions">
         <a id="north"  href="explore_rooms.php?region=north">
           <div class="landscape">
             <img src="/images/porto_explore.jpg" >
