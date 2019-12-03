@@ -1,18 +1,19 @@
         @import url("palette.css");
-    .side-menu {
-        background-color: var(--blue-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 20%;
-    }
-    
-    .side-menu a {
-        background-color: var(--pink-color);
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        border: 0.5px solid var(--black-color);
-        padding-bottom: 3em;
-        padding-top: 3em;
-        margin: 0;
+        .side-menu {
+            background-color: var(--blue-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 20%;
+        }
+        
+        .side-menu a {
+            background-color: var(--pink-color);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border: 0.5px solid var(--black-color);
+            padding-bottom: 3em;
+            padding-top: 3em;
+            margin: 0;
+        }
