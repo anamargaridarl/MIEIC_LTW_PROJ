@@ -17,7 +17,7 @@ h1 {
 .middle {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .res_page {
@@ -25,6 +25,7 @@ h1 {
 }
 
 .reservation {
+    min-width: 20%;
     padding: 1em;
     display: flex;
     flex-direction: row;

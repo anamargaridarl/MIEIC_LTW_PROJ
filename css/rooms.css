@@ -16,8 +16,9 @@ body {
 }
 
 .house img {
-    border-radius: 1em;
+    border-radius: 10px;
     object-fit: contain;
+    min-width: 30%;
 }
 
 .right {
