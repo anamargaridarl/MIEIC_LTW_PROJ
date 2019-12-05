@@ -159,26 +159,28 @@ html {
     justify-content: space-evenly;
 }
 
-.landscape {
+.landscape a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    align-content: space-between;
 }
 
 .landscape {
-    text-decoration: none;
     border: 1px solid var(--blue-color);
     width: 20em;
     margin: 0em 0em 1em 0em;
     border-radius: 10px;
+
 }
 
-.landscape img {
+.landscape > a img {
     width: 19.90em;
     height: 12em;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    margin-bottom: 0;
 }
 
 .explore>p {
@@ -186,7 +188,11 @@ html {
     font-size: 2em;
 }
 
-.landscape p {
+.landscape > a {
+    text-decoration: none;
+}
+
+.landscape > a p {
     text-align: center;
     background-color: var(--pink-color);
     color: var(--white-color);
@@ -195,5 +201,5 @@ html {
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
     border-top: 1px solid var(--blue-color);
-    margin-top: 0.1px;
+    margin-top: 0;
 }

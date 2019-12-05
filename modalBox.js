@@ -6,7 +6,7 @@ const sgnup = document.querySelector('#signupbtn');
 
 const login = document.querySelector('#loginbtn');
 
-const explore = document.querySelector('#explore');
+const explore = document.querySelector('#exploreform');
 
 sgnup.addEventListener('click', function() {
   modalSignup.style.display = 'block';
@@ -21,6 +21,6 @@ login.addEventListener('click', function() {
 window.addEventListener('click', function(event) {
   if (event.target == modalSignup || event.target == modalLogin) {
     event.target.style.display = 'none';
-    explore.style.display = 'grid';
+    explore.style.display = 'flex';
   }
 });

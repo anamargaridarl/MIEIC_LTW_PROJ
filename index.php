@@ -40,29 +40,25 @@
       <p>Explore</p>
       <div id="regions">
         <div class="landscape">
-        <a id="north"  href="explore_rooms.php?region=north">
+          <a id="north"  href="explore_rooms.php?region=north">
+            <img src="/images/porto_explore.jpg" ><p>North</p>
           </a>
-            <img src="/images/porto_explore.jpg" >
-            <p>North</p>
-          </div>
+        </div>
         <div class="landscape">  
-        <a id="center" href="explore_rooms.php?region=center">
+          <a id="center" href="explore_rooms.php?region=center">
+            <img src="/images/viseu_explore.jpg" ><p>Center</p>
           </a>
-            <img src="/images/viseu_explore.jpg" >
-            <p>Center</p>
-          </div>  
+        </div>  
         <div class="landscape">  
-        <a id="south" href="explore_rooms.php?region=south">
+          <a id="south" href="explore_rooms.php?region=south">
+            <img src="/images/algarve_explore.jpg" ><p>South</p>
           </a>
-            <img src="/images/algarve_explore.jpg" >
-            <p>South</p>
-          </div>
+        </div>
         <div class="landscape">
-        <a id="islands" href="explore_rooms.php?region=islands">
+          <a id="islands" href="explore_rooms.php?region=islands">
+            <img src="/images/madeira_explore.jpg" ><p>Islands</p>
           </a>
-              <img src="/images/madeira_explore.jpg" >
-            <p>Islands</p>
-          </div>
+        </div>
       </div>
     </section>  
     <?php drawFooter() ?>
