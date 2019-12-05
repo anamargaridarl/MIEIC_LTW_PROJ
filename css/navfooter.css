@@ -88,6 +88,7 @@ p {
 }
 
 footer {
+    position: relative;
     bottom: 0;
     height: 7em;
     width: 100%;

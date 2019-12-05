@@ -10,7 +10,6 @@
     drawHead(array("css/profilereservation.css", "css/profile_sidemenu.css", "css/navfooter.css"), array('modalBox.js'));
     ?>
 
-    <div class="page">
 
     <?php drawNavBar();?>
   
@@ -26,5 +25,4 @@
     
     <?php drawFooter(); ?>
 
-    </div>
    

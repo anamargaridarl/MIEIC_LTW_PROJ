@@ -7,18 +7,12 @@
 
     drawHead(array("css/rooms.css", "css/navfooter.css"), array('modalBox.js'));?>
 
-    <div id= "page">
     
-    <div id ="pagelessfooter">
     <?php drawNavBar();
 
     $houses = getRoomsByRegion($_GET['region']);
     
     drawRooms($houses);?>
 
-    </div>
-    
     <?php drawFooter(); ?>
 
-    </div>
-?>

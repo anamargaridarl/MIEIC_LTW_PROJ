@@ -14,16 +14,10 @@ h1 {
     width: 50%;
 }
 
-.page {
-    position: relative;
-    min-height: 100vh;
-}
-
 .middle {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: 90vh;
 }
 
 .res_page {
