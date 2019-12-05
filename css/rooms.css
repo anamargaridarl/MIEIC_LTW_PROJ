@@ -11,6 +11,15 @@
     width: 60%;
 }
 
+.page {
+    min-height: 100vh;
+    position: relative;
+}
+
+.pagelessfooter {
+    padding-bottom: 7em;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }

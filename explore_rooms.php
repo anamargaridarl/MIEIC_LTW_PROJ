@@ -5,13 +5,20 @@
     include_once('templates/list_rooms.php');
     include_once('templates/nav_bar.php');
 
-    drawHead(array("css/rooms.css", "css/navfooter.css"), array('modalBox.js'));
+    drawHead(array("css/rooms.css", "css/navfooter.css"), array('modalBox.js'));?>
 
-    drawNavBar();
+    <div id= "page">
+    
+    <div id ="pagelessfooter">
+    <?php drawNavBar();
 
     $houses = getRoomsByRegion($_GET['region']);
     
-    drawRooms($houses);
+    drawRooms($houses);?>
+
+    </div>
     
-    drawFooter();
+    <?php drawFooter(); ?>
+
+    </div>
 ?>
