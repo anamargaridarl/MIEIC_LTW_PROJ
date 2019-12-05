@@ -12,17 +12,20 @@
     <i class="material-icons">search</i>
     <input class="input-field" type="text" placeholder="Local" name="Location">
   </div>
-
-  <div id="account">
-    <a id="signupbtn">Sign Up</a>
-    <a id="loginbtn">Sign In</a>
-  </div>
-  <div id="logged">
-    <img src="profilepic.png" class="profilepic">
-    <a href="profile.php">My Profile</a>
-    <a href="signout.php" id="signout">Sign Out</a>
-  </div>
-
+  
+  <?php $_SESSION['username'] = 'Joana' ?>
+  <?php if(isset($_SESSION)) {?>
+    <div id="logged">
+      <a href="profile.php"><?= $_SESSION['username']?></a>
+      <img src="../images/profile_pic.jpg" class="profilepic">
+      <a href="signout.php" id="signout">Sign Out</a>
+    </div>
+    <?php } else { ?>
+      <div id="account">
+        <a id="signupbtn" href="">Sign Up</a>
+        <a id="loginbtn" href="">Sign In</a>
+      </div>
+  <?php } ?>
 </nav>
 
 <?php 
