@@ -23,6 +23,7 @@ html {
 
 #navbar {
     background-color: rgba(0, 0, 0, 0);
+    justify-content: right;
 }
 
 #navbar>#logo,
