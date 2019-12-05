@@ -7,9 +7,10 @@
 
 
     // Uncomment in production
-    // if (!isset($_SESSION['username'])) {
-    //     die(header('Location: /index.php'));
-    // }
+    if (!isset($_SESSION['username'])) {
+        //die(header('Location: /index.php'));
+        echo "<script>alert('User not logged in!')</script>";
+    }
 
     drawHead(array("css/navfooter.css", "css/profile.css" ,"css/profile_sidemenu.css"), array());
     drawNavBar();
