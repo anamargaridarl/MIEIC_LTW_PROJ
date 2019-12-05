@@ -16,8 +16,8 @@
   <?php $_SESSION['username'] = 'Joana' ?>
   <?php if(isset($_SESSION)) {?>
     <div id="logged">
+      <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
       <a href="profile.php"><?= $_SESSION['username']?></a>
-      <img src="../images/profile_pic.jpg" class="profilepic">
       <a href="signout.php" id="signout">Sign Out</a>
     </div>
     <?php } else { ?>

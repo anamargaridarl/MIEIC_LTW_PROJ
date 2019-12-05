@@ -67,25 +67,31 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#account a , #logged a{
+#account a , #logged a {
     text-decoration: none;
     margin-right: 0.5em;
     margin-left: 0.5em;
     padding-top: 0.5em;
-    padding-left: 1em;
     padding-bottom: 0.5em;
     font-size: 1.25em;
-    border-width: 0.5px;
-    border-left-style: solid;
-    border-color: var(--grey-color);
     color: var(--white-color);
 }
 
-#logged img {
+#account a, #logged a:nth-child(3), #logged div {
+    padding-left: 1em;
+    border-width: 0.5px;
+    border-left-style: solid;
+    border-color: var(--grey-color);
+}
+
+#logged > div > img {
     border-radius: 100px;
     max-height: 2.5em;
     max-width: 2.5em;
     padding-right: 0em;
+    border-width: 0.5px;
+    border-left-style: solid;
+    border-color: var(--grey-color);
 }
 
 footer {
