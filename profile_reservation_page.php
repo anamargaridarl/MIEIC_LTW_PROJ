@@ -8,8 +8,11 @@
 
     
     drawHead(array("css/profilereservation.css", "css/profile_sidemenu.css", "css/navfooter.css"), array('modalBox.js'));
-    
-    drawNavBar();?>
+    ?>
+
+    <div class="page">
+
+    <?php drawNavBar();?>
   
     <div class="middle">
     
@@ -23,4 +26,5 @@
     
     <?php drawFooter(); ?>
 
+    </div>
    

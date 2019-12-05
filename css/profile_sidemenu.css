@@ -3,7 +3,7 @@
             background-color: var(--blue-color);
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: stretch;
             width: 20%;
         }
         

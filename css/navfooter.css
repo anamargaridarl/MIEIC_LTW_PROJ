@@ -88,7 +88,9 @@ p {
 }
 
 footer {
-    padding: 1em 1em 1em 1em;
+    position: absolute;
+    bottom: 0;
+    height: 7em;
     width: 100%;
     background-color: var(--blue-color);
     text-align: center;
