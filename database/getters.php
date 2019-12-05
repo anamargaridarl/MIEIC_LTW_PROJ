@@ -1,8 +1,6 @@
 <?php
     include_once('../includes/database.php');
-
-    // SHOULD CREATE SINGLETON INSTANCE OF DATABASE INSTEAD OF USING GLOBAL VARS
-
+    
     function getRooms($location,$checkin,$checkout,$guests,$region) {
         $db = Database::instance()->db();        
         
