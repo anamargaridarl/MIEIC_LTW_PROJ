@@ -6,10 +6,10 @@
     include_once('templates/nav_bar.php');
     include_once('templates/profile_sidemenu.php');
 
-        // if (!isset($_SESSION['username'])) {
-        //     //die(header('Location: /index.php'));
-        //    //echo "<script>alert('User not logged in!')</script>";
-        // }
+        if (!isset($_SESSION['username'])) {
+            //die(header('Location: /index.php'));
+            http_response_code(401);
+        }
 
     drawHead(array("css/profilehouse.css", "css/profile_sidemenu.css","css/navfooter.css"), array('modalBox.js'));
 
