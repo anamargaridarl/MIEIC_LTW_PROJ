@@ -22,8 +22,8 @@
     </div>
     <?php } else { ?>
       <div id="account">
-        <a id="signupbtn" href="">Sign Up</a>
-        <a id="loginbtn" href="">Sign In</a>
+        <a id="signupbtn" >Sign Up</a>
+        <a id="loginbtn">Sign In</a>
       </div>
   <?php } ?>
 </nav>

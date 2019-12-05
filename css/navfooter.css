@@ -132,19 +132,24 @@ footer div {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+#modalLogin form, #modalSignup form {
+    width: 40%;
+    position: relative;
+    left: 30%;
+    top: 20%;
+}
+
 #signup,
 #login {
     background-color: var(--white-color);
     border: 0.2em solid var(--blue-color);
     border-radius: 1em;
     padding: 2em 2em 0em 2em;
-    width: 40%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
     position: relative;
-    left: 30%;
-    top: 20%;
     animation-name: animateUp;
     animation-duration: 1s;
 }
