@@ -1,5 +1,6 @@
 <?php
     include_once('database/users.php');
+    include_once('includes/session.php');
     include_once('templates/head.php');
     include_once('templates/footer.php');
     include_once('templates/nav_bar.php');
@@ -7,9 +8,11 @@
 
 
     // Uncomment in production
-    // if (!isset($_SESSION['username'])) {
-    //     die(header('Location: /index.php'));
-    // }
+    if (!isset($_SESSION['email'])) {
+        print_r($_SESSION);
+        die();
+        die(header('Location: /index.php'));
+    }
 
     drawHead(array("css/navfooter.css", "css/profile.css" ,"css/profile_sidemenu.css"), array());
     drawNavBar();
