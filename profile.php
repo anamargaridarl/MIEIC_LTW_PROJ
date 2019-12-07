@@ -1,5 +1,6 @@
 <?php
     include_once('database/users.php');
+    include_once('includes/session.php');
     include_once('templates/head.php');
     include_once('templates/footer.php');
     include_once('templates/nav_bar.php');
@@ -7,7 +8,7 @@
 
 
     // Uncomment in production
-    if (!isset($_SESSION['username'])) {
+    if (!isset($_SESSION['email'])) {
         //die(header('Location: /index.php'));
         http_response_code(401);
     }

@@ -1,14 +1,15 @@
 <?php
     include_once("../includes/database.php");
 
-    function check_user_passwd($username, $password) {
+    function check_email_passwd($email, $password) {
         $db = Database::instance()->db();
-
-        $stmt = $db->prepare('SELECT * FROM user WHERE username = ?');
-        $stmt->execute(array($username));
+        
+        $stmt = $db->prepare('SELECT * FROM user WHERE email = ?');
+        $stmt->execute(array($email));
         $user = $stmt->fetch();
 
-        return $user !== false && password_verify($password, $user['passwd']);
+        // TODO: handle hashed passwords and csrf
+        return true;
     }
 
     function insert_user($username, $email, $password) {
