@@ -5,7 +5,9 @@
 
 <nav id="navbar">
   <div id="logo">
+  <a id="homepage"  href="index.php">
   <img src="../images/logodemo.png" alt="Logo">
+  </a>
   </div>
 
   <div class="input-container">
