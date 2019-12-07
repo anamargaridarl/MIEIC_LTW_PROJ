@@ -7,7 +7,7 @@ function drawHouses($houses) { ?>
 
 <?php foreach ($houses as $house): 
   $images = getImages($house['hab']);?>
-  <a class="house">
+  <a class="house" href="houses_page.php?id=<?=$house['hab']?>">
     <div class="img">
       <img src=<?= $images[0]['link'] ?> alt="House Photo" width="250em" height="250em">
     </div>
@@ -18,7 +18,7 @@ function drawHouses($houses) { ?>
       <p>Capacity:<?= $house['capacity'] ?></p>
       <p>Price: <?= $house['price_per_day'] ?>€/night</p>
     </div>
-  </a>
+</a>
 <?php endforeach ?>
   <div class="addhouse">
     <a href="profile.php"> + </a>

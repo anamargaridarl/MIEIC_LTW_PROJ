@@ -28,6 +28,8 @@ h1 {
     border-color: var(--grey-color);
     margin: 1em 1em auto;
     padding: 1em;
+    text-decoration: none;
+    color: var(--black-color);
 }
 
 .middle {
