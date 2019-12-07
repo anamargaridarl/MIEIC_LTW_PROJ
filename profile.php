@@ -9,9 +9,8 @@
 
     // Uncomment in production
     if (!isset($_SESSION['email'])) {
-        print_r($_SESSION);
-        die();
-        die(header('Location: /index.php'));
+        //die(header('Location: /index.php'));
+        http_response_code(401);
     }
 
     drawHead(array("css/navfooter.css", "css/profile.css" ,"css/profile_sidemenu.css"), array());

@@ -6,7 +6,12 @@
     include_once('templates/nav_bar.php');
     include_once('templates/profile_sidemenu.php');
 
-    
+    if (!isset($_SESSION['username'])) {
+        //die(header('Location: /index.php'));
+        http_response_code(401);
+    }
+
+
     drawHead(array("css/profilereservation.css", "css/profile_sidemenu.css", "css/navfooter.css"), array('modalBox.js'));
     ?>
 
@@ -17,9 +22,9 @@
     
     <?php drawSideMenu();
 
-    $reservations = getReservations(6); 
+    //$reservations = getReservations(6); 
 
-    drawReservations($reservations);?>
+    //drawReservations($reservations);?>
 
     </div>
     
