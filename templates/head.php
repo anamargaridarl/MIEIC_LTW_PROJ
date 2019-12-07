@@ -18,4 +18,6 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+        <div id="page-container">
+            <div id="content-wrap">
 <?php } ?>
