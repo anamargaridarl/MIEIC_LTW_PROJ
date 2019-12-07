@@ -9,9 +9,12 @@
 
     try {
         insert_user($username, $email, $password);
-        $_SESSION['email'] = $username;
+        $_SESSION['email'] = $email;
+        $_SESSION['username'] = $username;
         header('Location: ../profile.php');
     } catch (PDOException $e) {
         // TODO: handle database insert error (user already exists,...)
+        print_r($_POST);
+        print_r($e);
     }
 ?>

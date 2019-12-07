@@ -15,10 +15,10 @@
     function insert_user($username, $email, $password) {
         $db = Database::instance()->db();
 
-        $stmt = $db->prepare('INSERT INTO user(username, passwd, joined_on) values(?, ?, ?)');
+        $stmt = $db->prepare('INSERT INTO user(username, email, passwd, joined_on) values(?, ?, ?, ?)');
 
         // TODO: hash password
-        $stmt->execute(array($username, $password, date('Y-m-d')));
+        $stmt->execute(array($username, $email, $password, date('Y-m-d')));
     }
 
 ?>
