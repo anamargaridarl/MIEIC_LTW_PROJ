@@ -25,7 +25,7 @@
     <section class="profile-info">
         <section class="profile-image">
             <img src="images/profile_pic_resize.jpg" alt="profile picture">
-            <p>Person Name</p>
+            <p><?= $_SESSION['username'] ?></p>
         </section>
         <form>
             <label for="username">Name</label>

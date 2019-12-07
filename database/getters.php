@@ -96,4 +96,13 @@
         $houses = $stmt->fetchAll();
         return $houses;
     }
+
+    function get_username($email) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT username FROM user WHERE email = ?');
+        $stmt->execute(array($email));
+
+        $username = $stmt->fetch()['username'];
+        return $username;
+    }
 ?>
