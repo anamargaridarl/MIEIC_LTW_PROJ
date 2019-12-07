@@ -12,7 +12,9 @@
 
   <div class="input-container">
     <i class="material-icons">search</i>
-    <input class="input-field" type="text" placeholder="Local" name="Location">
+    <form id="input" method="get" action="http://localhost:8088/search_rooms.php" method ="GET">
+    <input class="input-field" id='input-field' type="text" placeholder="Local" name="Location">
+    </form>
   </div>
 
   <div id="account">
