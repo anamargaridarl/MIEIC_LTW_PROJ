@@ -1,5 +1,5 @@
 <?php
-    include_once('database/users.php');
+    //include_once('database/users.php');
     include_once('templates/head.php');
     include_once('templates/footer.php');
     include_once('templates/nav_bar.php');

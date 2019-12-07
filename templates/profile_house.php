@@ -8,9 +8,9 @@ function drawHouses($houses) { ?>
 <?php foreach ($houses as $house): 
   $images = getImages($house['hab']);?>
   <div class="house">
-  <div class="img">
-  <img src=<?= $images[0]['link'] ?> alt="House Photo" width="250em" height="250em">
-  </div>
+    <div class="img">
+      <img src=<?= $images[0]['link'] ?> alt="House Photo" width="250em" height="250em">
+    </div>
   <div class="text">
   <p><?= $house['title'] ?></p>
   <p><?= $house['region'] ?> , <?= $house['location'] ?></p>
