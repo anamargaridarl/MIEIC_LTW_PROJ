@@ -1,5 +1,7 @@
 <?php
   include_once('templates/modalBoxes.php');
+  include_once('includes/session.php');
+
   function drawNavBar() {
 ?>
 
@@ -16,17 +18,19 @@
     <input class="input-field" id='input-field' type="text" placeholder="Local" name="Location">
     </form>
   </div>
-
-  <div id="account">
-    <a id="signupbtn" ">Sign Up</a>
-    <a id="loginbtn" ">Sign In</a>
-  </div>
-  <div id="logged">
-    <img src="profilepic.png" class="profilepic">
-    <a href="profile.php">My Profile</a>
-    <a href="signout.php" id="signout">Sign Out</a>
-  </div>
-
+  
+  <?php if(isset($_SESSION['email'])) {?>
+    <div id="logged">
+      <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
+      <a href="profile.php"><?= $_SESSION['username']?></a>
+      <a href="actions/action_signout.php" id="signout">Sign Out</a>
+    </div>
+    <?php } else { ?>
+      <div id="account">
+        <a id="signupbtn" >Sign Up</a>
+        <a id="loginbtn">Sign In</a>
+      </div>
+  <?php } ?>
 </nav>
 
 <?php 

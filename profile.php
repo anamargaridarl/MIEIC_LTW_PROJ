@@ -1,5 +1,10 @@
 <?php
+<<<<<<< HEAD
     //include_once('database/users.php');
+=======
+    include_once('database/users.php');
+    include_once('includes/session.php');
+>>>>>>> login
     include_once('templates/head.php');
     include_once('templates/footer.php');
     include_once('templates/nav_bar.php');
@@ -7,9 +12,10 @@
 
 
     // Uncomment in production
-    // if (!isset($_SESSION['username'])) {
-    //     die(header('Location: /index.php'));
-    // }
+    if (!isset($_SESSION['email'])) {
+        //die(header('Location: /index.php'));
+        http_response_code(401);
+    }
 
     drawHead(array("css/navfooter.css", "css/profile.css" ,"css/profile_sidemenu.css"), array());
     drawNavBar();
@@ -23,7 +29,7 @@
     <section class="profile-info">
         <section class="profile-image">
             <img src="images/profile_pic_resize.jpg" alt="profile picture">
-            <p>Person Name</p>
+            <p><?= $_SESSION['username'] ?></p>
         </section>
         <form>
             <label for="username">Name</label>

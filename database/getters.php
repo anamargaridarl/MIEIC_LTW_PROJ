@@ -1,13 +1,9 @@
 <?php
-    include_once('database/connection.php');
-
-    // SHOULD CREATE SINGLETON INSTANCE OF DATABASE INSTEAD OF USING GLOBAL VARS
-
+    include_once('../includes/database.php');
+    
     function getRooms($location,$checkin,$checkout,$guests,$region) {
-        global $db;        
+        $db = Database::instance()->db();        
         
-        
-
         $houses = [];
         if($location != NULL) {
             $stmt = $db->prepare('SELECT DISTINCT hab_id,title, description, price_per_day FROM habitation WHERE location = ? COLLATE NOCASE');
@@ -52,7 +48,7 @@
     }
 
     function getRoomsByRegion($region) {
-        global $db;
+        $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ?');
         $stmt->execute(array($region));
         return $stmt->fetchAll();
@@ -60,7 +56,7 @@
 
     function getRoom($id)
     {
-        global $db;
+        $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT title, nr_rooms,nr_bathrooms,capacity,description,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
@@ -71,7 +67,7 @@
     //get images based on the id of an habitation
     function getImages($id)
     {
-        global $db;
+        $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT link FROM images WHERE hab_id = ?');
         $stmt->execute(array($id));
         $images = $stmt->fetchAll();
@@ -82,7 +78,7 @@
     //profile_reservation_page
     function getReservations($client_id)
     {
-        global $db;
+        $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT title, location,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE client = ? AND hab_id = hab');
         $stmt->execute(array($client_id));
         $reservations = $stmt->fetchAll();
@@ -93,11 +89,20 @@
     //profile_houses_page
     function get_owner_houses($owner_id)
     {
-        global $db;
+        $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT hab, title, addr, region,hab_id,price_per_day, capacity, location FROM ownership, habitation WHERE owner = ? and hab_id =hab');
         $stmt->execute(array($owner_id));
 
         $houses = $stmt->fetchAll();
         return $houses;
+    }
+
+    function get_username($email) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT username FROM user WHERE email = ?');
+        $stmt->execute(array($email));
+
+        $username = $stmt->fetch()['username'];
+        return $username;
     }
 ?>
