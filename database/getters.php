@@ -110,7 +110,7 @@
 
         //profile_edit_house
     function get_owner_house($owner_id,$house_id) {
-           global $db;
+            $db = Database::instance()->db();
            $stmt = $db->prepare('SELECT hab_id, title, addr,region, price_per_day, capacity, nr_rooms, nr_bathrooms, description, location FROM ownership, habitation WHERE owner = ? and hab_id = ? and hab_id = hab');
            $stmt->execute(array($owner_id,$house_id));
     

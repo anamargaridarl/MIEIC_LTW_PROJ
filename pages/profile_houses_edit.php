@@ -12,7 +12,7 @@
         http_response_code(401);
     }
 
-    drawHead(array("../css/profilehouseedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js'));
+    drawHead(array("../css/profilehouseedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../modal_box.js'));
 
     drawNavBar();?>
     <div class="middle">
@@ -20,8 +20,8 @@
     <?php
     
     drawSideMenu();
-   // $house_id = $_GET['id'];
-   // $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
+    $house_id = 1;
+    $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
     editHouse($house);?>
     
     </div>

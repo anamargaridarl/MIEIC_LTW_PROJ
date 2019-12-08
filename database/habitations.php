@@ -15,7 +15,7 @@
                               SET title = ?,
                                   price_per_day = ?,
                                   nr_rooms = ?,
-                                  nr_bathroms = ?,
+                                  nr_bathrooms = ?,
                                   capacity = ?,
                                   addr = ?,
                                   location = ?,
@@ -25,13 +25,13 @@
                                   hab_id = ?');
 
         $stmt->execute(array($house['title'],
-                             $house['region'],
-                             $house['location'],
-                             $house['address'], 
-                             $house['capacity'],
+                             $house['price_p_day'],
                              $house['n_bedrooms'],
                              $house['n_bathrooms'],
-                             $house['price_p_day'],
+                             $house['capacity'],
+                             $house['address'], 
+                             $house['location'],
+                             $house['region'],
                              $house['description'],
                              $house_id,));
     }
