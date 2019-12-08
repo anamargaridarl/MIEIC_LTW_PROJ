@@ -21,4 +21,24 @@
         $stmt->execute(array($username, $email, $password, date('Y-m-d')));
     }
 
+    function update_username($email, $name) {
+        $db = Database::instance()->db();
+
+        $stmt = $db->prepare('UPDATE user SET username = ? WHERE email = ?');
+        $stmt->execute(array($name, $email));
+    }
+
+    function update_passwd($email, $passwd) {
+        $db = Database::instance()->db();
+
+        $stmt = $db->prepare('UPDATE user SET passwd = ? WHERE email = ?');
+        $stmt->execute(array($passwd, $email));
+    }
+
+    function update_email($email, $new_email) {
+        $db = Database::instance()->db();
+
+        $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
+        $stmt->execute(array($new_email, $email));
+    }
 ?>
