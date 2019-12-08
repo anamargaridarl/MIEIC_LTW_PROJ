@@ -1,10 +1,10 @@
 <?php
-    include_once('database/users.php');
-    include_once('includes/session.php');
-    include_once('templates/head.php');
-    include_once('templates/footer.php');
-    include_once('templates/nav_bar.php');
-    include_once('templates/profile_sidemenu.php');
+    include_once('../database/users.php');
+    include_once('../includes/session.php');
+    include_once('../templates/head.php');
+    include_once('../templates/footer.php');
+    include_once('../templates/nav_bar.php');
+    include_once('../templates/profile_sidemenu.php');
 
 
     // Uncomment in production
@@ -13,7 +13,7 @@
         http_response_code(401);
     }
 
-    drawHead(array("css/navfooter.css", "css/profile.css" ,"css/profile_sidemenu.css"), array());
+    drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array());
     drawNavBar();
     // drawProfile();
 ?>
@@ -24,7 +24,7 @@
 
     <section class="profile-info">
         <section class="profile-image">
-            <img src="images/profile_pic_resize.jpg" alt="profile picture">
+            <img src="../images/profile_pic_resize.jpg" alt="profile picture">
             <p><?= $_SESSION['username'] ?></p>
         </section>
         <form>

@@ -1,5 +1,5 @@
 <?php
-  include_once('templates/modalBoxes.php');
+  include_once('modal_boxes.php');
   include_once('includes/session.php');
 
   function drawNavBar() {
@@ -7,14 +7,14 @@
 
 <nav id="navbar">
   <div id="logo">
-  <a id="homepage"  href="index.php">
+  <a id="homepage"  href="../index.php">
   <img src="../images/logodemo.png" alt="Logo">
   </a>
   </div>
 
   <div class="input-container">
     <i class="material-icons">search</i>
-    <form id="input" method="get" action="http://localhost:8088/search_rooms.php" method ="GET">
+    <form id="input" method="get" action="search_rooms.php" method ="GET">
     <input class="input-field" id='input-field' type="text" placeholder="Local" name="Location">
     </form>
   </div>
@@ -23,7 +23,7 @@
     <div id="logged">
       <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
       <a href="profile.php"><?= $_SESSION['username']?></a>
-      <a href="actions/action_signout.php" id="signout">Sign Out</a>
+      <a href="../actions/action_signout.php" id="signout">Sign Out</a>
     </div>
     <?php } else { ?>
       <div id="account">

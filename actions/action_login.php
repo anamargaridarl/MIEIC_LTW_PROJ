@@ -9,7 +9,7 @@
     if (check_email_passwd($email, $password)) {
         $_SESSION['email'] = $email;
         $_SESSION['username'] = get_username($email);
-        header('Location: ../profile.php');
+        header('Location: ../pages/profile.php');
     } else {
         header('Location: ../index.php');
     }

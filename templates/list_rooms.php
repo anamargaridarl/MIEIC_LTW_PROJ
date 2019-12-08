@@ -11,7 +11,7 @@
             </section>
             <section class="house_price">
                 <p><?= $house['price_per_day']?>€/day</p>
-                <a href="../houses_page.php?id=<?= $house['hab_id']?>">Check availability</a>
+                <a href="houses_page.php?id=<?= $house['hab_id']?>">Check availability</a>
             </section>
             </section>
         </section>
