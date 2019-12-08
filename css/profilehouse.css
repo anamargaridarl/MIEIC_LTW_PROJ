@@ -1,5 +1,4 @@
 @import url("palette.css");
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -72,44 +71,4 @@ h1 {
     text-decoration: none;
     font-size: 8em;
     color: var(--grey-color);
-}
-
-/* EDIT HOUSE PROFILE */
-
-#editform {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1em 1em auto;
-    padding: 1em;
-    text-decoration: none;
-    color: var(--black-color);
-}
-
-#h_title {
-    display: flex;
-    flex-flow: row nowrap;   
-}
-
-#h_title input {
-    flex: auto;
-    width: 100%;
-}
-#h_location {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-#h_capacity {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-#h_description {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
 }
