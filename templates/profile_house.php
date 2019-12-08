@@ -21,7 +21,7 @@ function drawHouses($houses) { ?>
 </div>
 <?php endforeach ?>
   <div class="addhouse">
-    <a href="profile.php"> + </a>
+    <a href="pages/profile.php"> + </a>
   </div>
 </div>
 <?php } ?>
