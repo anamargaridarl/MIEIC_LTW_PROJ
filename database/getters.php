@@ -58,8 +58,7 @@
         return $stmt->fetchAll();
     }
 
-    function getRoom($id)
-    {
+    function getRoom($id) {
         global $db;
         $stmt = $db->prepare('SELECT title, nr_rooms,nr_bathrooms,capacity,description,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
@@ -69,8 +68,7 @@
     }
 
     //get images based on the id of an habitation
-    function getImages($id)
-    {
+    function getImages($id) {
         global $db;
         $stmt = $db->prepare('SELECT link FROM images WHERE hab_id = ?');
         $stmt->execute(array($id));
@@ -80,8 +78,7 @@
 
 
     //profile_reservation_page
-    function getReservations($client_id)
-    {
+    function getReservations($client_id) {
         global $db;
         $stmt = $db->prepare('SELECT title, location,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE client = ? AND hab_id = hab');
         $stmt->execute(array($client_id));
@@ -91,13 +88,22 @@
     }
 
     //profile_houses_page
-    function get_owner_houses($owner_id)
-    {
+    function get_owner_houses($owner_id) {
         global $db;
         $stmt = $db->prepare('SELECT hab, title, addr, region,hab_id,price_per_day, capacity, location FROM ownership, habitation WHERE owner = ? and hab_id =hab');
         $stmt->execute(array($owner_id));
 
         $houses = $stmt->fetchAll();
         return $houses;
+    }
+
+    //profile_edit_house
+    function get_owner_house($owner_id,$house_id) {
+        global $db;
+        $stmt = $db->prepare('SELECT hab_id, title, addr,region, price_per_day, capacity, nr_rooms, nr_bathrooms, description, location FROM ownership, habitation WHERE owner = ? and hab_id = ? and hab = ?');
+        $stmt->execute(array($owner_id,$house_id));
+
+        $house = $stmt->fetchAll();
+        return $house;
     }
 ?>
