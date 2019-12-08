@@ -15,7 +15,7 @@
   <div class="input-container">
     <i class="material-icons">search</i>
     <form id="input" method="get" action="search_rooms.php" method ="GET">
-    <input class="input-field" id='input-field' type="text" placeholder="Local" name="Location">
+    <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
     </form>
   </div>
   
