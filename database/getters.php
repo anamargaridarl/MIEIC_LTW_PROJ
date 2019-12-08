@@ -86,6 +86,17 @@
         return $reservations;
     }
 
+    function getReservationsHouse($house_id)
+    {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT title, location,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE hab_id = hab');
+        $stmt->execute(array($house_id));
+        $reservations = $stmt->fetchAll();
+
+        return $reservations;
+    }
+
+    
     //profile_houses_page
     function get_owner_houses($owner_id)
     {
@@ -95,6 +106,16 @@
 
         $houses = $stmt->fetchAll();
         return $houses;
+    }
+
+        //profile_edit_house
+    function get_owner_house($owner_id,$house_id) {
+           global $db;
+           $stmt = $db->prepare('SELECT hab_id, title, addr,region, price_per_day, capacity, nr_rooms, nr_bathrooms, description, location FROM ownership, habitation WHERE owner = ? and hab_id = ? and hab_id = hab');
+           $stmt->execute(array($owner_id,$house_id));
+    
+           $house = $stmt->fetchAll();
+           return $house[0];
     }
 
     function get_username($email) {
