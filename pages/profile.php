@@ -27,11 +27,16 @@
             <img src="../images/profile_pic_resize.jpg" alt="profile picture">
             <p><?= $_SESSION['username'] ?></p>
         </section>
-        <form>
+        <form method="post" action="../actions/action_update_profile.php">
             <label for="username">Name</label>
-            <input type="text" name="username">
+            <input type="text" name="username" value="<?= $_SESSION['username'] ?>">
+
             <label for="email">Email</label>
-            <input type="text" name="email">
+            <input type="text" name="email" value="<?= $_SESSION['email'] ?>">
+
+            <label for="passfield">Password</label>
+            <input type="password" name="passfield">
+
             <input type="submit" name="submit" value="Update profile">
         </form>
     </section>
