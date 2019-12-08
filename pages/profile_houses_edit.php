@@ -20,8 +20,8 @@
     <?php
     
     drawSideMenu();
-   // $house_id = $_GET['id'];
-   // $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
+    $house_id = $_GET['id'];
+    $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
     editHouse($house);?>
     
     </div>
