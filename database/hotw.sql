@@ -11,7 +11,6 @@ CREATE TABLE user (
   email TEXT UNIQUE NOT NULL,
   username TEXT UNIQUE NOT NULL,
   hash TEXT NOT NULL,
-  salt TEXT NOT NULL,
   joined_on DATE NOT NULL
   -- country perhaps?
   --points gained(through forum participation) ? 
