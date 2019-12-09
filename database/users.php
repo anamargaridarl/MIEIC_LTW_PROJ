@@ -7,7 +7,7 @@
         $stmt = $db->prepare('SELECT hash FROM user WHERE email = ? ');
         $stmt->execute(array($email));
         $hash = $stmt->fetch();
-        // TODO: handle hashed passwords and csrf
+        // TODO: handle csrf
         return password_verify($password,$hash['hash']);
     }
 
@@ -29,9 +29,9 @@
 
     function update_passwd($email, $passwd) {
         $db = Database::instance()->db();
-
-        $stmt = $db->prepare('UPDATE user SET passwd = ? WHERE email = ?');
-        $stmt->execute(array($passwd, $email));
+        $hash = password_hash($passwd,PASSWORD_BCRYPT);
+        $stmt = $db->prepare('UPDATE user SET hash = ? WHERE email = ?');
+        $stmt->execute(array($hash, $email));
     }
 
     function update_email($email, $new_email) {
