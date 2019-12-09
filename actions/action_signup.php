@@ -8,7 +8,8 @@
     $password = $_POST['password'];
 
     try {
-        insert_user($username, $email, $password);
+        $hash = password_hash($password,PASSWORD_BCRYPT);
+        insert_user($username, $email, $hash);
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $username;
         header('Location: ../pages/profile.php');

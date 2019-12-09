@@ -8,8 +8,9 @@
     }
 
     // TODO: handle password hashing
-    if (isset($_POST['passfield']) && !empty($_POST['passfield']))
-        update_passwd($_SESSION['email'], $_POST['passfield']);
+    if (isset($_POST['newpassfield']) && !empty($_POST['newpassfield']) && 
+        isset($_POST['oldpassfield']) && !empty($_POST['oldpassfield']))
+        update_passwd($_SESSION['email'], $_POST['oldpassfield'],$_POST['newpassfield']);
 
     if (isset($_POST['email'])) {
         update_email($_SESSION['email'], $_POST['email']);

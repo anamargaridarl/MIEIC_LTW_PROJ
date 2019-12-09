@@ -1,15 +1,15 @@
 PRAGMA foreign_keys = ON;
 
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (1,"Ana Maggie","Golden_Biles99","2019-10-21", "ana@mail.com");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (2,"Gonçalo Oliver","SuPErtUx4LiF","2019-10-21", "goncalo@mail.com");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (3,"João Martens","picoCTF{p3nt3st1ng_4_n00bs_wefdw3e1}","2019-10-21", "joao@mail.com");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (4,"Nadia Bradford","m004Q_L8uN","2019-10-29", "nbradford142@mail.co.uk");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (5,"Casey Hawkins","GVr01LGNze","2019-11-01", "hawkcasey@mail.us");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (6,"Edgar Gray","49oMSwShe3","2019-11-01", "grayedgar@edgar.me");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (7,"Cain Hampton","AYZ2iR9w9j","2019-11-10", "hamptonc@bestfreeemail.com");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (8,"Sean Clayton","T4p3zp0OYU","2019-11-05", "sc2778172@mail.co.nz");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (9,"Omar Baird","I4KpcnMGtq","2019-11-08", "omar@bai.rd");
-INSERT INTO user (user_id,username,passwd,joined_on, email) VALUES (10,"Zach Mccall","WzRV9sSniC","2019-11-15", "makeamericagreatagain@mtrump2020.com");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (1,"Ana Maggie", "$2y$10$0w.l.hGG2.mtodwkiuk02ePjwxgUv0GOFYIyx7UCtWtGJr5Rcaqam", "2019-10-21", "ana@mail.com");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (2,"Gonçalo Oliver", "$2y$10$mArEARnsk1dK0PUSjVgihu0vOK/iOYJ/O.gkYZ3vlZsqjaMGsSU6e", "2019-10-21", "goncalo@mail.com");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (3,"João Martens", "$2y$10$N2KBEL.IMqukR8oBP0UJieFBeteFSzfLULFVs.nxP0yz/klHlg6Cu", "2019-10-21", "joao@mail.com");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (4,"Nadia Bradford", "$2y$10$O799MdRduy5SSPXbfYlv3e5Ng28s5NIFgdSiXgksQkfp/JwwzKvr2", "2019-10-29", "nbradford142@mail.co.uk");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (5,"Casey Hawkins", "$2y$10$3WQJtfRWMc4qexWzyfgjgO9uAQI.lL2zk70lo.ArfMIv5oFDIENs2", "2019-11-01", "hawkcasey@mail.us");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (6,"Edgar Gray", "$2y$10$xvZkXi8hcHfxT.DyIZlxleLHTKShyeHcQmIl3c8wIwHDipKXR6rx6", "2019-11-01", "grayedgar@edgar.me");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (7,"Cain Hampton", "$2y$10$7VDUpnvushqUdvo3fD6dPuDnfJiLOyioSTV1F4raWcqSonOIwEqom", "2019-11-10", "hamptonc@bestfreeemail.com");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (8,"Sean Clayton", "$2y$10$TFgqYa67piA80oDYpuxZoea0Yp35zdkKXODiZQL7tk5/qgPqhxvgS", "2019-11-05", "sc2778172@mail.co.nz");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (9,"Omar Baird", "$2y$10$47NvUFdI8Xd8pgN48C8Si.x/WslK26sMexMzLhaCFZh5dwlBJKZiy", "2019-11-08", "omar@bai.rd");
+INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (10,"Zach Mccall", "$2y$10$Tyvw15h/Zdt2YBvMlzdypuuB/RhLF7skW5EX28HSjGQxD0p6UFra2", "2019-11-15", "makeamericagreatagain@mtrump2020.com");
 
 INSERT INTO client (client_id) VALUES (1);
 INSERT INTO client (client_id) VALUES (2);
