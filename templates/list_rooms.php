@@ -1,5 +1,5 @@
 <?php
-    function drawRooms($houses) {
+    function drawRooms($houses,$checkin,$checkout) {
         foreach ($houses as $house): 
         $images = getImages($house['hab_id'])?>
         <section class="house">
@@ -11,7 +11,7 @@
             </section>
             <section class="house_price">
                 <p><?= $house['price_per_day']?>€/day</p>
-                <a href="houses_page.php?id=<?= $house['hab_id']?>">Check availability</a>
+                <a href="houses_page.php?id=<?= $house['hab_id']?>&checkin=<?= $checkin ?>&checkout=<?= $checkout?>">Check availability</a>
             </section>
             </section>
         </section>

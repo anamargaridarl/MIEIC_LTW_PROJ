@@ -3,7 +3,7 @@
     include_once('../includes/session.php');
     include_once('../templates/head.php');
     include_once('../templates/footer.php');
-    include_once('../templates/profile_reservation.php');
+    include_once('../templates/house_info_edit.php');
     include_once('../templates/nav_bar.php');
     include_once('../templates/profile_sidemenu.php');
 
@@ -12,23 +12,18 @@
         http_response_code(401);
     }
 
+    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js'));
 
-    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('modal_box.js'));
-    ?>
-
-
-    <?php drawNavBar();?>
-  
+    drawNavBar();?>
     <div class="middle">
+
+    <?php
     
-    <?php drawSideMenu();
-
-    $reservations = getReservations(6); 
-
-    drawReservations($reservations);?>
-
+    drawSideMenu();
+    $house_id = $_GET['id'];
+    $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
+    editHouse($house);?>
+    
     </div>
-    
     <?php drawFooter(); ?>
 
-   

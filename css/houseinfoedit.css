@@ -1,0 +1,126 @@
+@import url("palette.css");
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.house_page {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: center;
+    color: var(--pink-color);
+}
+
+
+/* EDIT HOUSE PROFILE */
+
+#editform {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+    text-decoration: none;
+    color: var(--black-color);
+    width: 80%;
+}
+
+#house_images {
+    margin: auto;
+    width: 100%;
+}
+
+#house_info {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1em;
+    margin: auto;
+}
+
+#house_info div {
+    padding: 0.5em 0em;
+}
+
+#house_info input {
+    padding: 0.5em 0em;
+    width: 100%;
+}
+
+#h_location {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#h_capacity input {
+    width: 2em;
+}
+
+#n_bedrooms input {
+    align-content: flex-end;
+}
+
+#h_capacity {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#h_description {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-items: flex-start;
+}
+
+#h_description {
+    width: 100%;
+}
+
+#h_description textarea {
+    height: 10em;
+    width: 60%;
+}
+
+#h_description label {
+    width: 100%;
+}
+
+#h_price input {
+    width: 2em;
+}
+
+#house_info #save_button input {
+    padding: 1em 3em;
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    border-color: var(--pink-color);
+}
+
+#h_desc_bot {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+#save_button {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: flex-end;
+}

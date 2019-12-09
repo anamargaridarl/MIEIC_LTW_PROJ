@@ -1,0 +1,93 @@
+@import url("palette.css");
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+h1 {
+    text-align: center;
+    color: var(--pink-color);
+}
+
+#h_info {
+    width: 50%;
+    margin: auto;
+}
+
+#h_info_all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+#h_image {
+    width: 40%;
+}
+
+#h_image img {
+    border-radius: 10px;
+    width: 15em;
+}
+
+#h_text {
+    margin: auto;
+    width: 50%;
+}
+
+@media (max-width: 70em) {
+    #h_text {
+        width: 100%;
+    }
+}
+
+#h_text p {
+    padding: 0.5em;
+}
+
+#reservlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+h2 {
+    color: var(--pink-color);
+}
+
+#reserv {
+    margin-top: 1em;
+    padding: 1em 1em;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--grey-color);
+    border-radius: 10px;
+}
+
+#h_text p:nth-child(6) {
+    padding-bottom: 2em;
+}
+
+#h_button {
+    text-align: end;
+    padding-bottom: 2em;
+}
+
+#editinfo {
+    text-decoration: none;
+    padding: 0.75em 1em;
+    color: var(--white-color);
+    background-color: var(--pink-color);
+    border-radius: 10px;
+    justify-content: end;
+}

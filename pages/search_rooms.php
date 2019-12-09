@@ -8,9 +8,15 @@
     drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../modal_box.js'));
 
     drawNavBar();
+    
+    if(isset($_GET['checkin']) && isset($_GET['checkout']) ){
+
+        $checkin = $_GET['checkin'];
+        $checkout = $_GET['checkout'];
+      }
 
     $houses = getRooms($_GET['location'],$_GET['checkin'],$_GET['checkout'],$_GET['guests'],$_GET['region']); # TODO: make it get the rooms based on checkin and checkout dates
-    drawRooms($houses);
+    drawRooms($houses,$checkin,$checkout);
     
     drawFooter();
 ?>

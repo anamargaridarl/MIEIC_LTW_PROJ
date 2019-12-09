@@ -4,7 +4,7 @@
   include_once('footer.php');
 
 
- function drawHouse($houses, $images) {?>
+ function drawHouse($house, $images, $checkin,$checkout) {?>
    
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
@@ -23,17 +23,17 @@
 <div class="bottom">
   
   <div class="title">
-  <h1> <?= $houses['title'] ?> </h1>
+  <h1> <?= $house['title'] ?> </h1>
   </div>
 
   <div class="title2">
-  <h2><?= $houses['location'] ?></h2>
-  <p> <?= $houses['capacity'] ?> guests <?= $houses['nr_rooms'] ?> bedrooms <?= $houses['nr_bathrooms'] ?> bathrooms </p>
+  <h2><?= $house['location'] ?></h2>
+  <p> <?= $house['capacity'] ?> guests <?= $house['nr_rooms'] ?> bedrooms <?= $house['nr_bathrooms'] ?> bathrooms </p>
   </div>
 
 
 <div class="texthouse">
-<p> <?= $houses['description'] ?> </p>
+<p> <?= $house['description'] ?> </p>
 </div>
 
 <div class="owner">
@@ -42,8 +42,15 @@
 </div>
 
 <div class="book">
-  <h2>Nights: 2*<?= $houses['price_per_day'] ?> €</h2>
-  <h3>Total:  <?= $houses['price_per_day'] * 2 ?> € </h3>
+  <?php 
+        $diff = abs(strtotime($checkout)-strtotime($checkin));
+        $years = floor($diff / (365*60*60*24));
+        $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+        $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+        $per_day = $house['price_per_day'] ;
+        $total = $per_day  * $days?>
+  <h2>Nights: <?=$days?>*<?= $house['price_per_day'] ?> €</h2>
+  <h3>Total:  <?= $total ?> € </h3>
   <button type="button">Book Now</button>
 </div>
 

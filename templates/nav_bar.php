@@ -1,6 +1,6 @@
 <?php
   include_once('modal_boxes.php');
-  include_once('includes/session.php');
+  include_once('../includes/session.php');
 
   function drawNavBar() {
 ?>
