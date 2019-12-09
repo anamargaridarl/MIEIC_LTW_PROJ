@@ -78,14 +78,16 @@ h2 {
     padding-bottom: 2em;
 }
 
+#h_button {
+    text-align: end;
+    padding-bottom: 2em;
+}
+
 #editinfo {
     text-decoration: none;
     padding: 0.75em 1em;
     color: var(--white-color);
     background-color: var(--pink-color);
     border-radius: 10px;
-}
-
-#editinfo a {
-    align-content: end;
+    justify-content: end;
 }

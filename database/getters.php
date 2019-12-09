@@ -89,13 +89,13 @@
     function getReservationsHouse($house_id)
     {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT title, location,region,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT title, location,region,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date , julianday(end_date) - julianday(start_date)  as dif 
+        FROM habitation,reservation WHERE hab_id = ?');
         $stmt->execute(array($house_id));
         $reservations = $stmt->fetchAll();
 
         return $reservations;
     }
-
     
     //profile_houses_page
     function get_owner_houses($owner_id)

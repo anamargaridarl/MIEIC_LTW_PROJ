@@ -18,8 +18,9 @@ $images = getImages($id); ?>
     <p> Price per day: <?= $house['price_per_day'] ?> €/night </p>
     <p> Description:</p>
     <p>  <?= $house['description'] ?> </p>
-
-    <a id="editinfo" href="">Edit Info</a>
+    <div id= "h_button">
+    <a id="editinfo" href="http://localhost:8088/pages/house_info_edit_page.php">Edit Info</a>
+    </div>
     </div>
     </div>
 
@@ -32,7 +33,11 @@ $images = getImages($id); ?>
     <p>Main Guest:   </p>
     <p>Nº.Guests: <?= $reservation['nr_guests'] ?> </p>
     <p>Dates: <?= $reservation['start_date'] ?> - <?= $reservation['end_date'] ?> </p>
-    <p>Total: <?= $reservation['price_per_day'] ?>*<?= $reservation['end_date'] -  $reservation['start_date']  ?> €</p>
+
+    <?php $per_day = $reservation['price_per_day'];
+          $days =  $reservation['dif'];
+          $total = $per_day * $days;?>
+    <p>Total: <?= $total ?> €</p>
     </div>
     <?php endforeach ?>
     </div>
