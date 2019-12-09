@@ -10,7 +10,8 @@ CREATE TABLE user (
   user_id PRIMARY KEY,
   email TEXT UNIQUE NOT NULL,
   username TEXT UNIQUE NOT NULL,
-  passwd TEXT NOT NULL,
+  hash TEXT NOT NULL,
+  salt TEXT NOT NULL,
   joined_on DATE NOT NULL
   -- country perhaps?
   --points gained(through forum participation) ? 

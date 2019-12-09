@@ -12,13 +12,13 @@
         return true;
     }
 
-    function insert_user($username, $email, $password) {
+    function insert_user($username, $email, $hash) {
         $db = Database::instance()->db();
 
-        $stmt = $db->prepare('INSERT INTO user(username, email, passwd, joined_on) values(?, ?, ?, ?)');
+        $stmt = $db->prepare('INSERT INTO user(username, email, hash, joined_on) values(?, ?, ?, ?)');
 
         // TODO: hash password
-        $stmt->execute(array($username, $email, $password, date('Y-m-d')));
+        $stmt->execute(array($username, $email, $hash, date('Y-m-d')));
     }
 
     function update_username($email, $name) {
