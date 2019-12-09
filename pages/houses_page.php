@@ -13,7 +13,7 @@
     $houses = getRoom($product_id);
     $images = getImages($product_id);
     
-    drawHead(array("../css/houses.css", "../css/navfooter.css"), array("../carousel.js", "../modal_box.js"));
+    drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js"));
 
     drawNavBar();
       

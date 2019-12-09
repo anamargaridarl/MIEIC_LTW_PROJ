@@ -57,7 +57,7 @@
     function getRoom($id)
     {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT title, nr_rooms,nr_bathrooms,capacity,description,location, price_per_day FROM habitation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
         $house = $stmt->fetch();
@@ -89,7 +89,7 @@
     function getReservationsHouse($house_id)
     {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT title, location,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT title, location,region,price_per_day,client, hab, hab_id,nr_guests,start_date,end_date FROM habitation,reservation WHERE hab_id = ?');
         $stmt->execute(array($house_id));
         $reservations = $stmt->fetchAll();
 
