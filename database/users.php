@@ -27,11 +27,19 @@
         $stmt->execute(array($name, $email));
     }
 
-    function update_passwd($email, $passwd) {
+    function update_passwd($email, $oldpasswd,$newpasswd) {
         $db = Database::instance()->db();
-        $hash = password_hash($passwd,PASSWORD_BCRYPT);
-        $stmt = $db->prepare('UPDATE user SET hash = ? WHERE email = ?');
-        $stmt->execute(array($hash, $email));
+        $stmt = $db->prepare('SELECT hash FROM user WHERE email = ? ');
+        $stmt->execute(array($email));
+        $hash = $stmt->fetch();
+
+        if(password_verify($oldpasswd,$hash['hash'])) {
+            $hash = password_hash($newpasswd,PASSWORD_BCRYPT);
+            $stmt = $db->prepare('UPDATE user SET hash = ? WHERE email = ?');
+            $stmt->execute(array($hash, $email));
+            return true;
+        }
+        else return false;
     }
 
     function update_email($email, $new_email) {

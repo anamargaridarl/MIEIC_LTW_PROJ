@@ -34,8 +34,11 @@
             <label for="email">Email</label>
             <input type="text" name="email" value="<?= $_SESSION['email'] ?>">
 
-            <label for="passfield">Password</label>
-            <input type="password" name="passfield">
+            <label for="oldpassfield">Old Password</label>
+            <input type="password" name="oldpassfield">
+
+            <label for="newpassfield">Password</label>
+            <input type="password" name="newpassfield">
 
             <input type="submit" name="submit" value="Update profile">
         </form>
