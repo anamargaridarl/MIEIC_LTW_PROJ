@@ -56,6 +56,4 @@ $images = getImages($house['hab_id']);?>
   </form>
 </div>
 
-<div id="reservations">
-</div>
 <?php } ?>

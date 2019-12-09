@@ -3,7 +3,7 @@
     include_once('../includes/session.php');
     include_once('../templates/head.php');
     include_once('../templates/footer.php');
-    include_once('../templates/house_profile.php');
+    include_once('../templates/house_info.php');
     include_once('../templates/nav_bar.php');
     include_once('../templates/profile_sidemenu.php');
 
@@ -21,12 +21,8 @@
     
     drawSideMenu();
     
-    if(isset($_GET['id'])){
-        $product_id = $_GET['id'];
-      }
-    
-    $house = getRoom(3);
-    $reservations = getReservationsHouse(3);
+    $house = getRoom(2);
+    $reservations = getReservationsHouse(2);
 
     
     drawHouseProfile($house, $reservations);?>

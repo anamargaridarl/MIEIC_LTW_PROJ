@@ -1,7 +1,6 @@
 <?php
 function drawHouseProfile($house,$reservations) { 
 $images = getImages($house['hab_id']); ?>
-
     <h1><?= $house['title'] ?></h1>
 
     <img src=<?= $images[0]['link'] ?> alt="House Photo" width="300" height=200>
