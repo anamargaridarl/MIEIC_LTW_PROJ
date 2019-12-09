@@ -4,12 +4,11 @@
     function check_email_passwd($email, $password) {
         $db = Database::instance()->db();
         
-        $stmt = $db->prepare('SELECT * FROM user WHERE email = ?');
+        $stmt = $db->prepare('SELECT hash FROM user WHERE email = ? ');
         $stmt->execute(array($email));
-        $user = $stmt->fetch();
-
+        $hash = $stmt->fetch();
         // TODO: handle hashed passwords and csrf
-        return true;
+        return password_verify($password,$hash['hash']);
     }
 
     function insert_user($username, $email, $hash) {
