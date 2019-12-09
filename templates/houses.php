@@ -5,7 +5,6 @@
 
 
  function drawHouse($house, $images, $checkin,$checkout) {?>
-   
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
