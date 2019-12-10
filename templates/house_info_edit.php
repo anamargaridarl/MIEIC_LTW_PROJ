@@ -3,7 +3,7 @@ function editHouse($house) {
 $images = getImages($house['hab_id']);?>
 <div class="house_page">
   <h1>Edit Information</h1>
-  <form id="editform" action="actions/action_edit_house.php" method="POST">
+  <form id="editform" action="../actions/action_update_house.php?id=<?=$house['hab_id']?>" method="POST">
     <div id="house_images">IMAGES</div>
     <div id="house_info">
       <div id="h_title">
