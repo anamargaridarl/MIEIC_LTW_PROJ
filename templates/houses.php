@@ -11,7 +11,7 @@
   <div id="Images">
    <?php foreach ($images as $image): ?>
     <div class="mySlides">
-      <img src=<?= $image['link'] ?> >
+      <img src=<?= urlencode($image['link']) ?> >
     </div>
   <?php endforeach ?>
 
@@ -22,17 +22,17 @@
 <div class="bottom">
   
   <div class="title">
-  <h1> <?= $house['title'] ?> </h1>
+  <h1> <?= htmlspecialchars($house['title']) ?> </h1>
   </div>
 
   <div class="title2">
-  <h2><?= $house['location'] ?></h2>
+  <h2><?= htmlspecialchars($house['location']) ?></h2>
   <p> <?= $house['capacity'] ?> guests <?= $house['nr_rooms'] ?> bedrooms <?= $house['nr_bathrooms'] ?> bathrooms </p>
   </div>
 
 
 <div class="texthouse">
-<p> <?= $house['description'] ?> </p>
+<p> <?= htmlspecialchars($house['description']) ?> </p>
 </div>
 
 <div class="owner">
