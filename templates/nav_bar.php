@@ -24,9 +24,9 @@
       <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
       
       <?php if (strpos(getcwd(), '/pages') > 0) { ?>
-        <a href="profile.php"><?= $_SESSION['username']?></a>
+        <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
       <?php } else { ?>
-        <a href="pages/profile.php"><?= $_SESSION['username']?></a>
+        <a href="pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
       <?php } ?>
 
         <a href="../actions/action_signout.php" id="signout">Sign Out</a>

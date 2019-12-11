@@ -9,13 +9,13 @@ function drawHouses($houses) { ?>
   $images = getImages($house['hab']);?>
   <div class="house">
     <div class="img">
-      <img src=<?= $images[0]['link'] ?> alt="House Photo" width="250em" height="250em">
+      <img src=<?= urlencode($images[0]['link']) ?> alt="House Photo" width="250em" height="250em">
     </div>
     <div class="text">
-      <p><?= $house['title'] ?></p>
-      <p><?= $house['region'] ?> , <?= $house['location'] ?></p>
-      <p>Address: <?= $house['addr'] ?></p>
-      <p>Capacity:<?= $house['capacity'] ?></p>
+      <p><?= htmlspecialchars($house['title']) ?></p>
+      <p><?= htmlspecialchars($house['region']) ?> , <?= htmlspecialchars($house['location']) ?></p>
+      <p>Address: <?= htmlspecialchars($house['addr']) ?></p>
+      <p>Capacity:<?= htmlspecialchars($house['capacity']) ?></p>
       <p>Price: <?= $house['price_per_day'] ?>€/night</p>
     </div>
 </div>
