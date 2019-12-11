@@ -19,7 +19,7 @@ $images = getImages($id); ?>
     <p> Description:</p>
     <p>  <?= $house['description'] ?> </p>
     <div id= "h_button">
-    <a id="editinfo" href="http://localhost:8088/pages/house_info_edit_page.php">Edit Info</a>
+    <a id="editinfo" href="../pages/house_info_edit_page.php?id=<?=$id?>">Edit Info</a>
     </div>
     </div>
     </div>

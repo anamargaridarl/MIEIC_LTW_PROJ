@@ -16,7 +16,7 @@
 
     try {
         update_house($house_id,$house);
-        header('Location: ../pages/profile_houses_edit.php'); // change to edit_house_page
+        header('Location: ../pages/house_info_page.php?id='.$house_id); // change to edit_house_page
     } catch (PDOException $e) {
         // TODO: handle database update error 
         print_r($_POST);
