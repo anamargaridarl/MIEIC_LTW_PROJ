@@ -95,6 +95,7 @@ INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",11);
 INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",11);
 INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",11);
 
+-- change owner id to owner email
 INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21 15:17:42");
 INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21 10:05:27");
 INSERT INTO ownership (hab,owner,added_on) VALUES (3,2,"2019-10-21 19:24:08");
