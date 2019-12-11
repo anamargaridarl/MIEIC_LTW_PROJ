@@ -21,7 +21,8 @@
     
     drawSideMenu();
     $house_id = $_GET['id'];
-    $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
+    $owner_id = 3;//$_SESSION['email']; //post merge
+    $house = get_owner_house($owner_id,$house_id); //REPLACE WITH VARIABLE
     editHouse($house);?>
     
     </div>

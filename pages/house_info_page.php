@@ -21,11 +21,12 @@
     
     drawSideMenu();
     
-    $house = getRoom(2);
-    $reservations = getReservationsHouse(2);
+    $house_id = $_GET['id'];
+    $house = getRoom($house_id);
+    $reservations = getReservationsHouse($house_id);
 
     
-    drawHouseProfile($house, 2,$reservations);?>
+    drawHouseProfile($house, $house_id,$reservations);?>
     
 </div>
     <?php drawFooter(); ?>

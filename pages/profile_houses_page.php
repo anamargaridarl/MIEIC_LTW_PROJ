@@ -20,7 +20,8 @@
     <?php
     
     drawSideMenu();
-    $houses = get_owner_houses(3); 
+    $owner_id = 3; //$_SESSION['email']; //post merge
+    $houses = get_owner_houses($owner_id); 
 
     drawHouses($houses);?>
     
