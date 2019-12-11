@@ -12,7 +12,7 @@
         http_response_code(401);
     }
 
-    drawHead(array("../css/profile_sidemenu.css","../css/houseinfo.css","../css/navfooter.css"), array('modal_box.js'));
+    drawHead(array("../css/profile_sidemenu.css","../css/houseinfo.css","../css/navfooter.css"), array('modal_box.js','show_pass.js'));
 
     drawNavBar();?>
     <div class="middle">

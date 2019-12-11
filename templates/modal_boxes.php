@@ -8,15 +8,17 @@
         <p id="signTitle">Sign Up</p>
         <div id="username">
           <p>Name</p>
-          <input type="text" name="username" placeholder="Enter your Username...">
+          <input type="text" name="username" placeholder="Enter your Username..." required>
         </div>
         <div id="email">
           <p>Email</p>
-          <input type="text" name="email" placeholder="Enter a valid email...">
+          <input type="text" name="email" placeholder="Enter a valid email..." required>
         </div>
         <div id="password">
           <p>Password</p>
-          <input type="password" name="password" placeholder="Enter a valid password...">
+          <input id="sgnup_pass" type="password" name="password" placeholder="Enter a valid password..." required>
+          <p>Show Password:</p>
+          <input type="checkbox" id="show_sgn">
         </div>
         <div id="register">
           <input type="submit" value="Register">
@@ -30,11 +32,13 @@
         <p id="loginTitle">Sign In</p>
         <div id="email">
           <p>Email</p>
-          <input type="text" name="email" placeholder="Enter your email account...">
+          <input type="text" name="email" placeholder="Enter your email account..." required>
         </div>
         <div id="password">
           <p>Password</p>
-          <input type="password" name="password" placeholder="Enter your password...">
+          <input id="login_pass" type="password" name="password" placeholder="Enter your password..." required>
+          <p>Show Password:</p>
+          <input type="checkbox" id="show_lgn">
         </div>
         <div id="log">
           <input type="submit" value="Login">
