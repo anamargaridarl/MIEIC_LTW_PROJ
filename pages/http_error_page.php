@@ -8,7 +8,7 @@
 
   drawNavBar();
   
-  http_response_code(418);
+  http_response_code(418); // remove when inserted in project
   switch(http_response_code()) {
     case 401:
       draw401();
