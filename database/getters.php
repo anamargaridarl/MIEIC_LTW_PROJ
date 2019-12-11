@@ -126,4 +126,13 @@
         $username = $stmt->fetch()['username'];
         return $username;
     }
+
+    function get_ownerid($username) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT user_id FROM user WHERE username = ?');
+        $stmt->execute(array($username));
+
+        $owner_id = $stmt->fetch();
+        return $owner_id;
+    }
 ?>

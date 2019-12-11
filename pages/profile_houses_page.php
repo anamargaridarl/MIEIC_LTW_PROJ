@@ -20,7 +20,9 @@
     <?php
     
     drawSideMenu();
-    $houses = get_owner_houses(3); 
+
+    $id = get_ownerid($_SESSION['username']);
+    $houses = get_owner_houses($id); 
 
     drawHouses($houses);?>
     
