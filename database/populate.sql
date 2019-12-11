@@ -95,11 +95,11 @@ INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",11);
 INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",11);
 INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",11);
 
-INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21 15:17:42");
-INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21 10:05:27");
-INSERT INTO ownership (hab,owner,added_on) VALUES (3,2,"2019-10-21 19:24:08");
-INSERT INTO ownership (hab,owner,added_on) VALUES (4,2,"2019-10-21 19:25:11");
-INSERT INTO ownership (hab,owner,added_on) VALUES (5,3,"2019-10-28 09:31:03");
+INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21");
+INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21");
+INSERT INTO ownership (hab,owner,added_on) VALUES (3,2,"2019-10-21");
+INSERT INTO ownership (hab,owner,added_on) VALUES (4,2,"2019-10-21");
+INSERT INTO ownership (hab,owner,added_on) VALUES (5,3,"2019-10-28");
 
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (1,3,1,6,"2019-11-01","2019-11-03");
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (2,6,2,4,"2019-10-31","2019-11-01");
