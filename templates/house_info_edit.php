@@ -8,21 +8,21 @@ $images = getImages($house['hab_id']);?>
     <div id="house_info">
       <div id="h_title">
         <label for="title">Title:</label>
-        <input type="text" name="title" value="<?=$house['title']?>">
+        <input type="text" name="title" value="<?= htmlspecialchars($house['title'])?>">
       </div>
       <div id="h_location">
         <div id="region">
           <label for="region">Region:</label>
-          <input type="text" name="region" value="<?=$house['region']?>">
+          <input type="text" name="region" value="<?= htmlspecialchars($house['region'])?>">
         </div>
         <div id="location">
           <label for="location">Location:</label>
-          <input type="text" name="location" value="<?=$house['location']?>">
+          <input type="text" name="location" value="<?= htmlspecialchars($house['location'])?>">
         </div>
       </div>
       <div id="h_address">
         <label for="address">Address:</label>
-        <input type="text" name="address" value="<?=$house['addr']?>">
+        <input type="text" name="address" value="<?= htmlspecialchars($house['addr'])?>">
       </div>
       <div id="h_capacity">
         <div id="capacity">
@@ -46,7 +46,7 @@ $images = getImages($house['hab_id']);?>
       <div id="h_description">
         <label for="description">Description:</label>
         <div id="h_desc_bot">
-        <textarea name="description" rows="3" cols="80"><?=$house['description']?></textarea>
+        <textarea name="description" rows="3" cols="80"><?= htmlspecialchars($house['description'])?></textarea>
         <div id="save_button">
           <input type="submit" name="save" value="Save">
         </div>
