@@ -24,7 +24,7 @@
 
     drawNavBar();
       
-    drawHouse($house,$images,$checkin,$checkout);
+    drawHouse($house, $images, $checkin, $checkout);
     
     drawFooter();
     
