@@ -12,7 +12,7 @@
         die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js'));
+    drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../modal_box.js'));
 
     drawNavBar();?>
     <div class="middle">
@@ -20,7 +20,10 @@
     <?php
     
     drawSideMenu();
-    $houses = get_owner_houses(3); 
+
+    $id = get_ownerid($_SESSION['username']);
+
+    $houses = get_owner_houses($id); 
 
     drawHouses($houses);?>
     

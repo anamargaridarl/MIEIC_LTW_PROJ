@@ -46,7 +46,8 @@ h1 {
     padding-left: 0.5em;
 }
 
-.text p:nth-child(1) {
+.text a:nth-child(1) {
+    text-decoration: none;
     font-size: 1.75em;
     color: var(--pink-color);
 }

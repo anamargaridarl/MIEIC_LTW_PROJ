@@ -57,7 +57,7 @@
     function getRoom($id)
     {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT hab_id,title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
         $house = $stmt->fetch();
@@ -125,5 +125,14 @@
 
         $username = $stmt->fetch()['username'];
         return $username;
+    }
+
+    function get_ownerid($username) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT user_id FROM user WHERE username = ?');
+        $stmt->execute(array($username));
+
+        $owner_id = $stmt->fetch();
+        return $owner_id['user_id'];
     }
 ?>
