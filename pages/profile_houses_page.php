@@ -23,7 +23,7 @@
 
     $id = get_ownerid($_SESSION['username']);
 
-    $houses = get_owner_houses($id['user_id']); 
+    $houses = get_owner_houses($id); 
 
     drawHouses($houses);?>
     

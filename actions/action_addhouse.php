@@ -11,7 +11,7 @@ if (isset($_POST['title']) &&
     isset($_POST['n_bathrooms']) &&
     isset($_POST['price']) &&
     isset($_POST['description']) ){
-
+        
         //add security checks
         $title = $_POST['title'];
         $region = $_POST['region'];
@@ -22,7 +22,6 @@ if (isset($_POST['title']) &&
         $n_bath = $_POST['n_bathrooms'];
         $price = $_POST['price'];
         $description = $_POST['description'];
-
         new_house($title,$region,$location,$address,$capacity,$n_rooms,$n_bath,$price,$description);
 
         header('Location: ../pages/profile_houses_page.php');

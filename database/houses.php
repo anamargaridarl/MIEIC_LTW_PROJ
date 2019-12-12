@@ -18,24 +18,18 @@
 
     $date = date('Y-m-d'); 
     $id = get_ownerid($_SESSION['username']);
-
-    error_log($date);
-    error_log($id['user_id']);
-    error_log($hab_id['hab_id']);
-
     
     $stmt3 = $db->prepare('SELECT owner_id FROM owner WHERE owner_id = ?');
-    $stmt3->execute(array($id['user_id']));
+    $stmt3->execute(array($id));
     $owner_id = $stmt3->fetch();
-
-    if(empty($owner_id))
+    if(!$owner_id)
     {
         $stmt4 = $db->prepare('INSERT INTO owner(owner_id) values(?)');
-        $stmt4->execute(array($id['user_id']));
+        $stmt4->execute(array($id));
     }
 
     $stmt5 = $db->prepare('INSERT INTO ownership( hab, owner, added_on) values(? , ? , ? )');
-    $stmt5->execute(array($hab_id['hab_id'], $id['user_id'], $date));
+    $stmt5->execute(array($hab_id['hab_id'], $id, $date));
    }
 
 ?>

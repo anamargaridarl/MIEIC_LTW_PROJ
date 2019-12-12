@@ -133,6 +133,6 @@
         $stmt->execute(array($username));
 
         $owner_id = $stmt->fetch();
-        return $owner_id;
+        return $owner_id['user_id'];
     }
 ?>
