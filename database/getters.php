@@ -126,4 +126,13 @@
         $username = $stmt->fetch()['username'];
         return $username;
     }
+
+    function getHouseOwnerEmail($house_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT email FROM ownership, user where user.user_id = ownership.owner and hab = ?');
+        $stmt->execute(array($house_id));
+
+        $owner = $stmt->fetch()['email'];
+        return $owner;
+    }
 ?>
