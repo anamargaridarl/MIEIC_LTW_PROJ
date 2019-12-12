@@ -16,11 +16,10 @@ body {
 
 #navbar {
     background-color: rgba(0, 0, 0, 0);
-    justify-content: right;
+    justify-content: flex-end;
 }
 
-#navbar>#logo,
-#navbar>.input-container {
+#logosearch {
     display: none;
 }
 

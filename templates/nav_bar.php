@@ -6,6 +6,7 @@
 ?>
 
 <nav id="navbar">
+  <div id = "logosearch">
   <div id="logo">
   <a id="homepage"  href="../index.php">
   <img src="../images/logodemo.png" alt="Logo">
@@ -18,7 +19,10 @@
     <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
     </form>
   </div>
+  </div>
   
+  <div id = "accountlog">
+
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
       <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
@@ -37,6 +41,8 @@
         <a id="loginbtn">Sign In</a>
       </div>
   <?php } ?>
+  </div>
+
 </nav>
 
 <?php 
