@@ -8,7 +8,7 @@ $images = getImages($house['hab_id']);?>
     <div id="house_info">
       <div id="h_title">
         <label for="title">Title:</label>
-        <input type="text" name="title" value="<?= htmlspecialchars($house['title'])?>">
+        <input type="text" name="title" value="<?= htmlspecialchars($house['title'])?>" required>
       </div>
       <div id="h_location">
         <div id="region">
@@ -17,30 +17,30 @@ $images = getImages($house['hab_id']);?>
         </div>
         <div id="location">
           <label for="location">Location:</label>
-          <input type="text" name="location" value="<?= htmlspecialchars($house['location'])?>">
+          <input type="text" name="location" value="<?= htmlspecialchars($house['location'])?>" required>
         </div>
       </div>
       <div id="h_address">
         <label for="address">Address:</label>
-        <input type="text" name="address" value="<?= htmlspecialchars($house['addr'])?>">
+        <input type="text" name="address" value="<?= htmlspecialchars($house['addr'])?>" nequired>
       </div>
       <div id="h_capacity">
         <div id="capacity">
           <label for="capacity">Capacity:</label>
-          <input type="text" name="capacity" value=<?=$house['capacity']?>>
+          <input type="number" name="capacity" value=<?=$house['capacity']?> required>
         </div>
         <div id ="n_bathrooms">
           <label for="n_bathrooms">Nº bathrooms:</label>
-          <input type="text" name="n_bathrooms" value=<?=$house['nr_bathrooms']?>>
+          <input type="number" name="n_bathrooms" value=<?=$house['nr_bathrooms']?> required>
         </div>
         <div id="n_bedrooms">
           <label for="n_bedrooms">Nº bedrooms:</label>
-          <input type="text" name="n_bedrooms" value=<?=$house['nr_rooms']?>>
+          <input type="number" name="n_bedrooms" value=<?=$house['nr_rooms']?> required>
         </div>
       </div>
       <div id="h_price">
         <label for="price">Price per day:
-          <input type="text" name="price" value=<?=$house['price_per_day']?>>
+          <input type="number" name="price" value=<?=$house['price_per_day']?> required>
         </label>
       </div>
       <div id="h_description">
@@ -66,7 +66,7 @@ function addHouse() {?>
       <div id="house_info">
         <div id="h_title">
           <label for="title">Title:</label>
-          <input type="text" name="title" ?>
+          <input type="text" name="title" required>
         </div>
         <div id="h_location">
           <div id="region">
@@ -75,30 +75,30 @@ function addHouse() {?>
           </div>
           <div id="location">
             <label for="location">Location:</label>
-            <input type="text" name="location" >
+            <input type="text" name="location" required>
           </div>
         </div>
         <div id="h_address">
           <label for="address">Address:</label>
-          <input type="text" name="address" >
+          <input type="text" name="address" required>
         </div>
         <div id="h_capacity">
           <div id="capacity">
             <label for="capacity">Capacity:</label>
-            <input type="text" name="capacity" >
+            <input type="number" name="capacity" required>
           </div>
           <div id ="n_bathrooms">
             <label for="n_bathrooms">Nº bathrooms:</label>
-            <input type="text" name="n_bathrooms" >
+            <input type="number" name="n_bathrooms" required>
           </div>
           <div id="n_bedrooms">
             <label for="n_bedrooms">Nº bedrooms:</label>
-            <input type="text" name="n_bedrooms" >
+            <input type="number" name="n_bedrooms" required>
           </div>
         </div>
         <div id="h_price">
           <label for="price">Price per day:
-            <input type="text" name="price" >
+            <input type="number" name="price" required>
           </label>
         </div>
         <div id="h_description">

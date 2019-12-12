@@ -29,10 +29,10 @@
         </section>
         <form method="post" action="../actions/action_update_profile.php">
             <label for="username">Name</label>
-            <input type="text" name="username" value="<?= htmlspecialchars($_SESSION['username']) ?>">
+            <input type="text" name="username" value="<?= htmlspecialchars($_SESSION['username']) ?>" required>
 
             <label for="email">Email</label>
-            <input type="text" name="email" value="<?= htmlspecialchars($_SESSION['email']) ?>">
+            <input type="text" name="email" value="<?= htmlspecialchars($_SESSION['email']) ?>" required>
 
             <label for="oldpassfield">Old Password</label>
             <input type="password" name="oldpassfield">
