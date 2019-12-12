@@ -28,8 +28,6 @@ body {
     left: 10%;
     top: 8%;
     position: relative;
-    max-width: 35%;
-    height: 35%;
     padding: 0.5em 1em 0.5em 1em;
     background-color: var(--white-color);
     border: 0.5px solid var(--blue-color);
@@ -37,16 +35,31 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 35%;
+    height: 35%;
 }
 
-@media (min-height: 1000px) {
+@media screen and (max-width: 800px) {
     .welcome {
-        min-height: 50vh;
+        min-height: 60vh;
     }
     #exploreform {
-        position: relative;
-        max-width: 80%;
-        max-height: 80%;
+        width: 60%;
+        margin: 3em auto;
+        left: 0%;
+        top: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .welcome {
+        min-height: 100vh;
+    }
+    #exploreform {
+        width: 80%;
+        margin: 3em auto;
+        left: 0%;
+        top: 0%;
     }
 }
 
