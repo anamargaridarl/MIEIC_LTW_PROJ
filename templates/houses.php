@@ -4,7 +4,7 @@
   include_once('footer.php');
 
 
- function drawHouse($house, $images, $checkin,$checkout) {?>
+ function drawHouse($house, $images, $checkin, $checkout) {?>
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -46,11 +46,11 @@
         $years = floor($diff / (365*60*60*24));
         $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
         $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
-        $per_day = $house['price_per_day'] ;
+        $per_day = $house['price_per_day'];
         $total = $per_day  * $days?>
   <h2>Nights: <?=$days?>*<?= $house['price_per_day'] ?> €</h2>
   <h3>Total:  <?= $total ?> € </h3>
-  <button type="button">Book Now</button>
+  <a href="reservation.php?">Book Now</a>
 </div>
 
 
