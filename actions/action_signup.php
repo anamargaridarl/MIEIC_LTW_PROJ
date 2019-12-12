@@ -15,7 +15,8 @@
         header('Location: ../pages/profile.php');
     } catch (PDOException $e) {
         // TODO: handle database insert error (user already exists,...)
-        print_r($_POST);
-        print_r($e);
+        error_log($_POST);
+        error_log($e);
+        header('Location: /index.php');
     }
 ?>
