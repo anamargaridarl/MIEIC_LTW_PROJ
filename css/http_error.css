@@ -1,0 +1,42 @@
+@import url("palette.css");
+#content-wrap {
+  height: 80vh;
+}
+
+#content-wrapper {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#error_box {
+  position: relative;
+  left:0;
+  top:0;
+  margin:auto;
+  padding: 1em;
+  border: 0.1em solid var(--blue-color);
+  border-radius: 1em;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#error_box h1 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  text-align: center;
+  color: var(--pink-color);
+}
+
+#error_box p {
+  font-weight: 500;
+  font-size: 1.5em;
+  padding: 0 1em 0 1em;
+}
+
+#error_box i {
+  padding-top: 0.5em;
+  color: var(--grey-color);
+}

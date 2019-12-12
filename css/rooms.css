@@ -1,14 +1,14 @@
 @import url("palette.css");
 .house {
-    margin: 1em auto;
-    padding: 1em;
+    margin: 2em auto;
+    padding: 1.5em;
     border: 0.5px solid var(--grey-color);
-    border-radius: 1em;
+    border-radius: 2em;
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 60%;
+    width: 55%;
 }
 
 body {

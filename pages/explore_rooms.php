@@ -13,7 +13,7 @@
 
     $houses = getRoomsByRegion($_GET['region']);
     
-    drawRooms($houses);?>
+    drawRooms($houses,"","");?>
 
     <?php drawFooter(); ?>
 

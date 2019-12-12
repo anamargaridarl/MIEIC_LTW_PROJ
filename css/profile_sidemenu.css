@@ -3,17 +3,18 @@
     background-color: var(--blue-color);
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    width: 20%;
+    justify-content: center;
+    width: 19%;
+    min-height: 72.5vh;
 }
 
 .side-menu a {
     background-color: var(--pink-color);
     color: white;
     text-decoration: none;
+    justify-content: center;
     text-align: center;
-    border: 0.5px solid var(--black-color);
-    padding-bottom: 3em;
-    padding-top: 3em;
+    border: 0.5px solid var(--white-color);
+    padding: 2em;
     margin: 0;
 }

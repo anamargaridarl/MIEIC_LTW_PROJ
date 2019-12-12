@@ -9,19 +9,19 @@ function drawHouses($houses) { ?>
   $images = getImages($house['hab']);?>
   <div class="house">
     <div class="img">
-      <img src=<?= $images[0]['link'] ?> alt="House Photo" width="250em" height="250em">
+      <img src=<?= urlencode($images[0]['link']) ?> alt="House Photo" width="250em" height="250em">
     </div>
     <div class="text">
-      <a href="house_info_page.php?id=<?=$house['hab_id']?>"><?= $house['title'] ?></a>
-      <p><?= $house['region'] ?> , <?= $house['location'] ?></p>
-      <p>Address: <?= $house['addr'] ?></p>
-      <p>Capacity:<?= $house['capacity'] ?></p>
+      <a href="house_info_page.php?id=<?=$house['hab_id']?>"><?= htmlspecialchars($house['title']) ?></a>
+      <p><?= htmlspecialchars($house['region']) ?> , <?= htmlspecialchars($house['location']) ?></p>
+      <p>Address: <?= htmlspecialchars($house['addr']) ?></p>
+      <p>Capacity:<?= htmlspecialchars($house['capacity']) ?></p>
       <p>Price: <?= $house['price_per_day'] ?>€/night</p>
     </div>
 </div>
 <?php endforeach ?>
   <div class="addhouse">
-    <a href="pages/profile.php"> + </a>
+    <a href="../pages/house_info_edit_page.php"> + </a>
   </div>
 </div>
 <?php } ?>
