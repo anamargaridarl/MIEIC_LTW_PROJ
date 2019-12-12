@@ -3,7 +3,7 @@
   include_once('templates/head.php');
   include_once('templates/footer.php');
   include_once('templates/nav_bar.php');
-  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js"));
+  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js"));
   ?>
   
   <body>

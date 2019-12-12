@@ -14,8 +14,8 @@
         $_SESSION['username'] = $username;
         header('Location: ../pages/profile.php');
     } catch (PDOException $e) {
-        // TODO: handle database insert error (user already exists,...)
-        print_r($_POST);
-        print_r($e);
+        //lacks handling specific errors (ex: user always exists,email already in use, etc...)
+        http_response_code(500);
+        die(header('Location: ../index.php'));
     }
 ?>

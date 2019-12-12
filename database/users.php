@@ -8,7 +8,10 @@
         $stmt->execute(array($email));
         $hash = $stmt->fetch();
         // TODO: handle csrf
-        return password_verify($password,$hash['hash']);
+        if(!$hash)
+            return $hash;
+        else
+            return password_verify($password,$hash['hash']);
     }
 
     function insert_user($username, $email, $hash) {
