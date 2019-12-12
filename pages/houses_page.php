@@ -7,7 +7,7 @@
     include_once('../templates/houses.php');
     
     if (isset($_GET['id'])){
-        $house_id = $_GET['id'];
+      $house_id = $_GET['id'];
     }
     
     if (isset($_GET['checkin']) && isset($_GET['checkout']) ){
@@ -23,7 +23,7 @@
   drawHead(array("../css/houses.css", "../css/navfooter.css"), array("../carousel.js", "../modal_box.js"));
 
   drawNavBar();
-  
+
   drawHouse($house, $images, $checkin, $checkout, $owner);
   
   drawFooter();
