@@ -12,7 +12,7 @@
         http_response_code(401);
     }
 
-    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js'));
+    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../modal_box.js'));
 
     drawNavBar();?>
     <div class="middle">
@@ -39,7 +39,6 @@
         addHouse();
     }?>
 
-    
     </div>
     <?php drawFooter(); ?>
 
