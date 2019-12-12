@@ -2,9 +2,9 @@
   include_once('nav_bar.php');
   include_once('head.php');
   include_once('footer.php');
+  include_once('../database/getters.php');
 
-
- function drawHouse($house, $images, $checkin, $checkout) {?>
+ function drawHouse($house, $images, $checkin, $checkout, $user_email) {?>
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -37,7 +37,7 @@
 
 <div class="owner">
 <img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
-  <p>Joana</p>
+  <p><?= get_username($user_email) ?></p>
 </div>
 
 <div class="book">
