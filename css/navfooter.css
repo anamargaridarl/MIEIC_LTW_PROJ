@@ -1,236 +1,272 @@
-                    @import url("palette.css");
-                    body {
-                        margin: 0;
-                        box-sizing: border-box;
-                    }
-                    
-                    #page-container {
-                        min-height: 100vh;
-                        position: relative;
-                    }
-                    
-                    #content-wrap {
-                        padding-bottom: 7em;
-                    }
-                    
-                    #navbar {
-                        padding: 0.75em;
-                        background-color: var(--blue-color);
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        justify-content: space-around;
-                    }
-                    
-                    #logo {
-                        padding-right: 11.5%;
-                        border-right: 0.5px solid var(--grey-color);
-                    }
-                    /* Style the input container */
-                    
-                    .input-container {
-                        display: flex;
-                        width: 40%;
-                        border-color: var(--grey-color);
-                    }
-                    /* Style the form icons */
-                    
-                    .material-icons {
-                        padding: 10px;
-                        background: var(--white-color);
-                        color: var(--pink-color);
-                        min-width: 50px;
-                        text-align: center;
-                        border-radius: 10px 0px 0px 10px;
-                    }
-                    /* Style the input fields */
-                    
-                    .input-field {
-                        width: 100%;
-                        padding: 15px;
-                        outline: none;
-                        border: none;
-                        font-size: 1em;
-                        border-radius: 0px 10px 10px 0px;
-                    }
-                    
-                    .input-field:focus {
-                        border: none;
-                    }
-                    
-                    p {
-                        margin: 0;
-                    }
-                    
-                    #account,
-                    #logged {
-                        display: flex;
-                        font-family: Arial, Helvetica, sans-serif;
-                    }
-                    
-                    #account a,
-                    #logged a {
-                        text-decoration: none;
-                        margin-right: 0.5em;
-                        margin-left: 0.5em;
-                        padding-top: 0.5em;
-                        padding-bottom: 0.5em;
-                        font-size: 1.25em;
-                        color: var(--white-color);
-                    }
-                    
-                    #account a,
-                    #logged a:nth-child(3),
-                    #logged div {
-                        padding-left: 1em;
-                        border-width: 0.5px;
-                        border-left-style: solid;
-                        border-color: var(--grey-color);
-                    }
-                    
-                    #logged>div>img {
-                        border-radius: 100px;
-                        max-height: 2.5em;
-                        max-width: 2.5em;
-                        padding-right: 0em;
-                        border-width: 0.5px;
-                        border-left-style: solid;
-                        border-color: var(--grey-color);
-                    }
-                    
-                    footer {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        position: absolute;
-                        bottom: 0;
-                        height: 7em;
-                        width: 100%;
-                        background-color: var(--blue-color);
-                        text-align: center;
-                    }
-                    
-                    footer a,
-                    footer p {
-                        font-size: 1.15em;
-                        color: var(--white-color);
-                        text-decoration: none;
-                        font-family: Arial, Helvetica, sans-serif;
-                    }
-                    
-                    footer div {
-                        position: relative;
-                        margin-top: 0.5em;
-                    }
-                    
-                    footer div:first-of-type {
-                        margin: 0;
-                    }
-                    /***************MODAL BOXES******************/
-                    
-                    #modalLogin form,
-                    #modalSignup form {
-                        width: 40%;
-                        position: relative;
-                        margin: 5% auto;
-                    }
-                    
-                    #register input,
-                    #log input {
-                        background-color: var(--pink-color);
-                        border: 0.5px solid var(--grey-color);
-                        color: var(--white-color);
-                        border-radius: 10px;
-                        font-size: 1.5em;
-                        max-width: 50%;
-                    }
-                    
-                    #register,
-                    #log {
-                        text-align: end;
-                    }
-                    
-                    @media (max-width: 600px) {
-                        #modalLogin form,
-                        #modalSignup form {
-                            width: 80%;
-                            margin: 20% auto;
-                        }
-                        #register input,
-                        #log input {
-                            max-width: 100%;
-                        }
-                    }
-                    
-                    @media (max-width: 800px) {
-                        #modalLogin form,
-                        #modalSignup form {
-                            width: 60%;
-                            margin: 10% auto;
-                        }
-                        #register input,
-                        #log input {
-                            max-width: 100%;
-                        }
-                    }
-                    
-                    #modalLogin,
-                    #modalSignup {
-                        display: none;
-                    }
-                    
-                    #modalLogin,
-                    #modalSignup {
-                        position: fixed;
-                        z-index: 5;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.4);
-                    }
-                    
-                    #signup,
-                    #login {
-                        background-color: var(--white-color);
-                        border: 1px solid var(--blue-color);
-                        border-radius: 1em;
-                        padding: 2em 2em 0em 2em;
-                        display: flex;
-                        flex-direction: column;
-                        flex-wrap: nowrap;
-                        animation-name: animateUp;
-                        animation-duration: 1s;
-                    }
-                    
-                    @keyframes animateUp {
-                        from {
-                            opacity: 0
-                        }
-                        to {
-                            opacity: 1
-                        }
-                    }
-                    
-                    #signTitle,
-                    #loginTitle {
-                        font-size: 2em;
-                        margin-bottom: 1em;
-                    }
-                    
-                    #signup>div,
-                    #login>div {
-                        padding-bottom: 1.5em;
-                    }
-                    
-                    #signup>div>p,
-                    #login>div>p {
-                        padding-bottom: 0.5em;
-                        font-size: 1.5em;
-                    }
-                    
-                    #signup>div>input,
-                    #login>div>input {
-                        border-radius: 5px;
-                        height: 2.5em;
-                        width: 100%;
-                    }
+@import url("palette.css");
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    padding: 0.75em;
+    background-color: var(--blue-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#logo {
+    padding-right: 11.5%;
+    border-right: 0.5px solid var(--grey-color);
+}
+
+
+/* Style the input container */
+
+.input-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-color: var(--grey-color);
+}
+
+
+/* Style the form icons */
+
+.material-icons {
+    padding: 10px;
+    background: var(--white-color);
+    color: var(--pink-color);
+    min-width: 50px;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#input {
+    width: 80%;
+}
+
+
+/* Style the input fields */
+
+.input-field {
+    padding: 15px;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    border-radius: 0px 10px 10px 0px;
+    width: 100%;
+}
+
+.input-field:focus {
+    border: none;
+}
+
+p {
+    margin: 0;
+}
+
+#account,
+#logged {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#account a,
+#logged a {
+    text-decoration: none;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.25em;
+    color: var(--white-color);
+}
+
+#account a,
+#logged a:nth-child(3),
+#logged div {
+    padding-left: 1em;
+    border-width: 0.5px;
+    border-left-style: solid;
+    border-color: var(--grey-color);
+}
+
+#logged>div>img {
+    border-radius: 100px;
+    max-height: 2.5em;
+    max-width: 2.5em;
+    padding-right: 0em;
+    border-width: 0.5px;
+    border-left-style: solid;
+    border-color: var(--grey-color);
+}
+
+
+/* ---------------- footer --------------------------------*/
+
+#page-container {
+    min-height: 100vh;
+    position: relative;
+}
+
+#content-wrap {
+    padding-bottom: 7em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 7em;
+    width: 100%;
+    background-color: var(--blue-color);
+    text-align: center;
+}
+
+footer a,
+footer p {
+    font-size: 1.15em;
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer div {
+    position: relative;
+    margin-top: 0.5em;
+}
+
+footer div:first-of-type {
+    margin: 0;
+}
+
+
+/***************MODAL BOXES******************/
+
+#modalLogin,
+#modalSignup {
+    display: none;
+}
+
+#modalLogin,
+#modalSignup {
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalLogin form,
+#modalSignup form {
+    width: 40%;
+    position: relative;
+    left: 30%;
+    top: 20%;
+}
+
+#signup,
+#login {
+    background-color: var(--white-color);
+    border: 0.2em solid var(--blue-color);
+    border-radius: 1em;
+    padding: 2em 2em 0em 2em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    position: relative;
+    animation-name: animateUp;
+    animation-duration: 1s;
+}
+
+@keyframes animateUp {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+#signup {
+    grid-template-areas: "title" "user" "email" "pass" "submit";
+}
+
+#login {
+    grid-template-areas: "title" "email" "pass" "submit";
+}
+
+#signup>#signTitle,
+#login>#loginTitle {
+    grid-area: title;
+    font-size: 2em;
+    width: 50%;
+    margin-bottom: 1em;
+    word-wrap: break-word;
+}
+
+#signup>div,
+#login>div {
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+#signup>div>*,
+#login>div>* {
+    position: relative;
+    width: 100%;
+}
+
+#signup>div>p,
+#login>div>p {
+    padding-bottom: 0.8em;
+    font-size: 1.5em;
+}
+
+#signup>div>input,
+#login>div>input {
+    height: 60%;
+}
+
+#signup>#username,
+#login>#username {
+    grid-area: user;
+}
+
+#signup>#email,
+#login>#email {
+    grid-area: email;
+}
+
+#signup>#password,
+#login>#password {
+    grid-area: pass;
+    padding-bottom: 3em;
+}
+
+#signup>#register,
+#login>#log {
+    grid-area: submit;
+    width: 100%;
+    height: 6em;
+}
+
+#signup>#register>input,
+#login>#log>input {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    float: right;
+    background-color: var(--pink-color);
+    border: 0.1em solid var(--blue-color);
+    color: var(--white-color);
+    font-size: 1.5em;
+}
