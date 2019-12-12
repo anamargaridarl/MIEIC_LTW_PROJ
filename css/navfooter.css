@@ -8,9 +8,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-left: 5.5em;
-    width: 55%;
 }
 
 #accountlog {
@@ -18,7 +17,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-    width: 35%;
 }
 
 #navbar {
@@ -26,8 +24,9 @@ body {
     padding: 0.75em;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    word-break: break-all;
 }
 
 #logo {
@@ -59,7 +58,7 @@ body {
     border-radius: 10px 0px 0px 10px;
 }
 
-#input {
+.input-container #input {
     width: 80%;
 }
 
@@ -122,9 +121,10 @@ p {
 @media (max-width: 600px) {
     #navbar {
         flex-direction: column;
+        justify-content: flex-start;
     }
     #accountlog {
-        width: 100%;
+        width: 90%;
         padding: 0.5em 0;
         background-color: var(--white-color);
         border-width: 1px;
@@ -132,8 +132,8 @@ p {
         border-color: var(--grey-color);
     }
     #logosearch {
-        width: 100%;
         padding-bottom: 1em;
+        justify-content: flex-start;
     }
     #accountlog a {
         color: var(--black-color);

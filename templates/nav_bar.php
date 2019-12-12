@@ -7,6 +7,7 @@
 
 <nav id="navbar">
   <div id = "logosearch">
+  
   <div id="logo">
   <a id="homepage"  href="../index.php">
   <img src="../images/logodemo.png" alt="Logo">
