@@ -23,6 +23,11 @@ body {
     display: none;
 }
 
+#accountlog {
+    background-color: transparent;
+    border-style: hidden;
+}
+
 #exploreform {
     left: 10%;
     top: 8%;

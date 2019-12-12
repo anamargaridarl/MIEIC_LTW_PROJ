@@ -42,7 +42,6 @@
       </div>
   <?php } ?>
   </div>
-
 </nav>
 
 <?php 
