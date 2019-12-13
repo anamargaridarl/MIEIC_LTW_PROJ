@@ -43,9 +43,9 @@
             <input type="password" name="newpassfield">
 
             <input type="submit" name="submit" value="Update profile">
+
         </form>
     </section>
-</section>
 
 </div>
 <?php drawFooter(); ?>

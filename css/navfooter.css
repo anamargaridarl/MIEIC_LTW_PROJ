@@ -121,6 +121,7 @@ p {
 @media (max-width: 600px) {
     #navbar {
         flex-direction: column;
+        width: auto;
     }
     #accountlog {
         width: 90%;
