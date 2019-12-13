@@ -18,3 +18,7 @@
     padding: 2em;
     margin: 0;
 }
+
+@media (max-width: 600px) {
+    .side-menu {}
+}

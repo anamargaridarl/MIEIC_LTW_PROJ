@@ -20,6 +20,8 @@
 
 <section class="container">
     
+<div class="middle">
+
 <?php drawSideMenu() ?>
 
     <section class="profile-info">
@@ -45,4 +47,5 @@
     </section>
 </section>
 
+</div>
 <?php drawFooter(); ?>
