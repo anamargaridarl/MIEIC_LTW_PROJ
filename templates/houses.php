@@ -7,20 +7,20 @@
  function drawHouse($house, $images, $checkin,$checkout) {?>
   
   <div class="slideshow-container">
+    
     <a class="prev" >&#10094;</a>
-
-  <div id="Images">
-    <?php foreach ($images as $image): ?>
-      <div class="mySlides">
-        <img src=<?= urlencode($image['link']) ?> >
+    <div id="Images">
+      <?php foreach ($images as $image): ?>
+        <div class="mySlides">
+          <img src=<?= urlencode($image['link']) ?> >
+        </div>
+        <?php endforeach ?>
       </div>
-    <?php endforeach ?>
-  </div>
-
+      
   <a class="next" >&#10095;</a>
   </div>
   
-<div class="bottom">
+<div id="bottom">
   
   <div id="left">
 
@@ -36,27 +36,27 @@
             <h2><?= htmlspecialchars($house['location']) ?></h2>
             <p> <?= $house['capacity'] ?> guests <?= $house['nr_rooms'] ?> bedrooms <?= $house['nr_bathrooms'] ?> bathrooms </p>
           </div>
-
+          
         </div>
-      
-
-        <div class="owner">
+        
+        
+        <div id="owner">
           <img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
           <p>Joana</p>
         </div>
-
+        
+      </div>
+      
+      <div class="texthouse">
+        <p> <?= htmlspecialchars($house['description']) ?> </p>
+      </div>
+      
     </div>
-  
-    <div class="texthouse">
-      <p> <?= htmlspecialchars($house['description']) ?> </p>
-    </div>
-
-  </div>
-
-  <div id="right">
-
-  <div id="map">
-      <script>
+    
+    <div id="right">
+      
+      <div id="map">
+        <script>
       function initMap() {
       var uluru = {lat: -25.344, lng: 131.036};
       var map = new google.maps.Map(
@@ -68,7 +68,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Y0wHsbht-eyF0oxEXu5FoiLmvkmG2l4&callback=initMap">
       </script>
     </div>
-
+    
     <div class="book">
       <?php 
             $diff = abs(strtotime($checkout)-strtotime($checkin));
@@ -81,8 +81,8 @@
       <h3>Total:  <?= $total ?> € </h3>
       <button type="button">Book Now</button>
     </div>
-
-
+    
+    
     
   </div>
 

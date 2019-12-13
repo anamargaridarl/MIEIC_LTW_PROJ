@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    text-align: center;
 }
 
 
@@ -22,7 +21,11 @@ body {
 
 .mySlides {
     display: none;
-    margin: 0 2em;
+    margin: auto;
+}
+
+#Images {
+    padding: 0 1em;
 }
 
 .mySlides img {
@@ -34,46 +37,43 @@ a {
     padding-top: 10em;
 }
 
-#prev {
-    text-align: center;
-}
-
-#next {
-    text-align: center;
-}
-
 
 /*  --------------------------Bottom ---------------------- */
 
 #map {
-    width: 50%;
     height: 200px;
-    background-color: var(--grey-color);
-    grid-area: map;
-    margin: 2em 0em 2em 5em;
 }
 
-.bottom {
-    margin: auto;
+#bottom {
+    margin: 2em 0 2em 20%;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 #left {
-    width: 50%;
+    width: 45%;
+    padding-right: 1em;
+    border-right-style: solid;
+    border-width: 0.5px;
+    border-color: var(--grey-color);
 }
 
 #right {
-    width: 50%;
+    padding-left: 1em;
+    width: 30%;
+    margin-right: 20%;
 }
 
 #top {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+}
+
+#titles {
+    width: 80%;
 }
 
 .title h1 {
@@ -88,14 +88,36 @@ a {
     color: var(--grey-color);
 }
 
-.book h2 {
-    color: var(--grey-color);
-    font-weight: normal;
+.title2 p {
+    padding-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    border-color: var(--grey-color);
 }
 
-.book>h3 {
+.book {
+    text-align: end;
+}
+
+.book h2 {
+    padding-bottom: 1em;
+    color: var(--grey-color);
+    margin-left: 35%;
+    width: 65%;
     font-size: 1.25em;
     font-weight: normal;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    border-color: var(--grey-color);
+}
+
+.book h3 {
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+.texthouse {
+    padding-top: 2em;
 }
 
 .book button {
@@ -106,4 +128,53 @@ a {
     color: var(--white-color);
     text-decoration: none;
     font-size: 1em;
+    padding: 1em 2em;
+}
+
+#owner {
+    width: 10%;
+}
+
+#owner img {
+    padding-top: 1em;
+}
+
+@media (max-width: 800px) {
+    #bottom {
+        flex-direction: column;
+        margin: auto;
+        margin: 2em;
+    }
+    #left {
+        width: 100%;
+        border-right-style: hidden;
+        padding-bottom: 2em;
+        padding-right: 0;
+    }
+    #map {
+        width: 100%;
+        padding-bottom: 2em;
+    }
+    #right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .book {
+        text-align: start;
+    }
+    .book h2 {
+        margin-left: 0;
+    }
+    .texthouse {
+        width: 80%;
+    }
+    .slideshow-container a {
+        width: 5%;
+    }
+    .mySlides img {
+        width: 40vh;
+        height: 40vh;
+    }
 }
