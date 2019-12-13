@@ -256,3 +256,38 @@ footer div:first-of-type {
     color: var(--white-color);
     font-size: 1.5em;
 }
+
+/************ Error Box ****************/
+
+.error_msg, .success_msg {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-flow: row nowrap;
+    z-index: 1;
+    font-size: 1.2em;
+}
+
+.error_msg * {
+    background-color: rgba(245, 70, 70, 0.7);
+}
+
+.success_msg * {
+    background-color: rgba(70, 245, 100, 0.7);
+}
+
+#close_msg {
+    color: var(--white-color);
+    padding: 0.4em 0.5em 0.2em 0;
+    font-size: 1.2em;
+}
+
+#close_msg:hover {
+    color: var(--grey-color);
+}
+
+#message {
+    color: var(--white-color);
+    padding: 0.5em;
+}

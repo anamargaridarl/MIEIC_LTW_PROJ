@@ -4,6 +4,7 @@
     include_once('../templates/head.php');
     include_once('../templates/footer.php');
     include_once('../templates/nav_bar.php');
+    include_once('../templates/show_messages.php');
     include_once('../templates/profile_sidemenu.php');
 
 
@@ -14,6 +15,7 @@
     }
 
     drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array());
+    showMessages();
     drawNavBar();
     // drawProfile();
 ?>
