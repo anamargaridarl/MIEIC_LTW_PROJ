@@ -1,5 +1,4 @@
 @import url("palette.css");
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -43,6 +42,9 @@ a {
     text-align: center;
 }
 
+
+/*  --------------------------Bottom ---------------------- */
+
 #map {
     width: 50%;
     height: 200px;
@@ -52,86 +54,48 @@ a {
 }
 
 .bottom {
-    display: grid;
-    grid-template-columns: 1fr 0.2fr 1fr;
-    grid-template-areas: "title owner map" "text1 text1 map" "text2 text2 map" "text2 text2 book";
-    grid-template-rows: 0.2fr 0.5fr 0.4fr 0.2fr;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 
-.owner {
-    margin: 2em 8em 0em 0em;
-    grid-area: owner;
+#left {
+    width: 50%;
 }
 
-.owner img {
-    border-radius: 40px;
+#right {
+    width: 50%;
 }
 
-.title {
-    margin: 2em 0em 0em 10em;
-    grid-area: title;
+#top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 
 .title h1 {
-    margin-bottom: 0em;
     font-weight: normal;
     font-size: 2em;
     color: var(--pink-color);
 }
 
-.title2 {
-    grid-area: text1;
-    margin: 0em 0em 0em 10em;
-}
-
 .title2 h2 {
-    margin-top: 0em;
     font-weight: normal;
     font-size: 1.5em;
     color: var(--grey-color);
 }
 
-.title2 p {
-    font-size: 1em;
-    padding-bottom: 0.5em;
-    padding-right: 6em;
-    border-width: 0.5px;
-    border-bottom-style: solid;
-    border-color: var(--grey-color);
-}
-
-.title2,
-.texthouse {
-    border-width: 0.5px;
-    padding-right: 2em;
-    border-right-style: solid;
-    border-color: var(--grey-color)
-}
-
-.book {
-    margin-right: 6em;
-    grid-area: book;
-}
-
 .book h2 {
-    text-align: end;
-    font-size: 1.15em;
     color: var(--grey-color);
     font-weight: normal;
-    padding-bottom: 0.75em;
-    border-width: 0.5px;
-    border-bottom-style: solid;
-    border-color: var(--grey-color);
-    margin-left: 5em;
-    margin-right: 6em;
 }
 
 .book>h3 {
-    text-align: end;
     font-size: 1.25em;
     font-weight: normal;
-    margin-left: 5em;
-    margin-right: 5.5em;
 }
 
 .book button {
@@ -140,17 +104,6 @@ a {
     border-radius: 15px;
     border-width: 0.5px;
     color: var(--white-color);
-    padding: 1em 4em 1em;
     text-decoration: none;
     font-size: 1em;
-    margin-left: 10em;
-    margin-bottom: 2em;
-}
-
-.texthouse {
-    padding-top: 2em;
-    padding-right: 4em;
-    margin-left: 10em;
-    grid-area: text2;
-    margin-bottom: 2em;
 }
