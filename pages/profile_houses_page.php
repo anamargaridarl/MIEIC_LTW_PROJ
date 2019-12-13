@@ -12,7 +12,7 @@
         http_response_code(401);
     }
 
-    drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','show_pass.js'));//these scripts wont be needed
+    drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','show_pass.js'));
 
     drawNavBar();?>
     <div class="middle">

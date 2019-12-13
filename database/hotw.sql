@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS user;
 CREATE TABLE user (
   user_id INTEGER PRIMARY KEY,
   email TEXT UNIQUE NOT NULL,
-  username TEXT UNIQUE NOT NULL,
+  username TEXT NOT NULL,
   hash TEXT NOT NULL,
   joined_on DATE NOT NULL
   -- country perhaps?
