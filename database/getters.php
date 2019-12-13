@@ -11,10 +11,17 @@
             $houses = $stmt->fetchAll();
         }
 
-       if($checkin != NULL && $checkout != NULL) {
-            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day FROM habitation,reservation WHERE hab_id = hab AND (start_date > ? OR end_date < ?)');
-            $stmt->execute(array($checkout,$checkin));
+        if($checkin != NULL && $checkout != NULL) {
+           $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day 
+                                    FROM habitation,reservation 
+                                    WHERE hab_id = hab 
+                                    AND hab IN 
+                                    (SELECT hab FROM reservation 
+                                    EXCEPT SELECT hab FROM reservation 
+                                    WHERE (start_date < ? AND end_date > ?) OR (end_date > ? AND start_date < ?) OR (start_date > ? AND end_date < ?))');
+            $stmt->execute(array($checkin,$checkin,$checkout,$checkout,$checkin,$checkout));
             $reservationDays = $stmt->fetchAll();
+            
             foreach($houses as $key => $value) {
                 if(!in_array($value,$reservationDays)) {
                     unset($houses[$key]);
