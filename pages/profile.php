@@ -17,6 +17,8 @@
 
 <section class="container">
     
+<div class="middle">
+
 <?php drawSideMenu() ?>
 
     <section class="profile-info">
@@ -38,8 +40,9 @@
             <input type="password" name="newpassfield">
 
             <input type="submit" name="submit" value="Update profile">
+
         </form>
     </section>
-</section>
 
+</div>
 <?php drawFooter(); ?>
