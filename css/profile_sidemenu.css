@@ -14,7 +14,7 @@
     justify-content: center;
     text-align: center;
     border: 0.5px solid var(--white-color);
-    padding: 2em;
+    padding: 15%;
     margin: 0;
 }
 
@@ -34,5 +34,6 @@
         border-radius: 10px;
         width: 60%;
         align-self: center;
+        padding: 5%;
     }
 }
