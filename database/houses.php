@@ -17,7 +17,7 @@
     $hab_id = $stmt2->fetch();
 
     $date = date('Y-m-d'); 
-    $id = get_ownerid($_SESSION['username']);
+    $id = get_userid($_SESSION['username']);
 
     error_log($date);
     error_log($id['user_id']);

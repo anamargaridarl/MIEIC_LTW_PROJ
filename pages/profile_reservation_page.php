@@ -23,7 +23,9 @@
     
     <?php drawSideMenu();
 
-    $reservations = getReservations(6); 
+    $id = get_userid($_SESSION['username']);
+
+    $reservations = getReservations($id); 
 
     drawReservations($reservations);?>
 

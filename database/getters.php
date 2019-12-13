@@ -127,7 +127,7 @@
         return $username;
     }
 
-    function get_ownerid($username) {
+    function get_userid($username) {
         $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT user_id FROM user WHERE username = ?');
         $stmt->execute(array($username));

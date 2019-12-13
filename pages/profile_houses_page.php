@@ -21,7 +21,7 @@
     
     drawSideMenu();
 
-    $id = get_ownerid($_SESSION['username']);
+    $id = get_userid($_SESSION['username']);
 
     $houses = get_owner_houses($id['user_id']); 
 
