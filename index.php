@@ -13,22 +13,22 @@
         <h3 id="form_title">Houses of the World!</h3>
         <div id="whereto">
           <p>Where</p>
-          <input type="text" name="location" placeholder="Choose your next destination...">
+          <input type="text" name="location" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
         </div>
         <div id="check">
         <div id="checkin">
           <p>Check-In</p>
-          <input type="date" name="checkin">
+          <input type="date" name="checkin" title="Choose the date when your stay shall begin...">
         </div>
         <div id="checkout">
           <p>Check-Out</p>
-          <input type="date" name="checkout">
+          <input type="date" name="checkout" title="...And when it shall end.">
         </div>
         </div>
         <div id="guestbot">
         <div id="guests">
           <p>Nº guests</p>
-          <input type="number" name="guests" min="1" max="8" placeholder="1">
+          <input type="number" name="guests" min="1" max="20" placeholder="1" title="How many people are coming with you? It's a single-player adventure, a romantic getaway or a group excursion? You can select up to 20 guests...">
         </div>
         <div id="button">
         <input id="search" type="submit" value="Search">
