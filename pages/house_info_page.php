@@ -6,6 +6,7 @@
     include_once('../templates/house_info.php');
     include_once('../templates/nav_bar.php');
     include_once('../templates/profile_sidemenu.php');
+    include_once('../templates/show_messages.php');
 
     if (!isset($_SESSION['email'])) {
         http_response_code(401);
@@ -13,7 +14,7 @@
     }
 
     drawHead(array("../css/profile_sidemenu.css","../css/houseinfo.css","../css/navfooter.css"), array('modal_box.js','show_pass.js'));
-
+    showMessages();
     drawNavBar();?>
     <div class="middle">
 

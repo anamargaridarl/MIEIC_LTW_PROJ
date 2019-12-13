@@ -24,7 +24,7 @@
                               WHERE
                                   hab_id = ?');
 
-        $stmt->execute(array($house['title'],
+        return $stmt->execute(array($house['title'],
                              $house['price_p_day'],
                              $house['n_bedrooms'],
                              $house['n_bathrooms'],

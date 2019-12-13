@@ -15,11 +15,14 @@
     $house['description'] = $_POST['description'];
 
     try {
-        update_house($house_id,$house);
+        if(!update_house($house_id,$house)) {
+            http_response_code(500);
+            die(header('Location: http_error_page.php'));
+        }
+        $_SESSION['message'] = array('type' => 'success','content' => 'Updated house successfully.');
         header('Location: ../pages/house_info_page.php?id='.$house_id); // change to edit_house_page
     } catch (PDOException $e) {
-        // TODO: handle database update error 
-        print_r($_POST);
-        print_r($e);
+        http_response_code(500);
+        die(header('Location: http_error_page.php'));
     }
 ?>
