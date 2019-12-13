@@ -103,6 +103,17 @@
 
         return $reservations;
     }
+
+    function getClientName($client_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT username FROM user,client WHERE user_id = client_id AND client_id = ?');
+        $stmt->execute(array($client_id));
+        $guest = $stmt->fetch();
+        if(!$guest)
+            return false;
+        else
+        return $guest['username'];
+    }
     
     //profile_houses_page
     function get_owner_houses($owner_id)

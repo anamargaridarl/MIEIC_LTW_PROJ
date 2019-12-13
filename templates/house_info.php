@@ -28,9 +28,10 @@ $images = getImages($id); ?>
     <h2> Reservation History </h2>
 
     <div id="reservlist">
-   <?php foreach ($reservations as $reservation): ?>
+   <?php foreach ($reservations as $reservation): 
+      $guest = getClientName($reservation['client']);?>
     <div id="reserv">
-    <p>Main Guest:   </p>
+    <p>Main Guest: <?=$guest?></p>
     <p>Nº.Guests: <?= $reservation['nr_guests'] ?> </p>
     <p>Dates: <?= $reservation['start_date'] ?> - <?= $reservation['end_date'] ?> </p>
 
