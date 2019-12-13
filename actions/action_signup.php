@@ -9,12 +9,15 @@
 
     try {
         $hash = password_hash($password,PASSWORD_BCRYPT);
-        insert_user($username, $email, $hash);
+        if(!insert_user($username, $email, $hash)) {
+            $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Failed to create account: email is already in used.');
+            die(header('Location: ../index.php'));
+        }
+
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $username;
         header('Location: ../pages/profile.php');
     } catch (PDOException $e) {
-        //lacks handling specific errors (ex: user always exists,email already in use, etc...)
         http_response_code(500);
         die(header('Location: ../index.php'));
     }
