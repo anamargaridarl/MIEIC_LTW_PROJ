@@ -29,16 +29,16 @@
         </section>
         <form method="post" action="../actions/action_update_profile.php">
             <label for="username">Name</label>
-            <input type="text" name="username" value="<?= htmlspecialchars($_SESSION['username']) ?>" required>
+            <input type="text" name="username" value="<?= htmlspecialchars($_SESSION['username']) ?>" title="This name is the one displayed to other users." required>
 
             <label for="email">Email</label>
-            <input type="text" name="email" value="<?= htmlspecialchars($_SESSION['email']) ?>" required>
+            <input type="text" name="email" value="<?= htmlspecialchars($_SESSION['email']) ?>" title="Set the email for your account. You won't get spam from us, don't worry..." required>
 
-            <label for="oldpassfield">Old Password</label>
-            <input type="password" name="oldpassfield">
+            <label for="currpass">Password</label>
+            <input type="password" name="currpass" title="Any changes to the profile require for you to enter your password..." required>
 
-            <label for="newpassfield">Password</label>
-            <input type="password" name="newpassfield">
+            <label for="newpassfield">New Password</label>
+            <input type="password" name="newpassfield" title="Change your password if you wish, but put your current one before that, in case you forget to signout somewhere...">
 
             <input type="submit" name="submit" value="Update profile">
         </form>
