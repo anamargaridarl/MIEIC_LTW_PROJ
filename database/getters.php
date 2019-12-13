@@ -81,7 +81,6 @@
         return $images;
     }
 
-
     //profile_reservation_page
     function getReservations($client_id)
     {

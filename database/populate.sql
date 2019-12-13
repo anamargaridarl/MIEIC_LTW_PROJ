@@ -11,6 +11,17 @@ INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (8,"Sean Clayto
 INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (9,"Omar Baird", "$2y$10$47NvUFdI8Xd8pgN48C8Si.x/WslK26sMexMzLhaCFZh5dwlBJKZiy", "2019-11-08", "omar@bai.rd");
 INSERT INTO user (user_id,username,hash,joined_on, email) VALUES (10,"Zach Mccall", "$2y$10$Tyvw15h/Zdt2YBvMlzdypuuB/RhLF7skW5EX28HSjGQxD0p6UFra2", "2019-11-15", "makeamericagreatagain@mtrump2020.com");
 
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/profile_pic.jpg",1);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/tux.jpg",2);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/vianetta.jpg",3);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/nadia.jpg",4);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/casey.jpg",5);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/edgar.jpg",6);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/cain.jpg",7);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/sean.jpg",8);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/omar.jpg",9);
+INSERT INTO avatar (link,user_id) VALUES ("../images/avatars/zach.jpg",10);
+
 INSERT INTO client (client_id) VALUES (1);
 INSERT INTO client (client_id) VALUES (2);
 INSERT INTO client (client_id) VALUES (3);

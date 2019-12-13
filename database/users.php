@@ -48,4 +48,12 @@
         $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
         $stmt->execute(array($new_email, $email));
     }
+
+    function getProfileAvatar($username) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT link FROM avatar, user WHERE username = ? and avatar.user_id = user.user_id');
+        $stmt->execute(array($username));
+        $avatar = $stmt->fetch();
+        return $avatar['link'];
+    }
 ?>
