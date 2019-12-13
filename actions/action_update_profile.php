@@ -3,7 +3,7 @@
     include_once('../database/users.php');
 
     if(!check_email_passwd($_SESSION['email'],$_POST['currpass'])) {
-        $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Failed to edit profile: incorrect password');
+        $_SESSION['message'] = array('type' => 'error', 'content' => 'Failed to edit profile: incorrect password');
         die(header('Location: ../pages/profile.php'));
     }
 
@@ -39,6 +39,6 @@
         http_response_code(500);
         die(header('Location: http_error_page.php'));
     }
-
+    $_SESSION['message'] = array('type' => 'success','content' => 'Updated profile successfully.');
     header('Location: ../pages/profile.php');
 ?>

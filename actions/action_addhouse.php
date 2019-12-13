@@ -21,6 +21,7 @@
         die(header('Location: http_error_page.php'));
     }
 
+    $_SESSION['message'] = array('type' => 'success','content' => 'Added new house successfully.');
     header('Location: ../pages/profile_houses_page.php');
 
 ?>
