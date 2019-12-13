@@ -12,7 +12,7 @@ function drawHouses($houses) { ?>
       <img src=<?= urlencode($images[0]['link']) ?> alt="House Photo" width="250em" height="250em">
     </div>
     <div class="text">
-      <p><?= htmlspecialchars($house['title']) ?></p>
+      <a href="house_info_page.php?id=<?=$house['hab_id']?>"><?= htmlspecialchars($house['title']) ?></a>
       <p><?= htmlspecialchars($house['region']) ?> , <?= htmlspecialchars($house['location']) ?></p>
       <p>Address: <?= htmlspecialchars($house['addr']) ?></p>
       <p>Capacity:<?= htmlspecialchars($house['capacity']) ?></p>

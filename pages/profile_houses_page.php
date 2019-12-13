@@ -9,8 +9,8 @@
     include_once('../templates/show_messages.php');
 
     if (!isset($_SESSION['email'])) {
-        //die(header('Location: /index.php'));
         http_response_code(401);
+        die(header('Location: /index.php'));
     }
 
     drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','show_pass.js'));
@@ -24,7 +24,7 @@
 
     $id = get_ownerid($_SESSION['username']);
 
-    $houses = get_owner_houses($id['user_id']); 
+    $houses = get_owner_houses($id); 
 
     drawHouses($houses);?>
     

@@ -18,11 +18,6 @@
 
         $date = date('Y-m-d'); 
         $id = get_ownerid($_SESSION['username']);
-
-        error_log($date);
-        error_log($id['user_id']);
-        error_log($hab_id['hab_id']);
-
         
         $stmt3 = $db->prepare('SELECT owner_id FROM owner WHERE owner_id = ?');
         $stmt3->execute(array($id['user_id']));

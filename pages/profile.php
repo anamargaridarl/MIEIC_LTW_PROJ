@@ -7,17 +7,14 @@
     include_once('../templates/show_messages.php');
     include_once('../templates/profile_sidemenu.php');
 
-
-    // Uncomment in production
     if (!isset($_SESSION['email'])) {
-        //die(header('Location: /index.php'));
         http_response_code(401);
+        die(header('Location: ../index.php'));
     }
 
     drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array());
     showMessages();
     drawNavBar();
-    // drawProfile();
 ?>
 
 <section class="container">

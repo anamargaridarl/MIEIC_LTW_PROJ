@@ -3,6 +3,7 @@
     include_once('../database/getters.php');
     include_once('../database/users.php');
 
+
     $email = $_POST['email'];
     $password = $_POST['password'];
 

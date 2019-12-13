@@ -19,7 +19,7 @@ $images = getImages($id); ?>
     <p> Description:</p>
     <p>  <?= htmlspecialchars($house['description']) ?> </p>
     <div id= "h_button">
-    <a id="editinfo" href="http://localhost:8088/pages/house_info_edit_page.php">Edit Info</a>
+    <a id="editinfo" href="../pages/house_info_edit_page.php?id=<?=$id?>">Edit Info</a>
     </div>
     </div>
     </div>
@@ -28,9 +28,10 @@ $images = getImages($id); ?>
     <h2> Reservation History </h2>
 
     <div id="reservlist">
-   <?php foreach ($reservations as $reservation): ?>
+   <?php foreach ($reservations as $reservation): 
+      $guest = getClientName($reservation['client']);?>
     <div id="reserv">
-    <p>Main Guest:   </p>
+    <p>Main Guest: <?=$guest?></p>
     <p>Nº.Guests: <?= $reservation['nr_guests'] ?> </p>
     <p>Dates: <?= $reservation['start_date'] ?> - <?= $reservation['end_date'] ?> </p>
 
