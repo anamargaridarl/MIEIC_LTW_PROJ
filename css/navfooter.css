@@ -121,7 +121,6 @@ p {
 @media (max-width: 600px) {
     #navbar {
         flex-direction: column;
-        justify-content: flex-start;
     }
     #accountlog {
         width: 90%;
@@ -130,20 +129,25 @@ p {
         border-width: 1px;
         border-style: solid;
         border-color: var(--grey-color);
+        align-self: center;
+        justify-content: center;
     }
     #logosearch {
+        width: 90%;
         padding-bottom: 1em;
-        justify-content: flex-start;
+        justify-content: center;
+        padding-left: 0;
     }
     #accountlog a {
         color: var(--black-color);
     }
     #logged,
     #account {
-        justify-content: center;
+        justify-content: start;
     }
     #logged div,
-    #logo {
+    #logo,
+    #account a:nth-child(1) {
         border-style: hidden;
     }
     #logged a {
