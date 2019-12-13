@@ -21,7 +21,7 @@
 
     <section class="profile-info">
         <section class="profile-image">
-            <img src="../images/profile_pic_resize.jpg" alt="profile picture">
+            <img src="../images/avatars/profile_pic_resize.jpg" alt="profile picture">
             <p><?= htmlspecialchars($_SESSION['username']) ?></p>
         </section>
         <form method="post" action="../actions/action_update_profile.php">

@@ -40,60 +40,60 @@ INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacit
 INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (12,"Casa Moderna Centro",53,1,1,2,"Rua da Camisa","Lisboa","center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
 INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (13,"Casa da Bolinha",103,2,1,3,"Rua da BolaBerlim","Albufeira","south","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",1);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",1);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",1);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",1);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",1);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",2);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",2);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",2);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",2);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",2);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",2);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",2);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",2);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",3);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",3);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",3);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",3);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",3);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",3);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",3);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",3);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",4);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",4);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",4);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",4);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",4);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",4);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",4);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",4);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",5);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",5);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",5);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",5);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",5);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",5);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",5);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",5);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",6);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",6);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",6);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",6);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",7);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",7);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",7);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",7);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",7);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",7);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",7);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",7);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",8);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",8);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",8);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",8);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",8);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",8);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",8);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",8);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",9);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",9);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",9);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",9);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",10);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",10);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",10);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",10);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",10);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",10);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",10);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",10);
 
-INSERT INTO images (link,hab_id) VALUES ("../images/fancy_living_room.jpg",11);
-INSERT INTO images (link,hab_id) VALUES ("../images/modern_living_room.jpg",11);
-INSERT INTO images (link,hab_id) VALUES ("../images/spacey_living_room.jpg",11);
-INSERT INTO images (link,hab_id) VALUES ("../images/minimal_kitchen.jpg",11);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/fancy_living_room.jpg",11);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/modern_living_room.jpg",11);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/spacey_living_room.jpg",11);
+INSERT INTO images (link,hab_id) VALUES ("../images/houses/minimal_kitchen.jpg",11);
 
 INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21");
 INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21");

@@ -42,22 +42,22 @@
       <div id="regions">
         <div class="landscape">
           <a id="north"  href="pages/explore_rooms.php?region=north">
-            <img src="/images/porto_explore.jpg" ><p>North</p>
+            <img src="/images/site/porto_explore.jpg" ><p>North</p>
           </a>
         </div>
         <div class="landscape">  
           <a id="center" href="pages/explore_rooms.php?region=center">
-            <img src="/images/viseu_explore.jpg" ><p>Center</p>
+            <img src="/images/site/viseu_explore.jpg" ><p>Center</p>
           </a>
         </div>  
         <div class="landscape">  
           <a id="south" href="pages/explore_rooms.php?region=south">
-            <img src="/images/algarve_explore.jpg" ><p>South</p>
+            <img src="/images/site/algarve_explore.jpg" ><p>South</p>
           </a>
         </div>
         <div class="landscape">
           <a id="islands" href="pages/explore_rooms.php?region=islands">
-            <img src="/images/madeira_explore.jpg" ><p>Islands</p>
+            <img src="/images/site/madeira_explore.jpg" ><p>Islands</p>
           </a>
         </div>
       </div>

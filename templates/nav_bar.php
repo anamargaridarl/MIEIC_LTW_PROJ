@@ -8,7 +8,7 @@
 <nav id="navbar">
   <div id="logo">
   <a id="homepage"  href="../index.php">
-  <img src="../images/logodemo.png" alt="Logo">
+  <img src="../images/site/logodemo.png" alt="Logo">
   </a>
   </div>
 
@@ -21,7 +21,7 @@
   
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
-      <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
+      <div><img src="../images/avatars/profile_pic.jpg" class="profilepic"></div>
       
       <?php if (strpos(getcwd(), '/pages') > 0) { ?>
         <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>

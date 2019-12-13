@@ -36,7 +36,7 @@
 </div>
 
 <div class="owner">
-<img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
+<img src="../images/avatars/profile_pic_resize.jpg" alt="Profile Picture">
   <p>Joana</p>
 </div>
 
