@@ -21,13 +21,8 @@
     
     drawSideMenu();
 
-    if (!isset($_SESSION['username'])) {
-        http_response_code(401);
-    }
-    else{
-       $owner_username =  $_SESSION['username'];
-       $owner_id  = get_ownerid($owner_username);
-    }
+    $owner_username =  $_SESSION['username'];
+    $owner_id  = get_ownerid($owner_username);
 
     if(isset($_GET['id'])){
         $house_id = $_GET['id'];
