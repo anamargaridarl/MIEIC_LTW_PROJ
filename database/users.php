@@ -17,17 +17,21 @@
     function insert_user($username, $email, $hash) {
         $db = Database::instance()->db();
 
+        $username = get_username($email);
+
+        if($username)
+            return false;
+
         $stmt = $db->prepare('INSERT INTO user(username, email, hash, joined_on) values(?, ?, ?, ?)');
 
-        // TODO: hash password
-        $stmt->execute(array($username, $email, $hash, date('Y-m-d')));
+        return $stmt->execute(array($username, $email, $hash, date('Y-m-d')));
     }
 
     function update_username($email, $name) {
         $db = Database::instance()->db();
 
         $stmt = $db->prepare('UPDATE user SET username = ? WHERE email = ?');
-        $stmt->execute(array($name, $email));
+        return $stmt->execute(array($name, $email));
     }
 
     function update_passwd($email, $oldpasswd,$newpasswd) {
@@ -49,6 +53,6 @@
         $db = Database::instance()->db();
 
         $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
-        $stmt->execute(array($new_email, $email));
+        return $stmt->execute(array($new_email, $email));
     }
 ?>
