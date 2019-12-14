@@ -15,7 +15,22 @@
   <div class="input-container">
     <i class="material-icons">search</i>
     <form id="input" method="get" action="search_rooms.php" method ="GET">
-    <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
+    <p><input id='input-field' type="text" placeholder="Local" name="location">
+      <section id="details-form">
+        <label for="guestno">Guests</label>
+        <input type="number" id="guestno" name="guestno">
+
+        <label for="nights">Nights</label>
+        <input type="number" id="nights" name="nights">
+
+        <label for="checkin">Checkin date</label>
+        <input type="date" id="checkin" name="checkin">
+
+        <label for="checkout">Checkout date</label>
+        <input type="date" id="checkout" name="checkout">
+        <input type="submit" value="Submit">
+      </section>
+    </p>
     </form>
   </div>
   

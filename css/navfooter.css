@@ -48,10 +48,28 @@ body {
     border-radius: 10px 0px 0px 10px;
 }
 
+#details-form {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    left: 30%;
+    width: 20em;
+    background-color: white;
+    border: 1px solid var(--grey-color);
+    border-top: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+#details-form input, #details-form label {
+    display: block;
+    width: 80%;
+    margin: 1em;
+}
 
 /* Style the input fields */
 
-.input-field {
+#input-field {
     width: 100%;
     padding: 15px;
     outline: none;
@@ -60,7 +78,7 @@ body {
     border-radius: 0px 10px 10px 0px;
 }
 
-.input-field:focus {
+#input-field:focus {
     border: none;
 }
 

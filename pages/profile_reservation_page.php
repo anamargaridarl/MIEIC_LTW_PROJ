@@ -13,7 +13,7 @@
     }
 
 
-    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('modal_box.js'));
+    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('../modal_box.js', '../search.js'));
     ?>
 
 

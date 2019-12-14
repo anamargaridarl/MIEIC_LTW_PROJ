@@ -13,7 +13,7 @@
         http_response_code(401);
     }
 
-    drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array());
+    drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array('../search.js'));
     drawNavBar();
     // drawProfile();
 ?>

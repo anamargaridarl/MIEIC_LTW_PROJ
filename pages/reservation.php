@@ -6,7 +6,7 @@
     include_once('../templates/profile_sidemenu.php');
     include_once('../templates/reservation_form.php');
 
-    drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../modal_box.js", "../reservations.js"));
+    drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../modal_box.js", "../reservations.js", "../search.js"));
     drawNavBar();
 
     $house_id = $_GET['id'];
