@@ -7,10 +7,6 @@
     include_once('../templates/show_messages.php');
     include_once('../templates/profile_sidemenu.php');
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d75941661bb071644c8f27b26527047048a657f
     if (!isset($_SESSION['email'])) {
         http_response_code(401);
         die(header('Location: ../index.php'));
