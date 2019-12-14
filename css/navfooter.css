@@ -64,27 +64,30 @@ body {
     position: absolute;
     visibility: hidden;
     z-index: 1;
-    left: 30%;
-    width: 20em;
+    left: 23%;
+    width: 20%;
     background-color: white;
     border: 1px solid var(--grey-color);
     border-top: none;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
 }
-.input-container #input {
-    width: 80%;
-}
 
-#details-form input, #details-form label {
+#details-form input,
+#details-form label {
     display: block;
     width: 80%;
     margin: 1em;
 }
 
+.input-container #input {
+    width: 80%;
+}
+
+
 /* Style the input fields */
 
-.input-field {
+#input-field {
     padding: 15px;
     outline: none;
     border: none;
@@ -339,9 +342,11 @@ footer div:first-of-type {
     font-size: 1.5em;
 }
 
+
 /************ Error Box ****************/
 
-.error_msg, .success_msg {
+.error_msg,
+.success_msg {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
