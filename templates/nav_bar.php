@@ -20,6 +20,9 @@
     <input class="input-field" id='input-field' type="text" placeholder="Local" name="location" title="Where are you going next? It's only a few clicks away...">
     </form>
   </div>
+
+  </div>
+
   
   <div id = "accountlog">
 
