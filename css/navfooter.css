@@ -176,6 +176,9 @@ p {
     #account a:nth-child(1) {
         border-style: hidden;
     }
+    #details-form {
+        width: 40%;
+    }
 }
 
 
