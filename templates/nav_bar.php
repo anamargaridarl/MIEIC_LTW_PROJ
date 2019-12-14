@@ -16,9 +16,10 @@
 
     <div class="input-container">
       <i class="material-icons">search</i>
-      <form id="input" method="get" action="search_rooms.php" method ="GET">
-      <p><input id='input-field' type="text" placeholder="Local" name="location">
-        <section id="details-form">
+      <form id="input" method="get" action="search_rooms.php" method ="GET" autocomplete="off">
+      <p>
+        <input id='input-field' type="text" placeholder="Local" name="location">
+        <div id="details-form">
           <label for="guests">Guests</label>
           <input type="number" id="guests" name="guests">
 
@@ -31,7 +32,8 @@
           <label for="checkout">Checkout date</label>
           <input type="date" id="checkout" name="checkout">
           <input type="submit" value="Submit">
-        </section>
+        </div>
+
       </p>
       </form>
     </div>

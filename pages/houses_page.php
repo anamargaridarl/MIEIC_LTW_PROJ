@@ -6,32 +6,21 @@
     include_once('../templates/nav_bar.php');
     include_once('../templates/houses.php');
     
-    if (isset($_GET['id'])){
-      $house_id = $_GET['id'];
-    }
+    if(isset($_GET['id'])){
+        $product_id = $_GET['id'];
+      }
     
-    if (isset($_GET['checkin']) && isset($_GET['checkout']) ){
-      $checkin = $_GET['checkin'];
-      $checkout = $_GET['checkout'];
-    }
-
-  $images = getImages($house_id);
-  $owner = getHouseOwnerEmail($house_id);
-  $guests = $_GET['guests'];
-  
-  drawHead(array("../css/houses.css", "../css/navfooter.css"), array("../carousel.js", "../modal_box.js", "search.js"));
-
-  drawNavBar();
-
-  drawHouse($house_id, $images, $checkin, $checkout, $owner, $guests);
-  
-  drawFooter();
+      if(isset($_GET['checkin']) && isset($_GET['checkout']) ){
+        $checkin = $_GET['checkin'];
+        $checkout = $_GET['checkout'];
+      }
+    $house = getRoom($product_id);
+    $images = getImages($product_id);
     
-    drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js', "search.js"));
-
+    drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js'));
     drawNavBar();
       
-      drawHouse($house_id, $images, $checkin, $checkout, $owner, $guests);
+    drawHouse($house,$images,$checkin,$checkout);
     
     drawFooter();
     

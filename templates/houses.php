@@ -2,12 +2,6 @@
   include_once('nav_bar.php');
   include_once('head.php');
   include_once('footer.php');
-  include_once('../database/getters.php');
-
- function drawHouse($house_id, $images, $checkin, $checkout, $user_email, $guests) {
-   $house = getRoom($house_id);
-?>
-
  function drawHouse($house, $images, $checkin,$checkout) {?>
   
   <div class="slideshow-container">
