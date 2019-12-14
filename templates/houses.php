@@ -4,7 +4,10 @@
   include_once('footer.php');
   include_once('../database/getters.php');
 
- function drawHouse($house, $images, $checkin, $checkout, $user_email) {?>
+ function drawHouse($house_id, $images, $checkin, $checkout, $user_email) {
+   $house = getRoom($house_id);
+?>
+
   <div class="slideshow-container">
     <a class="prev" >&#10094;</a>
 
@@ -45,12 +48,12 @@
         $diff = abs(strtotime($checkout)-strtotime($checkin));
         $years = floor($diff / (365*60*60*24));
         $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
-        $days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+        $nights = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
         $per_day = $house['price_per_day'];
-        $total = $per_day  * $days?>
-  <h2>Nights: <?=$days?>*<?= $house['price_per_day'] ?> €</h2>
+        $total = $per_day  * $nights?>
+  <h2>Nights: <?=$nights?> * <?= $house['price_per_day'] ?> €</h2>
   <h3>Total:  <?= $total ?> € </h3>
-  <a href="reservation.php?">Book Now</a>
+  <a href="reservation.php?id=<?= $house_id ?>&checkin=<?= $checkin ?>&checkout=<?= $checkout ?>">Book Now</a>
 </div>
 
 
