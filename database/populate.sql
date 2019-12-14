@@ -102,7 +102,7 @@ INSERT INTO ownership (hab,owner,added_on) VALUES (4,2,"2019-10-21");
 INSERT INTO ownership (hab,owner,added_on) VALUES (5,3,"2019-10-28");
 
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (1,3,1,6,"2019-11-01","2019-11-03");
-INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (2,6,2,4,"2019-10-31","2019-11-01");
+INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (2,6,2,2,"2019-10-31","2019-11-01");
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (3,4,3,7,"2019-11-10","2019-11-16");
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (4,2,4,10,"2019-11-18","2019-11-19");
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (5,2,5,8,"2019-11-05","2019-11-08");
