@@ -49,11 +49,29 @@
         $stmt->execute(array($new_email, $email));
     }
 
-    function getProfileAvatar($username) {
+    function getProfileAvatarLink($username) {
+        $profile_avatar_path = "../images/avatars/";
         $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT link FROM avatar, user WHERE username = ? and avatar.user_id = user.user_id');
         $stmt->execute(array($username));
         $avatar = $stmt->fetch();
-        return $avatar['link'];
+        return $profile_avatar_path . $avatar['link'];
+    }
+
+    function getThumbnailLink($username) {
+        $thumbnail_avatar_path = "../images/avatars/thumbnails/";
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT link FROM avatar, user WHERE username = ? and avatar.user_id = user.user_id');
+        $stmt->execute(array($username));
+        $avatar = $stmt->fetch();
+        return $thumbnail_avatar_path . $avatar['link'];
+    }
+
+    function update_avatar($username, $link_avatar) {
+        
+        $user_id = get_ownerid($username);
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('UPDATE avatar SET link = ? WHERE user_id = ?');
+        return $stmt->execute(array($link_avatar,$user_id));
     }
 ?>
