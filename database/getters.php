@@ -141,8 +141,11 @@
         $stmt = $db->prepare('SELECT username FROM user WHERE email = ?');
         $stmt->execute(array($email));
 
-        $username = $stmt->fetch()['username'];
-        return $username;
+        $username = $stmt->fetch();
+        if(!$username)
+            return $username;
+        else
+            return $username['username'];
     }
 
     function get_userid($username) {

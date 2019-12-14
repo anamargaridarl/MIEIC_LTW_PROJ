@@ -14,12 +14,11 @@
       </a>
     </div>
 
-    <div class="input-container">
-      <i class="material-icons">search</i>
-      <form id="input" method="get" action="search_rooms.php" method ="GET">
-      <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
-      </form>
-    </div>
+  <div class="input-container">
+    <i class="material-icons">search</i>
+    <form id="input" method="get" action="search_rooms.php" method ="GET">
+    <input class="input-field" id='input-field' type="text" placeholder="Local" name="location" title="Where are you going next? It's only a few clicks away...">
+    </form>
   </div>
   
   <div id = "accountlog">
