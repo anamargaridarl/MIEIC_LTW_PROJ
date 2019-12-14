@@ -6,20 +6,20 @@
 ?>
 
 <nav id="navbar">
-  <div id = "logosearch">
   
-  <div id="logo">
-  <a id="homepage"  href="../index.php">
-  <img src="../images/logodemo.png" alt="Logo">
-  </a>
-  </div>
+  <div id = "logosearch">
+    <div id="logo">
+      <a id="homepage"  href="../index.php">
+      <img src="../images/logodemo.png" alt="Logo">
+      </a>
+    </div>
 
-  <div class="input-container">
-    <i class="material-icons">search</i>
-    <form id="input" method="get" action="search_rooms.php" method ="GET">
-    <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
-    </form>
-  </div>
+    <div class="input-container">
+      <i class="material-icons">search</i>
+      <form id="input" method="get" action="search_rooms.php" method ="GET">
+      <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
+      </form>
+    </div>
   </div>
   
   <div id = "accountlog">
