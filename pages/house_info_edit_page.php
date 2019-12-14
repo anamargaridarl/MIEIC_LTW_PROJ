@@ -12,7 +12,7 @@
         die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../modal_box.js'));
+    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','../show_pass.js'));
 
     drawNavBar();?>
     <div class="middle">
@@ -26,7 +26,7 @@
     }
     else{
        $owner_username =  $_SESSION['username'];
-       $owner_id  = get_ownerid($owner_username);
+       $owner_id  = get_userid($owner_username);
     }
 
     if(isset($_GET['id'])){

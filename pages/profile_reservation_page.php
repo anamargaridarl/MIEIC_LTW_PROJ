@@ -12,8 +12,7 @@
         die(header('Location: /index.php'));
     }
 
-
-    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('../modal_box.js'));
+    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('modal_box.js','../show_pass.js'));
     ?>
 
 
@@ -23,7 +22,9 @@
     
     <?php drawSideMenu();
 
-    $reservations = getReservations(6); 
+    $id = get_userid($_SESSION['username']);
+
+    $reservations = getReservations($id); 
 
     drawReservations($reservations);?>
 

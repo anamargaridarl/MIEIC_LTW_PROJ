@@ -7,19 +7,26 @@
 ?>
 
 <nav id="navbar">
-  <div id="logo">
-  <a id="homepage"  href="../index.php">
-  <img src="../images/site/logodemo.png" alt="Logo">
-  </a>
-  </div>
+  
+  <div id = "logosearch">
+    <div id="logo">
+      <a id="homepage"  href="../index.php">
+      <img src="../images/logodemo.png" alt="Logo">
+      </a>
+    </div>
 
   <div class="input-container">
     <i class="material-icons">search</i>
     <form id="input" method="get" action="search_rooms.php" method ="GET">
-    <input class="input-field" id='input-field' type="text" placeholder="Local" name="location">
+    <input class="input-field" id='input-field' type="text" placeholder="Local" name="location" title="Where are you going next? It's only a few clicks away...">
     </form>
   </div>
+
+  </div>
+
   
+  <div id = "accountlog">
+
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
       <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
@@ -38,6 +45,7 @@
         <a id="loginbtn">Sign In</a>
       </div>
   <?php } ?>
+  </div>
 </nav>
 
 <?php 

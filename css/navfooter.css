@@ -4,35 +4,46 @@ body {
     box-sizing: border-box;
 }
 
-#page-container {
-    min-height: 100vh;
-    position: relative;
+#logosearch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
 }
 
-#content-wrap {
-    padding-bottom: 7em;
+#accountlog {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 #navbar {
-    padding: 0.75em;
     background-color: var(--blue-color);
+    padding: 0.75em 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #logo {
-    padding-right: 11.5%;
+    width: 29%;
     border-right: 0.5px solid var(--grey-color);
+    text-align: center;
 }
 
 
 /* Style the input container */
 
 .input-container {
+    width: 67%;
     display: flex;
-    width: 40%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     border-color: var(--grey-color);
 }
 
@@ -43,21 +54,26 @@ body {
     padding: 10px;
     background: var(--white-color);
     color: var(--pink-color);
-    min-width: 50px;
+    width: 5%;
+    height: 58%;
     text-align: center;
     border-radius: 10px 0px 0px 10px;
+}
+
+.input-container #input {
+    width: 80%;
 }
 
 
 /* Style the input fields */
 
 .input-field {
-    width: 100%;
     padding: 15px;
     outline: none;
     border: none;
     font-size: 1em;
     border-radius: 0px 10px 10px 0px;
+    width: 100%;
 }
 
 .input-field:focus {
@@ -68,12 +84,14 @@ p {
     margin: 0;
 }
 
-#account, #logged {
+#account,
+#logged {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#account a , #logged a {
+#account a,
+#logged a {
     text-decoration: none;
     margin-right: 0.5em;
     margin-left: 0.5em;
@@ -83,14 +101,16 @@ p {
     color: var(--white-color);
 }
 
-#account a, #logged a:nth-child(3), #logged div {
+#account a,
+#logged a:nth-child(3),
+#logged div {
     padding-left: 1em;
     border-width: 0.5px;
     border-left-style: solid;
     border-color: var(--grey-color);
 }
 
-#logged > div > img {
+#logged>div>img {
     border-radius: 100px;
     max-height: 2.5em;
     max-width: 2.5em;
@@ -98,6 +118,53 @@ p {
     border-width: 0.5px;
     border-left-style: solid;
     border-color: var(--grey-color);
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+        width: auto;
+    }
+    #accountlog {
+        width: 90%;
+        padding: 0.5em 0;
+        background-color: var(--white-color);
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--grey-color);
+        align-self: center;
+        justify-content: center;
+    }
+    #logosearch {
+        width: 90%;
+        padding-bottom: 1em;
+        justify-content: center;
+        padding-left: 0;
+    }
+    #accountlog a {
+        color: var(--black-color);
+    }
+    #logged,
+    #account {
+        justify-content: start;
+    }
+    #logged div,
+    #logo,
+    #account a:nth-child(1) {
+        border-style: hidden;
+    }
+}
+
+
+/* ---------------- footer --------------------------------*/
+
+#page-container {
+    min-height: 100vh;
+    position: relative;
+}
+
+#content-wrap {
+    padding-bottom: 7em;
 }
 
 footer {
@@ -130,8 +197,56 @@ footer div:first-of-type {
 }
 
 
+/***************MODAL BOXES******************/
+
 
 /***************MODAL BOXES******************/
+
+#modalLogin form,
+#modalSignup form {
+    width: 40%;
+    position: relative;
+    margin: 5% auto;
+}
+
+#register input,
+#log input {
+    background-color: var(--pink-color);
+    border: 0.5px solid var(--grey-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    font-size: 1.5em;
+    max-width: 50%;
+}
+
+#register,
+#log {
+    text-align: end;
+}
+
+@media (max-width: 600px) {
+    #modalLogin form,
+    #modalSignup form {
+        width: 80%;
+        margin: 20% auto;
+    }
+    #register input,
+    #log input {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    #modalLogin form,
+    #modalSignup form {
+        width: 60%;
+        margin: 10% auto;
+    }
+    #register input,
+    #log input {
+        max-width: 100%;
+    }
+}
 
 #modalLogin,
 #modalSignup {
@@ -142,33 +257,21 @@ footer div:first-of-type {
 #modalSignup {
     position: fixed;
     z-index: 5;
-    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
-}
-
-#modalLogin form, #modalSignup form {
-    width: 40%;
-    position: relative;
-    left: 30%;
-    top: 20%;
 }
 
 #signup,
 #login {
     background-color: var(--white-color);
-    border: 0.2em solid var(--blue-color);
+    border: 1px solid var(--blue-color);
     border-radius: 1em;
     padding: 2em 2em 0em 2em;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     animation-name: animateUp;
     animation-duration: 1s;
 }
@@ -182,65 +285,27 @@ footer div:first-of-type {
     }
 }
 
-#signup {
-    grid-template-areas: "title" "user" "email" "pass" "submit";
-}
-
-#login {
-    grid-template-areas: "title" "email" "pass" "submit";
-}
-
-#signup>#signTitle,
-#login>#loginTitle {
-    grid-area: title;
+#signTitle,
+#loginTitle {
     font-size: 2em;
-    width: 50%;
     margin-bottom: 1em;
-    word-wrap: break-word;
 }
 
 #signup>div,
 #login>div {
-    padding-bottom: 2em;
-    width: 100%;
-}
-
-#signup>div>*,
-#login>div>* {
-    position: relative;
-    width: 100%;
+    padding-bottom: 1.5em;
 }
 
 #signup>div>p,
 #login>div>p {
-    padding-bottom: 0.8em;
+    padding-bottom: 0.5em;
     font-size: 1.5em;
 }
 
 #signup>div>input,
 #login>div>input {
-    height: 60%;
-}
-
-#signup>#username,
-#login>#username {
-    grid-area: user;
-}
-
-#signup>#email,
-#login>#email {
-    grid-area: email;
-}
-
-#signup>#password,
-#login>#password {
-    grid-area: pass;
-    padding-bottom: 3em;
-}
-
-#signup>#register,
-#login>#log {
-    grid-area: submit;
+    border-radius: 5px;
+    height: 2.5em;
     width: 100%;
     height: 6em;
 }
@@ -255,4 +320,39 @@ footer div:first-of-type {
     border: 0.1em solid var(--blue-color);
     color: var(--white-color);
     font-size: 1.5em;
+}
+
+/************ Error Box ****************/
+
+.error_msg, .success_msg {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-flow: row nowrap;
+    z-index: 1;
+    font-size: 1.2em;
+}
+
+.error_msg * {
+    background-color: rgba(245, 70, 70, 0.7);
+}
+
+.success_msg * {
+    background-color: rgba(70, 245, 100, 0.7);
+}
+
+#close_msg {
+    color: var(--white-color);
+    padding: 0.4em 0.5em 0.2em 0;
+    font-size: 1.2em;
+}
+
+#close_msg:hover {
+    color: var(--grey-color);
+}
+
+#message {
+    color: var(--white-color);
+    padding: 0.5em;
 }

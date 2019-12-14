@@ -7,10 +7,15 @@ body {
     display: flex;
 }
 
+.middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .profile-info {
-    margin: auto;
-    width: 35em;
-    padding: 1em;
+    margin: 1em auto;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
