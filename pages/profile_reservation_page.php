@@ -8,12 +8,12 @@
     include_once('../templates/profile_sidemenu.php');
 
     if (!isset($_SESSION['email'])) {
-        //die(header('Location: /index.php'));
         http_response_code(401);
+        die(header('Location: /index.php'));
     }
 
+    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('modal_box.js','../show_pass.js', '../search.js'));
 
-    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('../modal_box.js', '../search.js'));
     ?>
 
 
@@ -23,7 +23,9 @@
     
     <?php drawSideMenu();
 
-    $reservations = getReservations(6); 
+    $id = get_userid($_SESSION['username']);
+
+    $reservations = getReservations($id); 
 
     drawReservations($reservations);?>
 

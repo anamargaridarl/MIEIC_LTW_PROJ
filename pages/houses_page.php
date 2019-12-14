@@ -27,4 +27,12 @@
   
   drawFooter();
     
+    drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js', "search.js"));
+
+    drawNavBar();
+      
+      drawHouse($house_id, $images, $checkin, $checkout, $owner, $guests);
+    
+    drawFooter();
+    
 ?>

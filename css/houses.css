@@ -1,5 +1,4 @@
 @import url("palette.css");
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -15,7 +14,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    text-align: center;
 }
 
 
@@ -23,7 +21,11 @@ body {
 
 .mySlides {
     display: none;
-    margin: 0 2em;
+    margin: auto;
+}
+
+#Images {
+    padding: 0 1em;
 }
 
 .mySlides img {
@@ -35,103 +37,87 @@ a {
     padding-top: 10em;
 }
 
-#prev {
-    text-align: center;
-}
 
-#next {
-    text-align: center;
-}
+/*  --------------------------Bottom ---------------------- */
 
 #map {
-    width: 50%;
     height: 200px;
-    background-color: var(--grey-color);
-    grid-area: map;
-    margin: 2em 0em 2em 5em;
 }
 
-.bottom {
-    display: grid;
-    grid-template-columns: 1fr 0.2fr 1fr;
-    grid-template-areas: "title owner map" "text1 text1 map" "text2 text2 map" "text2 text2 book";
-    grid-template-rows: 0.2fr 0.5fr 0.4fr 0.2fr;
+#bottom {
+    margin: 2em 0 2em 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-.owner {
-    margin: 2em 8em 0em 0em;
-    grid-area: owner;
+#left {
+    width: 45%;
+    padding-right: 1em;
+    border-right-style: solid;
+    border-width: 0.5px;
+    border-color: var(--grey-color);
 }
 
-.owner img {
-    border-radius: 40px;
+#right {
+    padding-left: 1em;
+    width: 30%;
+    margin-right: 20%;
 }
 
-.title {
-    margin: 2em 0em 0em 10em;
-    grid-area: title;
+#top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#titles {
+    width: 80%;
 }
 
 .title h1 {
-    margin-bottom: 0em;
     font-weight: normal;
     font-size: 2em;
     color: var(--pink-color);
 }
 
-.title2 {
-    grid-area: text1;
-    margin: 0em 0em 0em 10em;
-}
-
 .title2 h2 {
-    margin-top: 0em;
     font-weight: normal;
     font-size: 1.5em;
     color: var(--grey-color);
 }
 
 .title2 p {
-    font-size: 1em;
     padding-bottom: 0.5em;
-    padding-right: 6em;
-    border-width: 0.5px;
     border-bottom-style: solid;
-    border-color: var(--grey-color);
-}
-
-.title2,
-.texthouse {
     border-width: 0.5px;
-    padding-right: 2em;
-    border-right-style: solid;
-    border-color: var(--grey-color)
+    border-color: var(--grey-color);
 }
 
 .book {
-    margin-right: 6em;
-    grid-area: book;
+    text-align: end;
 }
 
 .book h2 {
-    text-align: end;
-    font-size: 1.15em;
+    padding-bottom: 1em;
     color: var(--grey-color);
-    font-weight: normal;
-    padding-bottom: 0.75em;
-    border-width: 0.5px;
-    border-bottom-style: solid;
-    border-color: var(--grey-color);
-    margin-left: 5em;
-    margin-right: 6em;
-}
-
-.book>h3 {
-    text-align: end;
+    margin-left: 35%;
+    width: 65%;
     font-size: 1.25em;
     font-weight: normal;
-    margin-left: 5em;
-    margin-right: 5.5em;
+    border-bottom-style: solid;
+    border-width: 0.5px;
+    border-color: var(--grey-color);
+}
+
+.book h3 {
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+.texthouse {
+    padding-top: 2em;
 }
 
 .book a {
@@ -140,17 +126,55 @@ a {
     border-radius: 15px;
     border-width: 0.5px;
     color: var(--white-color);
-    padding: 1em 4em 1em;
     text-decoration: none;
     font-size: 1em;
-    margin-left: 10em;
-    margin-bottom: 2em;
+    padding: 1em 2em;
 }
 
-.texthouse {
-    padding-top: 2em;
-    padding-right: 4em;
-    margin-left: 10em;
-    grid-area: text2;
-    margin-bottom: 2em;
+#owner {
+    width: 10%;
+}
+
+#owner img {
+    padding-top: 1em;
+}
+
+@media (max-width: 800px) {
+    #bottom {
+        flex-direction: column;
+        margin: auto;
+        margin: 2em;
+    }
+    #left {
+        width: 100%;
+        border-right-style: hidden;
+        padding-bottom: 2em;
+        padding-right: 0;
+    }
+    #map {
+        width: 100%;
+        padding-bottom: 2em;
+    }
+    #right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .book {
+        text-align: start;
+    }
+    .book h2 {
+        margin-left: 0;
+    }
+    .texthouse {
+        width: 80%;
+    }
+    .slideshow-container a {
+        width: 5%;
+    }
+    .mySlides img {
+        width: 40vh;
+        height: 40vh;
+    }
 }

@@ -6,13 +6,16 @@
     include_once('../templates/house_info.php');
     include_once('../templates/nav_bar.php');
     include_once('../templates/profile_sidemenu.php');
+    include_once('../templates/show_messages.php');
 
     if (!isset($_SESSION['email'])) {
-        //die(header('Location: /index.php'));
         http_response_code(401);
+        die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/profile_sidemenu.css","../css/houseinfo.css","../css/navfooter.css"), array('../modal_box.js', '../search.js'));
+    drawHead(array("../css/profile_sidemenu.css","../css/houseinfo.css","../css/navfooter.css"), array('modal_box.js','show_pass.js', '../search.js'));
+    showMessages();
+
 
     drawNavBar();?>
     <div class="middle">
@@ -21,11 +24,12 @@
     
     drawSideMenu();
     
-    $house = getRoom(2);
-    $reservations = getReservationsHouse(2);
+    $house_id = $_GET['id'];
+    $house = getRoom($house_id);
+    $reservations = getReservationsHouse($house_id);
 
     
-    drawHouseProfile($house, 2,$reservations);?>
+    drawHouseProfile($house, $house_id,$reservations);?>
     
 </div>
     <?php drawFooter(); ?>

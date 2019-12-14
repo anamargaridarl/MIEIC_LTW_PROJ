@@ -5,7 +5,7 @@
     include_once('../templates/list_rooms.php');
     include_once('../templates/nav_bar.php');
 
-    drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../modal_box.js', '../search.js'));
+    drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../modal_box.js', '../search.js','../show_pass.js'));
 
     drawNavBar();
     

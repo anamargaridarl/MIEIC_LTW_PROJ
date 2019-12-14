@@ -44,6 +44,13 @@ h1 {
     width: 50%;
 }
 
+.text a {
+    font-size: 1.5em;
+    color: var(--pink-color);
+    text-decoration: none;
+    padding-left: 5%;
+}
+
 .text p {
     padding-left: 5%;
 }
