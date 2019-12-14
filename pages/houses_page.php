@@ -15,8 +15,6 @@
       $checkout = $_GET['checkout'];
     }
 
-
-  $house = getRoom($house_id);
   $images = getImages($house_id);
   $owner = getHouseOwnerEmail($house_id);
   
@@ -24,7 +22,7 @@
 
   drawNavBar();
 
-  drawHouse($house, $images, $checkin, $checkout, $owner);
+  drawHouse($house_id, $images, $checkin, $checkout, $owner);
   
   drawFooter();
     

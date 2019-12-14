@@ -9,6 +9,10 @@
     drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../modal_box.js", "../reservations.js"));
     drawNavBar();
 
-    drawReservationForm();
+    $house_id = $_GET['id'];
+    $checkin = $_GET['checkin'];
+    $checkout = $_GET['checkout'];
+
+    drawReservationForm($house_id, $checkin, $checkout);
     drawFooter(); 
 ?>
