@@ -23,11 +23,11 @@
     <section class="profile-info">
         <section class="profile-image">
             <img src="<?=getProfileAvatarLink($_SESSION['username'])?>" alt="profile picture">
-            <form id="upload_avatar" method="post" action="../actions/action_update_avatar.php" enctype="multipart/form-data">
-                <input type="file" name="avatar" accept=".png, .jpg, .jpeg" required>
-                <input type="submit" value="Upload avatar">
-            </form>
             <p><?= htmlspecialchars($_SESSION['username']) ?></p>
+            <form id="upload_avatar" method="post" action="../actions/action_update_avatar.php" enctype="multipart/form-data">
+            <input type="file" name="avatar" accept=".png, .jpg, .jpeg" required>
+            <input type="submit" value="Upload avatar">
+        </form>
         </section>
         <form method="post" action="../actions/action_update_profile.php">
             <label for="username">Name</label>
