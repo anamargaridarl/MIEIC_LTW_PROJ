@@ -7,7 +7,6 @@
     include_once('../templates/profile_sidemenu.php');
 
 
-    // Uncomment in production
     if (!isset($_SESSION['email'])) {
         //die(header('Location: /index.php'));
         http_response_code(401);

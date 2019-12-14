@@ -27,11 +27,17 @@
                 <p id="total">Total: <?= $house['price_per_day'] * $nights ?> €</p>
             </section>
         </section>
-        <form id="regForm" action="">
+        <form id="regForm" action="../actions/action_reservation.php" method="POST">
+            <input type="number" value="<?= $house_id ?>" name="house_id" class="invisible">
+            <input type="number" value="<?= $guests ?>" name="guests" class="invisible">
+            <input type="date" value="<?= $checkin ?>" name="checkin" class="invisible">
+            <input type="date" value="<?= $checkout ?>" name="checkout" class="invisible">
+
             <!-- One "tab" for each step in the form: -->
-            <!-- Display as many inputs as guests -->
             <div class="tab">Guest Info:
-                <p>Guest 1 Name: <input placeholder="First name..." oninput="this.className = ''"></p>
+               <?php for ($guest = 1; $guest <= $guests; $guest++) { ?>
+                    <p>Guest <?=$guest?> Name: <input placeholder="First name..." oninput="this.className = ''"></p>
+                <?php } ?>
                 
                 <p>Contact Information<input placeholder="E-mail..." oninput="this.className = ''" value="<?= $_SESSION['email'] ?>"></p>
                 <p><input placeholder="Phone..." oninput="this.className = ''"></p>
