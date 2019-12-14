@@ -8,11 +8,12 @@
     include_once('../templates/profile_sidemenu.php');
 
     if (!isset($_SESSION['email'])) {
-        //die(header('Location: /index.php'));
         http_response_code(401);
+        die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../modal_box.js', '../search.js'));
+    drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','../show_pass.js', '../search.js'));
+
 
     drawNavBar();?>
     <div class="middle">
@@ -20,10 +21,25 @@
     <?php
     
     drawSideMenu();
-    $house_id = $_GET['id'];
-    $house = get_owner_house(3,$house_id); //REPLACE WITH VARIABLE
-    editHouse($house);?>
-    
+
+    if (!isset($_SESSION['username'])) {
+        http_response_code(401);
+    }
+    else{
+       $owner_username =  $_SESSION['username'];
+       $owner_id  = get_userid($owner_username);
+    }
+
+    if(isset($_GET['id'])){
+        $house_id = $_GET['id'];
+        $house = get_owner_house($owner_id,$house_id); //REPLACE WITH VARIABLE
+        editHouse($house);
+    }
+    else
+    {
+        addHouse();
+    }?>
+
     </div>
     <?php drawFooter(); ?>
 

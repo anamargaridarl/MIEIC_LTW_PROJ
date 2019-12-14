@@ -6,42 +6,47 @@
 ?>
 
 <nav id="navbar">
-  <div id="logo">
-  <a id="homepage"  href="../index.php">
-  <img src="../images/logodemo.png" alt="Logo">
-  </a>
-  </div>
+  
+  <div id = "logosearch">
+    <div id="logo">
+      <a id="homepage"  href="../index.php">
+      <img src="../images/logodemo.png" alt="Logo">
+      </a>
+    </div>
 
-  <div class="input-container">
-    <i class="material-icons">search</i>
-    <form id="input" method="get" action="search_rooms.php" method ="GET">
-    <p><input id='input-field' type="text" placeholder="Local" name="location">
-      <section id="details-form">
-        <label for="guests">Guests</label>
-        <input type="number" id="guests" name="guests">
+    <div class="input-container">
+      <i class="material-icons">search</i>
+      <form id="input" method="get" action="search_rooms.php" method ="GET">
+      <p><input id='input-field' type="text" placeholder="Local" name="location">
+        <section id="details-form">
+          <label for="guests">Guests</label>
+          <input type="number" id="guests" name="guests">
 
-        <label for="nights">Nights</label>
-        <input type="number" id="nights" name="nights">
+          <label for="nights">Nights</label>
+          <input type="number" id="nights" name="nights">
 
-        <label for="checkin">Checkin date</label>
-        <input type="date" id="checkin" name="checkin">
+          <label for="checkin">Checkin date</label>
+          <input type="date" id="checkin" name="checkin">
 
-        <label for="checkout">Checkout date</label>
-        <input type="date" id="checkout" name="checkout">
-        <input type="submit" value="Submit">
-      </section>
-    </p>
-    </form>
+          <label for="checkout">Checkout date</label>
+          <input type="date" id="checkout" name="checkout">
+          <input type="submit" value="Submit">
+        </section>
+      </p>
+      </form>
+    </div>
   </div>
   
+  <div id = "accountlog">
+
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
       <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
       
       <?php if (strpos(getcwd(), '/pages') > 0) { ?>
-        <a href="profile.php"><?= $_SESSION['username']?></a>
+        <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
       <?php } else { ?>
-        <a href="pages/profile.php"><?= $_SESSION['username']?></a>
+        <a href="pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
       <?php } ?>
 
         <a href="../actions/action_signout.php" id="signout">Sign Out</a>
@@ -52,6 +57,7 @@
         <a id="loginbtn">Sign In</a>
       </div>
   <?php } ?>
+  </div>
 </nav>
 
 <?php 

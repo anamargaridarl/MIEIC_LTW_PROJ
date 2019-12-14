@@ -6,13 +6,15 @@
     include_once('../templates/profile_house.php');
     include_once('../templates/nav_bar.php');
     include_once('../templates/profile_sidemenu.php');
+    include_once('../templates/show_messages.php');
 
     if (!isset($_SESSION['email'])) {
-        //die(header('Location: /index.php'));
         http_response_code(401);
+        die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../modal_box.js', '../search.js'));
+    drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','show_pass.js', '../search.js'));
+    showMessages();
 
     drawNavBar();?>
     <div class="middle">
@@ -20,7 +22,10 @@
     <?php
     
     drawSideMenu();
-    $houses = get_owner_houses(3); 
+
+    $id = get_userid($_SESSION['username']);
+
+    $houses = get_owner_houses($id); 
 
     drawHouses($houses);?>
     

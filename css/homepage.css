@@ -4,7 +4,6 @@ body {
     box-sizing: border-box;
 }
 
-
 .welcome {
     min-height: 100vh;
     width: 100%;
@@ -17,20 +16,22 @@ body {
 
 #navbar {
     background-color: rgba(0, 0, 0, 0);
-    justify-content: right;
+    justify-content: flex-end;
 }
 
-#navbar>#logo,
-#navbar>.input-container {
+#logosearch {
     display: none;
+}
+
+#accountlog {
+    background-color: transparent;
+    border-style: hidden;
 }
 
 #exploreform {
     left: 10%;
     top: 8%;
     position: relative;
-    max-width: 35%;
-    height: 35%;
     padding: 0.5em 1em 0.5em 1em;
     background-color: var(--white-color);
     border: 0.5px solid var(--blue-color);
@@ -38,22 +39,32 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 35%;
+    height: 35%;
 }
 
-@media (max-width: 100em) {
+@media screen and (max-width: 800px) {
+    .welcome {
+        min-height: 60vh;
+    }
     #exploreform {
-        min-width: 20em;
+        width: 60%;
+        margin: 3em auto;
+        left: 0%;
+        top: 0%;
     }
 }
 
-@media (max-height: 60em) {
-    #exploreform {
-        min-height: 20em;
+@media screen and (max-width: 600px) {
+    .welcome {
+        min-height: 100vh;
     }
-}
-
-#exploreform {
-    max-height: 60%;
+    #exploreform {
+        width: 80%;
+        margin: 3em auto;
+        left: 0%;
+        top: 0%;
+    }
 }
 
 #exploreform p {
@@ -75,7 +86,7 @@ body {
     margin-top: 2%;
     border-radius: 5px;
     min-width: 95%;
-    height: 80%;
+    padding: 1em 0em;
 }
 
 #check {
@@ -94,7 +105,7 @@ body {
 #checkin input,
 #checkout input {
     margin-top: 2%;
-    height: 80%;
+    padding: 1em 0em;
     border-radius: 5px;
 }
 
@@ -121,7 +132,7 @@ body {
 #guests input {
     margin-top: 2%;
     border-radius: 5px;
-    height: 70%;
+    padding: 1em 0em;
     min-width: 80%;
 }
 
@@ -132,7 +143,7 @@ body {
 }
 
 #button input {
-    padding: 5% 20%;
+    padding: 1em 3em;
     background-color: var(--pink-color);
     border-radius: 5px;
     border: 0.5px solid var(--grey-color);

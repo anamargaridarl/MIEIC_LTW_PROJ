@@ -11,10 +11,17 @@
             $houses = $stmt->fetchAll();
         }
 
-       if($checkin != NULL && $checkout != NULL) {
-            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day FROM habitation,reservation WHERE hab_id = hab AND (start_date > ? OR end_date < ?)');
-            $stmt->execute(array($checkout,$checkin));
+        if($checkin != NULL && $checkout != NULL) {
+           $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day 
+                                    FROM habitation,reservation 
+                                    WHERE hab_id = hab 
+                                    AND hab IN 
+                                    (SELECT hab FROM reservation 
+                                    EXCEPT SELECT hab FROM reservation 
+                                    WHERE (start_date < ? AND end_date > ?) OR (end_date > ? AND start_date < ?) OR (start_date > ? AND end_date < ?))');
+            $stmt->execute(array($checkin,$checkin,$checkout,$checkout,$checkin,$checkout));
             $reservationDays = $stmt->fetchAll();
+            
             foreach($houses as $key => $value) {
                 if(!in_array($value,$reservationDays)) {
                     unset($houses[$key]);
@@ -57,7 +64,7 @@
     function getRoom($id)
     {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT hab_id,title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ?');
         $stmt->execute(array($id));
 
         $house = $stmt->fetch();
@@ -96,6 +103,17 @@
 
         return $reservations;
     }
+
+    function getClientName($client_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT username FROM user,client WHERE user_id = client_id AND client_id = ?');
+        $stmt->execute(array($client_id));
+        $guest = $stmt->fetch();
+        if(!$guest)
+            return false;
+        else
+        return $guest['username'];
+    }
     
     //profile_houses_page
     function get_owner_houses($owner_id)
@@ -123,8 +141,20 @@
         $stmt = $db->prepare('SELECT username FROM user WHERE email = ?');
         $stmt->execute(array($email));
 
-        $username = $stmt->fetch()['username'];
-        return $username;
+        $username = $stmt->fetch();
+        if(!$username)
+            return $username;
+        else
+            return $username['username'];
+    }
+
+    function get_userid($username) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT user_id FROM user WHERE username = ?');
+        $stmt->execute(array($username));
+
+        $owner_id = $stmt->fetch();
+        return $owner_id['user_id'];
     }
 
     function getHouseOwnerEmail($house_id) {
