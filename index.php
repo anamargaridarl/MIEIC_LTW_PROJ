@@ -1,8 +1,10 @@
 <?php
+  chdir('pages');
   include_once('includes/session.php');
   include_once('templates/nav_bar.php');
   include_once('templates/head.php');
   include_once('templates/footer.php');
+  include_once('database/users.php');
   drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js"));
   ?>
   
