@@ -61,23 +61,26 @@ body {
 }
 
 #details-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     position: absolute;
     visibility: hidden;
+    width: 30%;
     z-index: 1;
-    left: 23%;
-    width: 20%;
     background-color: white;
     border: 1px solid var(--grey-color);
     border-top: none;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
+    padding: 1em;
 }
 
-#details-form input,
-#details-form label {
-    display: block;
-    width: 80%;
-    margin: 1em;
+#details-form input {
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1em;
 }
 
 .input-container #input {

@@ -2,12 +2,6 @@
   include_once('nav_bar.php');
   include_once('head.php');
   include_once('footer.php');
-  include_once('../database/getters.php');
-
- function drawHouse($house_id, $images, $checkin, $checkout, $user_email, $guests) {
-   $house = getRoom($house_id);
-?>
-
  function drawHouse($house, $images, $checkin,$checkout) {?>
   
   <div class="slideshow-container">
@@ -83,7 +77,7 @@
             $total = $per_day  * $days?>
       <h2>Nights: <?=$days?>*<?= $house['price_per_day'] ?> €</h2>
       <h3>Total:  <?= $total ?> € </h3>
-      <button type="button">Book Now</button>
+      <a href="reservation.php?id=<?= $house_id ?>&checkin=<?= $checkin ?>&checkout=<?= $checkout ?>&guests=<?= $guests ?>&nights=<?= $nights ?>">Book Now</a>
     </div>
     
     
