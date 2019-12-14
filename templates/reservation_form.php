@@ -2,7 +2,7 @@
     include_once('../database/getters.php');
     include_once('../includes/session.php');
 
-    function drawReservationForm($house_id, $checkin, $checkout) { 
+    function drawReservationForm($house_id, $checkin, $checkout, $guests, $nights) { 
         $house = getRoom($house_id);    
 ?>
     <section class="reservation">
@@ -13,9 +13,18 @@
             <p><?= $house['title'] ?></p>
             <p><?= $house['location'] ?></p>
             <section id="reservation-info">
-                <p>Guest No</p>
-                <p>Night No</p>
-                <p id="total">Total: </p>
+            <?php if ($guests == 1) { ?>
+                <p><?= $guests ?> Guest</p>
+            <?php } else { ?>
+                <p><?= $guests ?> Guests</p>
+            <?php } ?>
+
+            <?php if ($nights == 1) { ?>
+                <p><?= $nights ?> Night</p>
+            <?php } else { ?>
+                <p><?= $nights ?> Nights</p>
+            <?php } ?>
+                <p id="total">Total: <?= $house['price_per_day'] * $nights ?> €</p>
             </section>
         </section>
         <form id="regForm" action="">

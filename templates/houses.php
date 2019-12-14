@@ -4,7 +4,7 @@
   include_once('footer.php');
   include_once('../database/getters.php');
 
- function drawHouse($house_id, $images, $checkin, $checkout, $user_email) {
+ function drawHouse($house_id, $images, $checkin, $checkout, $user_email, $guests) {
    $house = getRoom($house_id);
 ?>
 
@@ -53,7 +53,7 @@
         $total = $per_day  * $nights?>
   <h2>Nights: <?=$nights?> * <?= $house['price_per_day'] ?> €</h2>
   <h3>Total:  <?= $total ?> € </h3>
-  <a href="reservation.php?id=<?= $house_id ?>&checkin=<?= $checkin ?>&checkout=<?= $checkout ?>">Book Now</a>
+  <a href="reservation.php?id=<?= $house_id ?>&checkin=<?= $checkin ?>&checkout=<?= $checkout ?>&guests=<?= $guests ?>&nights=<?= $nights ?>">Book Now</a>
 </div>
 
 

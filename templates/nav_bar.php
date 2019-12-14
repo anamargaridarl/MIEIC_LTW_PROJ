@@ -17,8 +17,8 @@
     <form id="input" method="get" action="search_rooms.php" method ="GET">
     <p><input id='input-field' type="text" placeholder="Local" name="location">
       <section id="details-form">
-        <label for="guestno">Guests</label>
-        <input type="number" id="guestno" name="guestno">
+        <label for="guests">Guests</label>
+        <input type="number" id="guests" name="guests">
 
         <label for="nights">Nights</label>
         <input type="number" id="nights" name="nights">
