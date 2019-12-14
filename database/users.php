@@ -55,4 +55,15 @@
         $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
         return $stmt->execute(array($new_email, $email));
     }
+
+    function reserve_room($email, $guests, $hab_id, $checkin, $checkout) {
+        $db = Database::instance()->db();
+        
+        $stmt = $db->prepare('SELECT user_id FROM user WHERE email = ?');
+        $stmt->execute(array($email));
+        $user_id = $stmt->fetch()['user_id'];
+
+        $stmt = $db->prepare('INSERT INTO reservation (nr_guests,hab,client,start_date,end_date) VALUES (?,?,?,?,?)');
+        $stmt->execute(array($guests, $hab_id, $user_id, $checkin, $checkout));
+    }
 ?>

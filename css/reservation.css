@@ -1,5 +1,9 @@
 @import url("palette.css");
 
+.invisible {
+  display: none;
+}
+
 .reservation {
   font-family: var(--fonts);
   padding: 1em;
