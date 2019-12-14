@@ -62,7 +62,10 @@ function addHouse() {?>
   <div class="house_page">
     <h1>New House</h1>
     <form id="addform" action="../actions/action_addhouse.php" method="POST">
-      <div id="house_images">IMAGES</div>
+      <div id="house_images">
+        <label for="h_images">Add pictures:</label>
+        <input type="file" name="h_images" accept=".jpg, .jpeg, .png" multiple title="Add some pictures for users to check your house. We required at least one photo of the house." required>
+      </div>
       <div id="house_info">
         <div id="h_title">
           <label for="title">Title:</label>
