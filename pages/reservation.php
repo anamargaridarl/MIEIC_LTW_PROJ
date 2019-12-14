@@ -12,7 +12,9 @@
     $house_id = $_GET['id'];
     $checkin = $_GET['checkin'];
     $checkout = $_GET['checkout'];
+    $guests = $_GET['guests'];
+    $nights = $_GET['nights'];
 
-    drawReservationForm($house_id, $checkin, $checkout);
+    drawReservationForm($house_id, $checkin, $checkout, $guests, $nights);
     drawFooter(); 
 ?>

@@ -17,12 +17,13 @@
 
   $images = getImages($house_id);
   $owner = getHouseOwnerEmail($house_id);
+  $guests = $_GET['guests'];
   
   drawHead(array("../css/houses.css", "../css/navfooter.css"), array("../carousel.js", "../modal_box.js", "search.js"));
 
   drawNavBar();
 
-  drawHouse($house_id, $images, $checkin, $checkout, $owner);
+  drawHouse($house_id, $images, $checkin, $checkout, $owner, $guests);
   
   drawFooter();
     
