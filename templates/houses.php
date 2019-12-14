@@ -36,8 +36,8 @@
 </div>
 
 <div class="owner">
-<img src="../images/avatars/profile_pic_resize.jpg" alt="Profile Picture">
-  <p>Joana</p>
+<img src="<?=getThumbnailLink(get_owner_name($house['hab_id']))?>" alt="Profile Picture">
+  <p><?=get_owner_name($house['hab_id'])?></p>
 </div>
 
 <div class="book">

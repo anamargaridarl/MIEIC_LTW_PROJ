@@ -19,9 +19,9 @@
     default:
       if($_FILES['avatar']['error'] == 1) {
         $_SESSION['message'] = array('type' => 'error','content' => 'File selected is too big.');
+      } else {
+        $_SESSION['message'] = array('type' => 'error','content' => 'File selected isn\'t supported.');
       }
-      $_SESSION['message'] = array('type' => 'error','content' => 'File selected isn\'t supported.');
-      var_dump($_FILES['avatar']);die();
       die(header('Location: ../pages/profile.php'));
     break; 
   }

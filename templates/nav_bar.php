@@ -1,6 +1,7 @@
 <?php
   include_once('modal_boxes.php');
   include_once('../includes/session.php');
+  include_once('../database/users.php');
 
   function drawNavBar() {
 ?>
@@ -21,7 +22,7 @@
   
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
-      <div><img src="../images/avatars/profile_pic.jpg" class="profilepic"></div>
+      <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
       
       <?php if (strpos(getcwd(), '/pages') > 0) { ?>
         <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
