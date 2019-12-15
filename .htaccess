@@ -1,0 +1,3 @@
+ErrorDocument 401 pages/http_error_page.php
+ErrorDocument 404 pages/http_error_page.php
+ErrorDocument 500 pages/http_error_page.php
