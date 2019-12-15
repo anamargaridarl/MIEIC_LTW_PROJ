@@ -197,13 +197,15 @@ footer div:first-of-type {
 }
 
 
-/***************MODAL BOXES******************/
+/* ---------------------------- modal boxes ---------------------------------- */
 
-
-/***************MODAL BOXES******************/
-
-#modalLogin form,
 #modalSignup form {
+    width: 40%;
+    position: relative;
+    margin: 0.2% auto;
+}
+
+#modalLogin form {
     width: 40%;
     position: relative;
     margin: 5% auto;
@@ -307,24 +309,30 @@ footer div:first-of-type {
     border-radius: 5px;
     height: 2.5em;
     width: 100%;
-    height: 6em;
 }
 
-#signup>#register>input,
-#login>#log>input {
-    width: 40%;
-    height: 100%;
-    position: relative;
-    float: right;
-    background-color: var(--pink-color);
-    border: 0.1em solid var(--blue-color);
-    color: var(--white-color);
-    font-size: 1.5em;
+#passwordshow {
+    display: flex;
+    flex-direction: row;
 }
+
+#passwordshow p {
+    width: 70%;
+}
+
+#signup #passwordshow input {
+    width: 30%;
+}
+
+#login #passwordshow input {
+    width: 30%;
+}
+
 
 /************ Error Box ****************/
 
-.error_msg, .success_msg {
+.error_msg,
+.success_msg {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
