@@ -22,7 +22,7 @@
     
     drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js'));
 
-    drawNavBar();
+    drawNavBar(false);
       
     drawHouse($house,$images,$checkin,$checkout);
     

@@ -1,5 +1,7 @@
 <?php
     include_once("../includes/database.php");
+    include_once("../database/getters.php");
+
 
     function check_email_passwd($email, $password) {
         $db = Database::instance()->db();
@@ -17,14 +19,17 @@
     function insert_user($username, $email, $hash) {
         $db = Database::instance()->db();
 
-        $username = get_username($email);
-
-        if($username)
+        if(get_username($email))
             return false;
-
+        
         $stmt = $db->prepare('INSERT INTO user(username, email, hash, joined_on) values(?, ?, ?, ?)');
-
         return $stmt->execute(array($username, $email, $hash, date('Y-m-d')));
+    }
+
+    function insert_default_avatar($user_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('INSERT INTO avatar(link, user_id) values(?, ?)');
+        return $stmt->execute(array('default_avatar.png',$user_id));
     }
 
     function update_username($email, $name) {
@@ -54,5 +59,31 @@
 
         $stmt = $db->prepare('UPDATE user SET email = ? WHERE email = ?');
         return $stmt->execute(array($new_email, $email));
+    }
+
+    function getProfileAvatarLink($username) {
+        $profile_avatar_path = "../images/avatars/";
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT link FROM avatar, user WHERE username = ? and avatar.user_id = user.user_id');
+        $stmt->execute(array($username));
+        $avatar = $stmt->fetch();
+        return $profile_avatar_path . $avatar['link'];
+    }
+
+    function getThumbnailLink($username) {
+        $thumbnail_avatar_path = "../images/avatars/thumbnails/";
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT link FROM avatar, user WHERE username = ? and avatar.user_id = user.user_id');
+        $stmt->execute(array($username));
+        $avatar = $stmt->fetch();
+        return $thumbnail_avatar_path . $avatar['link'];
+    }
+
+    function update_avatar($username, $link_avatar) {
+        
+        $user_id = get_userid($username);
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('UPDATE avatar SET link = ? WHERE user_id = ?');
+        return $stmt->execute(array($link_avatar,$user_id));
     }
 ?>

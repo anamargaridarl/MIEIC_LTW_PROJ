@@ -81,7 +81,6 @@
         return $images;
     }
 
-
     //profile_reservation_page
     function getReservations($client_id)
     {
@@ -155,5 +154,14 @@
 
         $owner_id = $stmt->fetch();
         return $owner_id['user_id'];
+    }
+
+    function get_owner_name($house_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('SELECT username FROM user,ownership WHERE hab = ? and user_id = owner');
+        $stmt->execute(array($house_id));
+
+        $owner_id = $stmt->fetch();
+        return $owner_id['username'];
     }
 ?>

@@ -1,10 +1,12 @@
 <?php
-function editHouse($house) {
-$images = getImages($house['hab_id']);?>
+function editHouse($house) { ?>
 <div class="house_page">
   <h1>Edit Information</h1>
-  <form id="editform" action="../actions/action_update_house.php?id=<?=$house['hab_id']?>" method="POST">
-    <div id="house_images">IMAGES</div>
+  <form id="editform" action="../actions/action_update_house.php?id=<?=$house['hab_id']?>" method="POST" enctype="multipart/form-data">
+      <div id="house_images">
+        <label for="h_images">Replace pictures :</label>
+        <input type="file" name="h_images[]" accept=".jpg, .jpeg, .png" multiple title="WARNING: This option will replace all your house photos with the ones selected!">
+      </div>
     <div id="house_info">
       <div id="h_title">
         <label for="title">Title:</label>
@@ -62,8 +64,11 @@ $images = getImages($house['hab_id']);?>
 function addHouse() {?>
   <div class="house_page">
     <h1>New House</h1>
-    <form id="addform" action="../actions/action_addhouse.php" method="POST">
-      <div id="house_images">IMAGES</div>
+    <form id="addform" action="../actions/action_addhouse.php" method="POST" enctype="multipart/form-data">
+      <div id="house_images">
+        <label for="h_images">Add pictures:</label>
+        <input type="file" name="h_images[]" accept=".jpg, .jpeg, .png" multiple title="Add some pictures for users to check your house. We required at least one (1) photo of the house and at most ten (10)." required>
+      </div>
       <div id="house_info">
         <div id="h_title">
           <label for="title">Title:</label>

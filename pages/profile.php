@@ -14,7 +14,8 @@
 
     drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array());
     showMessages();
-    drawNavBar();
+    drawNavBar(false);
+    
 ?>
 
 <section class="container">
@@ -25,8 +26,12 @@
 
     <section class="profile-info">
         <section class="profile-image">
-            <img src="../images/profile_pic_resize.jpg" alt="profile picture">
+            <img src="<?=getProfileAvatarLink($_SESSION['username'])?>" alt="profile picture">
             <p><?= htmlspecialchars($_SESSION['username']) ?></p>
+            <form id="upload_avatar" method="post" action="../actions/action_update_avatar.php" enctype="multipart/form-data">
+                <input type="file" name="avatar" accept=".png, .jpg, .jpeg" required>
+                <input type="submit" value="Upload avatar">
+            </form>
         </section>
         <form method="post" action="../actions/action_update_profile.php">
             <label for="username">Name</label>

@@ -9,7 +9,7 @@ function drawHouses($houses) { ?>
   $images = getImages($house['hab']);?>
   <div class="house">
     <div class="img">
-      <img src=<?= urlencode($images[0]['link']) ?> alt="House Photo" width="250em" height="250em">
+      <img src=<?= "../images/houses/" . urlencode($images[0]['link']) ?> alt="House Photo" width="250em" height="250em">
     </div>
     <div class="text">
       <a href="house_info_page.php?id=<?=$house['hab_id']?>"><?= htmlspecialchars($house['title']) ?></a>

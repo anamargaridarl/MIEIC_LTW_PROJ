@@ -12,7 +12,7 @@
     <div id="Images">
       <?php foreach ($images as $image): ?>
         <div class="mySlides">
-          <img src=<?= urlencode($image['link']) ?> >
+          <img src=<?= "../images/houses/" . urlencode($image['link']) ?> >
         </div>
         <?php endforeach ?>
       </div>
@@ -41,8 +41,8 @@
         
         
         <div id="owner">
-          <img src="../images/profile_pic_resize.jpg" alt="Profile Picture">
-          <p>Joana</p>
+          <img src="<?= getThumbnailLink(get_owner_name($house['hab_id']))?>" alt="Profile Picture">
+          <p><?= get_owner_name($house['hab_id'])?></p>
         </div>
         
       </div>

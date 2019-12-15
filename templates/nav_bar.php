@@ -1,8 +1,9 @@
 <?php
   include_once('modal_boxes.php');
   include_once('../includes/session.php');
+  include_once('../database/users.php');
 
-  function drawNavBar() {
+  function drawNavBar($index) {
 ?>
 
 <nav id="navbar">
@@ -28,12 +29,13 @@
 
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
-      <div><img src="../images/profile_pic.jpg" class="profilepic"></div>
+      <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
       
-      <?php if (strpos(getcwd(), '/pages') > 0) { ?>
-        <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
-      <?php } else { ?>
+      <?php if ($index) { ?>
         <a href="pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+      <?php } else {?>
+        <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+
       <?php } ?>
 
         <a href="../actions/action_signout.php" id="signout">Sign Out</a>
