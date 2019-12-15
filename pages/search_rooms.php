@@ -7,7 +7,7 @@
 
     drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../modal_box.js','../show_pass.js'));
 
-    drawNavBar();
+    drawNavBar(false);
     
     if(isset($_GET['checkin']) && isset($_GET['checkout']) ){
 

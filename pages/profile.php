@@ -14,7 +14,7 @@
 
     drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array());
     showMessages();
-    drawNavBar();
+    drawNavBar(false);
     
 ?>
 

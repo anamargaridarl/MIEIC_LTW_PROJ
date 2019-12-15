@@ -3,7 +3,7 @@
   include_once('../includes/session.php');
   include_once('../database/users.php');
 
-  function drawNavBar() {
+  function drawNavBar($index) {
 ?>
 
 <nav id="navbar">
