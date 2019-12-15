@@ -24,14 +24,21 @@
             <?php } else { ?>
                 <p><?= $nights ?> Nights</p>
             <?php } ?>
-                <p id="total">Total: <?= $house['price_per_day'] * $nights ?> €</p>
+                <p id="total">Total: <?= $house['price_per_day'] * $nights ?> &#8364</p>
             </section>
         </section>
         <form id="regForm" action="../actions/action_reservation.php" method="POST">
             <input type="number" value="<?= $house_id ?>" name="house_id" class="invisible">
             <input type="number" value="<?= $guests ?>" name="guests" class="invisible">
-            <input type="date" value="<?= $checkin ?>" name="checkin" class="invisible">
-            <input type="date" value="<?= $checkout ?>" name="checkout" class="invisible">
+            
+            <div class="tab">
+                <h1>Confirm Dates</h1>
+                <label for="checkin">Checkin Date: </label>
+                <input type="date" value="<?= $checkin ?>" name="checkin">
+                
+                <label for="checkout">Checkout Date: </label>
+                <input type="date" value="<?= $checkout ?>" name="checkout">
+            </div>
 
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
