@@ -8,7 +8,7 @@ $images = getImages($id); ?>
     <div id= "h_info_all">
 
     <div id= "h_image">
-    <img src=<?= urlencode($images[0]['link']) ?> alt="House Photo" width="300" height=200>
+    <img src=<?= "../images/houses/".urlencode($images[0]['link']) ?> alt="House Photo" width="300" height=200>
     </div>
      
     <div id= "h_text">
