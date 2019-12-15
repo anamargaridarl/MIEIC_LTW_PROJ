@@ -6,7 +6,7 @@
         
         $houses = [];
         if($location != NULL) {
-            $stmt = $db->prepare('SELECT DISTINCT hab_id,title, description, price_per_day FROM habitation WHERE location = ? COLLATE NOCASE');
+            $stmt = $db->prepare('SELECT DISTINCT hab_id,title, description, price_per_day FROM habitation WHERE location = ? COLLATE NOCASE AND active = 1');
             $stmt->execute(array($location));
             $houses = $stmt->fetchAll();
         }
@@ -14,7 +14,7 @@
         if($checkin != NULL && $checkout != NULL) {
            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day 
                                     FROM habitation,reservation 
-                                    WHERE hab_id = hab 
+                                    WHERE hab_id = hab AND active = 1
                                     AND hab IN 
                                     (SELECT hab FROM reservation 
                                     EXCEPT SELECT hab FROM reservation 
@@ -30,7 +30,7 @@
         }
 
         if($guests != NULL) {
-            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day FROM habitation WHERE capacity >= ?');
+            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description,price_per_day FROM habitation WHERE capacity >= ? AND active = 1');
             $stmt->execute(array($guests));
             $nGuests = $stmt->fetchAll();
             foreach($houses as $key => $value) {
@@ -41,7 +41,7 @@
         }
 
         if($region != NULL) {
-            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ?');
+            $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ? AND active = 1');
             $stmt->execute(array($region));
             $inRegion = $stmt->fetchAll();
             foreach($houses as $key => $value) {
@@ -56,7 +56,7 @@
 
     function getRoomsByRegion($region) {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ?');
+        $stmt = $db->prepare('SELECT DISTINCT hab_id,title,description, price_per_day FROM habitation WHERE region = ? AND active = 1');
         $stmt->execute(array($region));
         return $stmt->fetchAll();
     }
@@ -64,7 +64,7 @@
     function getRoom($id)
     {
         $db = Database::instance()->db();
-        $stmt = $db->prepare('SELECT hab_id,title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ?');
+        $stmt = $db->prepare('SELECT hab_id,title,addr, nr_rooms,nr_bathrooms,capacity,description,region,location, price_per_day FROM habitation WHERE hab_id = ? AND active = 1');
         $stmt->execute(array($id));
 
         $house = $stmt->fetch();
