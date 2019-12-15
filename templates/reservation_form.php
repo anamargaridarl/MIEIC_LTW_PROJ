@@ -49,7 +49,7 @@
             </div>
             
             <div style="overflow:auto;">
-                <div style="float:right;">
+                <div id="buttons" style="float:right;">
                     <button type="button" id="prevBtn">Previous</button>
                     <button type="button" id="nextBtn">Next</button>
                 </div>

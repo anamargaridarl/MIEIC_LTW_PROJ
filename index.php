@@ -11,7 +11,6 @@
   showMessages();
    ?>
    
-  <body>
     <section class="welcome">
       <?php drawNavBar(); ?>
       <form id="exploreform" action="pages/search_rooms.php" method="GET">
