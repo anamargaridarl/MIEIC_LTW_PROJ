@@ -14,13 +14,13 @@
         $checkin = $_GET['checkin'];
         $checkout = $_GET['checkout'];
       }
-    $house = getRoom($product_id);
-    $images = getImages($product_id);
+
+      $images = getImages($product_id);
     
     drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js'));
     drawNavBar();
       
-    drawHouse($house,$images,$checkin,$checkout);
+    drawHouse($product_id, $images, $checkin, $checkout, $_SESSION['email'], $_GET['guests']);
     
     drawFooter();
     

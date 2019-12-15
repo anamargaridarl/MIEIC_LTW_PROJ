@@ -16,7 +16,7 @@
 
     $houses = getRooms($_GET['location'], $_GET['checkin'], $_GET['checkout'], $_GET['guests'], $_GET['region']); # TODO: make it get the rooms based on checkin and checkout dates
 
-    drawRooms($houses, $checkin, $checkout, $_GET['guests'], $nights);
+    drawRooms($houses, $checkin, $checkout, $_GET['guests']);
     
     drawFooter();
 ?>

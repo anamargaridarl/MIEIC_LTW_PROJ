@@ -6,7 +6,7 @@
     include_once('../templates/profile_sidemenu.php');
     include_once('../templates/reservation_form.php');
 
-    if (!isset($_SESSION['email'])) {
+    if (!isset($_SESSION['email']) || empty($_GET['id'])) {
         http_response_code(401);
         die(header('Location: /index.php'));
     }
@@ -18,8 +18,7 @@
     $checkin = $_GET['checkin'];
     $checkout = $_GET['checkout'];
     $guests = $_GET['guests'];
-    $nights = $_GET['nights'];
 
-    drawReservationForm($house_id, $checkin, $checkout, $guests, $nights);
+    drawReservationForm($house_id, $checkin, $checkout, $guests);
     drawFooter(); 
 ?>

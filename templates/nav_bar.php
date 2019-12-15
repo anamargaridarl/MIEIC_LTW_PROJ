@@ -16,15 +16,12 @@
 
     <div class="input-container">
       <i class="material-icons">search</i>
-      <form id="input" method="get" action="search_rooms.php" method ="GET" autocomplete="off">
+      <form id="input" action="search_rooms.php" method ="GET" autocomplete="off">
       <p>
         <input id='input-field' type="text" placeholder="Local" name="location">
         <div id="details-form">
           <label for="guests">Guests</label>
           <input type="number" id="guests" name="guests">
-
-          <label for="nights">Nights</label>
-          <input type="number" id="nights" name="nights">
 
           <label for="checkin">Checkin date</label>
           <input type="date" id="checkin" name="checkin">

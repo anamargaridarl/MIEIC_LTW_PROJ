@@ -2,8 +2,12 @@
     include_once('../database/getters.php');
     include_once('../includes/session.php');
 
-    function drawReservationForm($house_id, $checkin, $checkout, $guests, $nights) { 
+    function drawReservationForm($house_id, $checkin, $checkout, $guests) { 
         $house = getRoom($house_id);    
+        $diff = abs(strtotime($checkout)-strtotime($checkin));
+        $years = floor($diff / (365*60*60*24));
+        $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+        $nights = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
 ?>
     <section class="reservation">
         <section class="box">
