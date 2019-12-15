@@ -5,7 +5,7 @@
   include_once('templates/head.php');
   include_once('templates/footer.php');
   include_once('templates/show_messages.php');
-  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js","search.js"));
+  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js","search.js", "cities.js"));
   
   showMessages();
 ?>
@@ -16,7 +16,7 @@
         <h3 id="form_title">Houses of the World!</h3>
         <div id="whereto">
           <p>Where</p>
-          <input type="text" name="location" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
+          <input id="searchbar" type="text" name="location" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
         </div>
         <div id="check">
         <div id="checkin">
