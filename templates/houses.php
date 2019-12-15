@@ -58,18 +58,27 @@
     <div id="right">
 
     <div id="map">
-    <script>
-      function initMap() {
-      var uluru = {lat: -25.344, lng: 131.036};
-      var map = new google.maps.Map(
-          document.getElementById('map'), {zoom: 4, center: uluru});
-      var marker = new google.maps.Marker({position: uluru, map: map});
+  <script>
+  function initMap() {
+    let uluru = {lat: -25.344, lng: 131.036};
+    let map = new google.maps.Map(document.getElementById('map'), {zoom: 12, center: uluru});
+    
+    let geocoder = new google.maps.Geocoder();
+    let address = "<?= join(", ", array($house['addr'], $house['location'])); ?>";
+    geocoder.geocode({'address': address}, function(results, status) {
+      if (status == 'OK') {
+        map.setCenter(results[0].geometry.location);
+        let marker = new google.maps.Marker({map: map, position: results[0].geometry.location});
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
       }
-      </script>
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0Y0wHsbht-eyF0oxEXu5FoiLmvkmG2l4&callback=initMap">
-      </script>
-    </div>
+    })
+  }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl2GT4Y7CuGySfw2qaA4gDisQ2B56g61E&callback=initMap">
+  </script>
+</div>
 
     <div class="book">
       <?php 
