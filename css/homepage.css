@@ -205,7 +205,9 @@ body {
     margin-top: 0;
 }
 
-#sugestionlist {
+#suggestionlist {
+    display: none;
+    background-color: white;
     width: 95.5%;
     margin: 0;
     border: 0.5px solid var(--grey-color);
@@ -219,4 +221,9 @@ body {
 #suggestions li {
     padding: 0.15em 0.5em;
     list-style-type: none;
+}
+
+#suggestions li:hover {
+    background-color: var(--blue-color);
+    color: white;
 }

@@ -1,11 +1,20 @@
 'use strict'
 let text = document.getElementById('searchbar');
 text.addEventListener('keyup', cityChanged);
+text.addEventListener('click', setValue);
+
+function setValue(event) {
+  let suggestions = document.getElementsByClassName('suggested-city');
+
+  if (suggestions.length != 0) {
+    document.getElementById('suggestionlist').style.display = 'block';
+  }
+}
 
 function setCity(event) {
-  console.log(event.target)
   let city = event.target.innerHTML;
   let searchbar = document.getElementById('searchbar');
+  document.getElementById('suggestionlist').style.display = 'none';
 
   searchbar.value = city;
 }
@@ -15,11 +24,12 @@ function cityChanged(event) {
   let text = event.target;
 
   if (text.value == '') {
+    console.log("cenas")
     document.getElementById('suggestionlist').style.display = 'none';
     return;
   }
   
-  document.getElementById('suggestionlist').style.display = 'unset';
+  document.getElementById('suggestionlist').style.display = 'block';
 
   let request = new XMLHttpRequest();
   request.addEventListener('load', citiesReceived);
@@ -35,6 +45,11 @@ function citiesReceived() {
 
   console.log(cities);
 
+  if (cities.length == 0) {
+    document.getElementById('suggestionlist').style.display = 'none';
+    return;
+  }
+
   // Add new suggestions
   for (let city in cities) {
     let item = document.createElement('li');
@@ -44,7 +59,6 @@ function citiesReceived() {
 
     let suggestions = document.getElementsByClassName('suggested-city');
     for (let i = 0; i < suggestions.length; ++i) {
-      console.log("oi")
       suggestions.item(i).addEventListener('click', setCity);
     }
   }
