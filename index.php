@@ -17,6 +17,8 @@
         <div id="whereto">
           <p>Where</p>
           <input id="searchbar" type="text" name="location" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
+          <ul id="suggestions">
+          </ul>
         </div>
         <div id="check">
         <div id="checkin">

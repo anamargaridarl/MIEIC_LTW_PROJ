@@ -1,3 +1,4 @@
+'use strict'
 let text = document.getElementById("searchbar");
 text.addEventListener("keyup", cityChanged);
 
@@ -15,14 +16,15 @@ function cityChanged(event) {
 function citiesReceived() {
   let cities = JSON.parse(this.responseText);
   let list = document.getElementById("suggestions");
-  // list.innerHTML = ""; // Clean current cities
+  list.innerHTML = ""; // Clean current cities
 
   console.log(cities);
 
   // Add new suggestions
-  // for (city in cities) {
-  //   let item = document.createElement("li");
-  //   item.innerHTML = cities[city].name;
-  //   list.appendChild(item);
-  // }
+  for (let city in cities) {
+    let item = document.createElement("li");
+    item.className = 'suggested-city';
+    item.innerHTML = cities[city].city_name;
+    list.appendChild(item);
+  }
 }
