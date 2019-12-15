@@ -7,7 +7,7 @@
   $db = Database::instance()->db();
 
   // Get the cities that start with $name
-  $stmt = $db->prepare("SELECT * FROM cities WHERE upper(city_name) LIKE upper(?) LIMIT 10");
+  $stmt = $db->prepare("SELECT DISTINCT location FROM habitation WHERE upper(location) LIKE upper(?) LIMIT 10");
   $stmt->execute(array("$name%"));
   $cities = $stmt->fetchAll();
   
