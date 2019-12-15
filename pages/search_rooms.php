@@ -13,6 +13,11 @@
 
         $checkin = $_GET['checkin'];
         $checkout = $_GET['checkout'];
+
+        if(date($checkin) > date($checkout)) {
+          $_SESSION['message'] = array('type' => 'error','content' => 'Check-out date cannot come before check-in.');
+          die(header('Location: ../index.php'));
+        }
       }
 
     $houses = getRooms($_GET['location'],$_GET['checkin'],$_GET['checkout'],$_GET['guests'],$_GET['region']); # TODO: make it get the rooms based on checkin and checkout dates

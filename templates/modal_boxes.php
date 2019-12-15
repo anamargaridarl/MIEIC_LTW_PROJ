@@ -8,7 +8,7 @@
         <p id="signTitle">Sign Up</p>
         <div id="username">
           <p>Name</p>
-          <input type="text" name="username" placeholder="Enter your Username..." pattern="\b(?!admin)\b\S+" title="Pickup a good username for yourself. Just a reminder, admin is not available..." required>
+          <input type="text" name="username" placeholder="Enter your Username..." pattern="\b(?!admin)\b\S+"  maxlength="20" title="Pickup a good username for yourself. Use at most 20 characters. Just a reminder, admin is not available..." required>
         </div>
         <div id="email">
           <p>Email</p>
