@@ -13,3 +13,6 @@ joao@mail.com   picoCTF{p3nt3st1ng_4_n00bs_wefdw3e1}
 Bibliotecas utilizadas:
 
  - php-gd para manipulacao de imagens
+
+Além disso utilizamos para o icon de lupa de pesquisa o googleapi fonts e para um smile nas páginas de erro o fontawesome.
+
