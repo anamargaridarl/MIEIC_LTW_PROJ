@@ -54,7 +54,7 @@ function citiesReceived() {
   for (let city in cities) {
     let item = document.createElement('li');
     item.className = 'suggested-city';
-    item.innerHTML = cities[city].city_name;
+    item.innerHTML = cities[city].location;
     list.appendChild(item);
 
     let suggestions = document.getElementsByClassName('suggested-city');

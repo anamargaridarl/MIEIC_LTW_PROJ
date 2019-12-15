@@ -148,18 +148,3 @@ INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (4,2,4,10,"2019-11-18","2019-11-19");
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (5,2,5,8,"2019-11-05","2019-11-08");
 INSERT into reservation (res_id,nr_guests,hab,client,start_date,end_date) VALUES (6,2,4,9,"2019-11-08","2019-11-10");
-
-INSERT into cities (city_name) VALUES ("Porto"); 
-INSERT into cities (city_name) VALUES ("Viseu");
-INSERT into cities (city_name) VALUES ("Coimbra");
-INSERT into cities (city_name) VALUES ("Lisboa");
-INSERT into cities (city_name) VALUES ("Faro");
-INSERT into cities (city_name) VALUES ("Almodovar");
-INSERT into cities (city_name) VALUES ("Portimao");
-INSERT into cities (city_name) VALUES ("Albufeira");
-INSERT into cities (city_name) VALUES ("Comporta");
-INSERT into cities (city_name) VALUES ("Vide");
-INSERT into cities (city_name) VALUES ("Ponte de Lima");
-INSERT into cities (city_name) VALUES ("Viana do Castelo");
-INSERT into cities (city_name) VALUES ("Caminha");
-INSERT into cities (city_name) VALUES ("Vila do Conde");
