@@ -34,6 +34,8 @@
         <form id="regForm" action="../actions/action_reservation.php" method="POST">
             <input type="number" value="<?= $house_id ?>" name="house_id" class="invisible">
             <input type="number" value="<?= $guests ?>" name="guests" class="invisible">
+            <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
+
             
             <div class="tab">
                 <h1>Confirm Dates</h1>
