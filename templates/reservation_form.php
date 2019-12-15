@@ -34,18 +34,20 @@
             <input type="date" value="<?= $checkout ?>" name="checkout" class="invisible">
 
             <!-- One "tab" for each step in the form: -->
-            <div class="tab">Guest Info:
+            <div class="tab">
+                <h1>Guest Info</h1>
                <?php for ($guest = 1; $guest <= $guests; $guest++) { ?>
                     <p>Guest <?=$guest?> Name: <input placeholder="First name..." oninput="this.className = ''"></p>
                 <?php } ?>
                 
                 <p>Contact Information<input placeholder="E-mail..." oninput="this.className = ''" value="<?= $_SESSION['email'] ?>"></p>
-                <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+                <p>Phone Number<input placeholder="Phone..." oninput="this.className = ''"></p>
             </div>
             
-            <div class="tab">Payment:
-                <p>Credit Card Number: <input type='number'></p>
-                <p>CCV: <input type="password"></p>
+            <div class="tab">
+            <h1>Payment</h1>
+                <p>Credit Card Number <input type='number'></p>
+                <p>CCV <input type="password"></p>
             </div>
             
             <div style="overflow:auto;">
