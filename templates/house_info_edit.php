@@ -15,7 +15,7 @@ function editHouse($house) { ?>
       <div id="h_location">
         <div id="region">
           <label for="region">Region:</label>
-          <input type="text" name="region" value="<?= htmlspecialchars($house['region'])?>" title="Which region of the country is your place in? In order to appear in most searches you should choose one of these: Norte, Sul, Centro or Islands." required>
+          <input type="text" name="region" value="<?= htmlspecialchars($house['region'])?>" title="Which region of the country is your place in? In order to appear in most searches you should choose one of these: North, South, Center or Islands." required>
         </div>
         <div id="location">
           <label for="location">Location:</label>
@@ -77,7 +77,7 @@ function addHouse() {?>
         <div id="h_location">
           <div id="region">
             <label for="region">Region:</label>
-            <input type="text" name="region" title="Which region of the country is your place in? In order to appear in most searches you should choose one of these: Norte, Sul, Centro or Islands." required>
+            <input type="text" name="region" title="Which region of the country is your place in? In order to appear in most searches you should choose one of these: North, South, Center or Islands." required>
           </div>
           <div id="location">
             <label for="location">Location:</label>
