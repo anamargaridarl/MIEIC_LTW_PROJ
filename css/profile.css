@@ -5,6 +5,7 @@ body {
 
 .container {
     display: flex;
+    height: 82vh;
 }
 
 .middle {
@@ -19,11 +20,17 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .profile-info .profile-image {
     margin: auto;
+    margin-bottom: 2em;
     text-align: center;
+}
+
+.profile-info form {
+    margin-bottom: auto;
 }
 
 .profile-info label {
