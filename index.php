@@ -44,22 +44,22 @@
       <p>Explore</p>
       <div id="regions">
         <div class="landscape">
-          <a id="north"  href="pages/explore_rooms.php?region=north">
+          <a id="north"  href="pages/explore_rooms.php?region=North">
             <img src="/images/site/porto_explore.jpg" ><p>North</p>
           </a>
         </div>
         <div class="landscape">  
-          <a id="center" href="pages/explore_rooms.php?region=center">
+          <a id="center" href="pages/explore_rooms.php?region=Center">
             <img src="/images/site/viseu_explore.jpg" ><p>Center</p>
           </a>
         </div>  
         <div class="landscape">  
-          <a id="south" href="pages/explore_rooms.php?region=south">
+          <a id="south" href="pages/explore_rooms.php?region=South">
             <img src="/images/site/algarve_explore.jpg" ><p>South</p>
           </a>
         </div>
         <div class="landscape">
-          <a id="islands" href="pages/explore_rooms.php?region=islands">
+          <a id="islands" href="pages/explore_rooms.php?region=Islands">
             <img src="/images/site/madeira_explore.jpg" ><p>Islands</p>
           </a>
         </div>
