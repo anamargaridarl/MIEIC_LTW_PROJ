@@ -60,6 +60,29 @@ body {
     border-radius: 10px 0px 0px 10px;
 }
 
+#details-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: absolute;
+    visibility: hidden;
+    width: 30%;
+    z-index: 1;
+    background-color: white;
+    border: 1px solid var(--grey-color);
+    border-top: none;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 1em;
+}
+
+#details-form input {
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
 .input-container #input {
     width: 80%;
 }
@@ -67,7 +90,7 @@ body {
 
 /* Style the input fields */
 
-.input-field {
+#input-field {
     padding: 15px;
     outline: none;
     border: none;
@@ -76,7 +99,7 @@ body {
     width: 100%;
 }
 
-.input-field:focus {
+#input-field:focus {
     border: none;
 }
 
@@ -153,6 +176,9 @@ p {
     #account a:nth-child(1) {
         border-style: hidden;
     }
+    #details-form {
+        width: 40%;
+    }
 }
 
 
@@ -197,7 +223,10 @@ footer div:first-of-type {
 }
 
 
-/* ---------------------------- modal boxes ---------------------------------- */
+/***************MODAL BOXES******************/
+
+
+/***************MODAL BOXES******************/
 
 #modalSignup form {
     width: 40%;
