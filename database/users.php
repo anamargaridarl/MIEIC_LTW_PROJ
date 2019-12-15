@@ -1,5 +1,7 @@
 <?php
     include_once("../includes/database.php");
+    include_once("../includes/getters.php");
+
 
     function check_email_passwd($email, $password) {
         $db = Database::instance()->db();
