@@ -71,4 +71,17 @@
         $stmt = $db->prepare('DELETE FROM images WHERE hab_id = ?');
         return $stmt->execute(array($hab_id));
     }
+
+    function set_house_inactive($house_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('UPDATE habitation SET active = 0  WHERE hab_id = ?');
+        return $stmt->execute(array($house_id));
+    }
+
+    function delete_ownership($house_id)  {
+      $db = Database::instance()->db();
+      $stmt = $db->prepare('DELETE FROM ownership WHERE hab = ?');
+      return $stmt->execute(array($house_id));
+    }
+
 ?>

@@ -19,7 +19,12 @@ $images = getImages($id); ?>
     <p> Description:</p>
     <p>  <?= htmlspecialchars($house['description']) ?> </p>
     <div id= "h_button">
-    <a id="editinfo" href="../pages/house_info_edit_page.php?id=<?=$id?>">Edit Info</a>
+      <form id="delete_house" method="post" action="../actions/action_delete_house.php">
+            <input type="hidden" name="house_id" value=<?=$id?>>
+            <input type="hidden" name="csrf" value=<?=$_SESSION['csrf']?>>
+            <input id="delete_btn" type="submit" value="Delete house" title="WARNING: this action is irreversible, your house will be removed">
+      </form>
+      <a id="editinfo" href="../pages/house_info_edit_page.php?id=<?=$id?>">Edit Info</a>
     </div>
     </div>
     </div>

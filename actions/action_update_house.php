@@ -26,7 +26,7 @@
     try {
         if(!update_house($house_id,$house)) {
             http_response_code(500);
-            die(header('Location: http_error_page.php'));
+            die(header('Location: ../pages/http_error_page.php'));
         }
 
         if($n_photos > 0) {
@@ -36,9 +36,9 @@
             }
         }
         $_SESSION['message'] = array('type' => 'success','content' => 'Updated house successfully.');
-        header('Location: ../pages/house_info_page.php?id='.$house_id); // change to edit_house_page
+        header('Location: ../pages/house_info_page.php?id='.$house_id);
     } catch (PDOException $e) {
         http_response_code(500);
-        die(header('Location: http_error_page.php'));
+        die(header('Location: ../pages/http_error_page.php'));
     }
 ?>
