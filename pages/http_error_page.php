@@ -4,7 +4,7 @@
   include_once('../templates/footer.php');
   include_once('../templates/http_error_box.php');
 
-  drawHead(array("../css/houses.css","../css/navfooter.css","../css/http_error.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js'));
+  drawHead(array("../css/houses.css","../css/navfooter.css","../css/http_error.css"), array("../js/carousel.js", "../js/modal_box.js",'../js/show_pass.js'));
 
   drawNavBar(false);
   

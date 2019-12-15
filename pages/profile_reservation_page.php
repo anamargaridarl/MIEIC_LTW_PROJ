@@ -12,10 +12,9 @@
         die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('modal_box.js','../show_pass.js', '../search.js'));
+    drawHead(array("../css/profilereservation.css", "../css/profile_sidemenu.css", "../css/navfooter.css"), array('../js/modal_box.js','../js/show_pass.js', '../search.js'));
 
     ?>
-
 
     <?php drawNavBar(false);?>
   

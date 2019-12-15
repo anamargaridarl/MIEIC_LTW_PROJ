@@ -5,7 +5,7 @@
   include_once('templates/head.php');
   include_once('templates/footer.php');
   include_once('templates/show_messages.php');
-  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js","search.js", "cities.js"));
+  drawHead(array("css/navfooter.css", "css/homepage.css"), array("js/modal_box.js","js/show_pass.js","js/search.js", "js/cities.js"));
   
   showMessages();
 ?>

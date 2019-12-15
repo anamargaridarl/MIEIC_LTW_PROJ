@@ -6,7 +6,7 @@
     include_once('../templates/nav_bar.php');
     include_once('../templates/modal_boxes.php');
 
-    drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../modal_box.js','../show_pass.js', '../search.js'));?>
+    drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../js/modal_box.js','../js/show_pass.js', '../js/search.js'));?>
 
     
     <?php drawNavBar(false);

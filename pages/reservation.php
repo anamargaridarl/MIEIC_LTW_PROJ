@@ -11,7 +11,7 @@
         die(header('Location: /index.php'));
     }
 
-    drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../modal_box.js", "../reservations.js", "../search.js"));
+    drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../js/modal_box.js", "../js/reservations.js", "../js/search.js"));
     drawNavBar(false);
 
     $house_id = $_GET['id'];

@@ -12,7 +12,7 @@
         die(header('Location: ../index.php'));
     }
 
-    drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array('../search.js'));
+    drawHead(array("../css/navfooter.css", "../css/profile.css" ,"../css/profile_sidemenu.css"), array('../js/search.js'));
     showMessages();
     drawNavBar(false);
     
