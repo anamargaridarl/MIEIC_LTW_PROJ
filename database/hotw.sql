@@ -12,20 +12,16 @@ CREATE TABLE user (
   username TEXT NOT NULL,
   hash TEXT NOT NULL,
   joined_on DATE NOT NULL
-  -- country perhaps?
-  --points gained(through forum participation) ? 
 );
 
 DROP TABLE IF EXISTS client;
 CREATE TABLE client (
   client_id INTEGER PRIMARY KEY REFERENCES user ON DELETE CASCADE ON UPDATE CASCADE
-  --points gained(number of rentals?)
 );
 
 DROP TABLE IF EXISTS owner;
 CREATE TABLE owner (
   owner_id INTEGER PRIMARY KEY REFERENCES user ON DELETE CASCADE ON UPDATE CASCADE
-  --points gained(users feedback on rentals?)
 );
 
 DROP TABLE IF EXISTS habitation;
@@ -39,9 +35,8 @@ CREATE TABLE habitation (
   location TEXT NOT NULL,
   addr TEXT NOT NULL,
   region TEXT NOT NULL,
-  description TEXT
-  -- rate?
-  -- comments?
+  description TEXT,
+  active INTEGER NOT NULL
 );
 
 DROP TABLE IF EXISTS images;
@@ -75,13 +70,6 @@ CREATE TABLE reservation (
   end_date DATE NOT NULL,
   UNIQUE (hab,client,start_date),
   CHECK (start_date < end_date)
-  -- discount REAL ?
-  -- total price? derived attribute
-  -- check number guest is lower or equal to habitation capacity
 );
-
--- Possible tables
--- - messages
--- - comments
 
 COMMIT TRANSACTION;
