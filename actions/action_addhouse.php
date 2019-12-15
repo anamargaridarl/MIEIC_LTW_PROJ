@@ -1,6 +1,7 @@
 <?php
     include_once('../includes/session.php');
-    include_once('../database/houses.php');
+    include_once('../database/habitations.php');
+    include_once('image_creation.php');
 
     $title = $_POST['title'];
     $region = $_POST['region'];
@@ -12,7 +13,6 @@
     $price = $_POST['price'];
     $description = $_POST['description'];
 
-    // var_dump($_FILES['h_images']);
     $n_photos = count($_FILES['h_images']['name']);
     $n_photos = $n_photos > 10 ? 10 : $n_photos;
 
