@@ -9,7 +9,7 @@
   drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js", "search.js"));
   
   showMessages();
-   ?>
+?>
    
     <section class="welcome">
       <?php drawNavBar(); ?>

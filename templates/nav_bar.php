@@ -10,7 +10,7 @@
   <div id = "logosearch">
     <div id="logo">
       <a id="homepage"  href="../index.php">
-      <img src="../images/logodemo.png" alt="Logo">
+      <img src="../images/logodemo2.png" alt="Logo" width = 40px height= 40px>
       </a>
     </div>
 

@@ -223,11 +223,14 @@ footer div:first-of-type {
 }
 
 
+/* ---------------------------- modal boxes ---------------------------------- */
+
+<<<<<<< HEAD
+
 /***************MODAL BOXES******************/
 
-
-/***************MODAL BOXES******************/
-
+=======
+>>>>>>> master
 #modalSignup form {
     width: 40%;
     position: relative;
@@ -343,12 +346,21 @@ footer div:first-of-type {
 #passwordshow {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
 }
 
 #passwordshow p {
     width: 70%;
 }
 
+=======
+}
+
+#passwordshow p {
+    width: 70%;
+}
+
+>>>>>>> master
 #signup #passwordshow input {
     width: 30%;
 }
