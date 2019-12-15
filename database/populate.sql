@@ -44,84 +44,71 @@ INSERT INTO owner (owner_id) VALUES (8);
 INSERT INTO owner (owner_id) VALUES (9);
 INSERT INTO owner (owner_id) VALUES (10);
 
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (1,"Casa de Milhafre",92,2,1,4,"Rua Visconde de Videne","Porto", "north","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (1,"Casa de Milhafre",92,2,1,4,"Rua Visconde de Videne","Porto", "North","Proin viverra, tellus vitae varius aliquam, purus est viverra nibh, eu dapibus lorem nisl sit amet ligula. Nulla laoreet molestie gravida.");
 INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (2,"Quinta do Covelo",178,3,2,8,"Rua Dr. José Almeida Esteves", "Porto","north","Quisque accumsan enim id erat sodales, euismod commodo elit lobortis. Curabitur posuere, metus et gravida ultrices non fringilla justo ligula id est. Vivamus ac facilisis felis.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (3,"Apartamento T3 Moderno",141,2,2,6,"Av. da França" ,"Porto","north","Aliquam mauris nisi, facilisis sed malesuada non, condimentum ut purus. In hac habitasse platea dictumst. Donec eu augue diam.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (4,"Quarto Privado Casal",63,1,1,2,"Rua das Flores","Porto", "north","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (5,"Classy Studio",105,1,1,3,"Rua da Trindade","Porto","north","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (6,"Classic House",63,2,1,4,"Rua da Marlene","Viseu","center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (7,"Quinta das Iguanas",87,3,2,8,"Rua da Iguana","Coimbra","center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (8,"Casa das Laranjas",103,1,1,3,"Rua da Laranja","Lisboa","center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (9,"Solar Acolhedor",87,1,1,3,"Rua da Tanjerina","Faro","south","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (10,"Quinta das Alfarrobas",101,3,3,8,"Rua da Alfarroba","Almodovar","south","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (11,"Casa dos Pasteis",71,1,1,4,"Rua da Pasteleira","Portimao","south","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (12,"Casa Moderna Centro",53,1,1,2,"Rua da Camisa","Lisboa","center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
-INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (13,"Casa da Bolinha",103,2,1,3,"Rua da BolaBerlim","Albufeira","south","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (3,"Apartamento T3 Moderno",141,2,2,6,"Av. da França" ,"Porto","North","Aliquam mauris nisi, facilisis sed malesuada non, condimentum ut purus. In hac habitasse platea dictumst. Donec eu augue diam.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (4,"Quarto Privado Casal",63,1,1,2,"Rua das Flores","Porto", "North","Cras euismod fringilla suscipit. Vestibulum sed nibh pellentesque, fringilla neque quis, euismod diam. Duis vel purus nec risus sollicitudin bibendum.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (5,"Classy Studio",105,1,1,3,"Rua da Trindade","Porto","North","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (6,"Classic House",63,2,1,4,"Rua da Marlene","Viseu","Center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (7,"Quinta das Iguanas",87,3,2,8,"Rua da Iguana","Coimbra","Center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (8,"Casa das Laranjas",103,1,1,3,"Rua da Laranja","Lisboa","Center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (9,"Solar Acolhedor",87,1,1,3,"Rua da Tanjerina","Faro","South","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (10,"Quinta das Alfarrobas",101,3,3,8,"Rua da Alfarroba","Almodovar","South","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (11,"Casa dos Pasteis",71,1,1,4,"Rua da Pasteleira","Portimao","South","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (12,"Casa Moderna Centro",53,1,1,2,"Rua da Camisa","Lisboa","Center","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
+INSERT INTO habitation (hab_id,title,price_per_day,nr_rooms,nr_bathrooms,capacity,addr,location,region,description) VALUES (13,"Casa da Bolinha",103,2,1,3,"Rua da BolaBerlim","Albufeira","South","Praesent ac lectus ultrices, efficitur neque id, vehicula erat. Pellentesque finibus velit id urna faucibus venenatis. Etiam eu faucibus justo.");
 
 INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",1);
 INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",1);
 INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",1);
 INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",1);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",2);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",2);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",2);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",2);
+INSERT INTO images (link,hab_id) VALUES ("bed1.jpg",2);
+INSERT INTO images (link,hab_id) VALUES ("kitchen1.jpeg",2);
+INSERT INTO images (link,hab_id) VALUES ("room1.jpg",2);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",3);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",3);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",3);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",3);
+INSERT INTO images (link,hab_id) VALUES ("bed2.jpeg",3);
+INSERT INTO images (link,hab_id) VALUES ("kitchen2.jpeg",3);
+INSERT INTO images (link,hab_id) VALUES ("room2.jpg",3);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",4);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",4);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",4);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",4);
+INSERT INTO images (link,hab_id) VALUES ("bed3.jpeg",4);
+INSERT INTO images (link,hab_id) VALUES ("room3.jpeg",4);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",5);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",5);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",5);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",5);
+INSERT INTO images (link,hab_id) VALUES ("bed4.jpeg",5);
+INSERT INTO images (link,hab_id) VALUES ("kitchen4.jpg",5);
+INSERT INTO images (link,hab_id) VALUES ("room5.jpg",5);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",6);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",6);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",6);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("bed5.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("kitchen5.jpg",6);
+INSERT INTO images (link,hab_id) VALUES ("room6.jpg",6);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",7);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",7);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",7);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",7);
+INSERT INTO images (link,hab_id) VALUES ("bed6.jpg",7);
+INSERT INTO images (link,hab_id) VALUES ("kitchen7.jpeg",7);
+INSERT INTO images (link,hab_id) VALUES ("room7.jpg",7);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",8);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",8);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",8);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",8);
+INSERT INTO images (link,hab_id) VALUES ("bed7.jpg",8);
+INSERT INTO images (link,hab_id) VALUES ("kitchen8.jpeg",8);
+INSERT INTO images (link,hab_id) VALUES ("room8.jpg",8);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",9);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",9);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",9);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("bed9.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("kitchen9.jpg",9);
+INSERT INTO images (link,hab_id) VALUES ("room9.jpeg",9);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",10);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",10);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",10);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",10);
+INSERT INTO images (link,hab_id) VALUES ("bed10.jpeg",10);
+INSERT INTO images (link,hab_id) VALUES ("kitchen10.jpeg",10);
+INSERT INTO images (link,hab_id) VALUES ("room10.jpeg",10);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",11);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",11);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",11);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",11);
+INSERT INTO images (link,hab_id) VALUES ("bed11.jpeg",11);
+INSERT INTO images (link,hab_id) VALUES ("kitchen11.jpeg",11);
+INSERT INTO images (link,hab_id) VALUES ("room11.jpeg",11);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",12);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",12);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",12);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",12);
+INSERT INTO images (link,hab_id) VALUES ("bed12.jpeg",12);
+INSERT INTO images (link,hab_id) VALUES ("kitchen12.jpeg",12);
+INSERT INTO images (link,hab_id) VALUES ("room12.jpg",12);
 
-INSERT INTO images (link,hab_id) VALUES ("fancy_living_room.jpg",13);
-INSERT INTO images (link,hab_id) VALUES ("modern_living_room.jpg",13);
-INSERT INTO images (link,hab_id) VALUES ("spacey_living_room.jpg",13);
-INSERT INTO images (link,hab_id) VALUES ("minimal_kitchen.jpg",13);
+INSERT INTO images (link,hab_id) VALUES ("bed13.jpeg",13);
+INSERT INTO images (link,hab_id) VALUES ("kitchen13.jpeg",13);
+INSERT INTO images (link,hab_id) VALUES ("room13.jpg",13);
 
 INSERT INTO ownership (hab,owner,added_on) VALUES (1,3,"2019-10-21");
 INSERT INTO ownership (hab,owner,added_on) VALUES (2,1,"2019-10-21");
