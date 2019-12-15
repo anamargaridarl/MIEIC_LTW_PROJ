@@ -5,6 +5,7 @@ body {
 }
 
 #logosearch {
+    align-self: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,6 +14,7 @@ body {
 }
 
 #accountlog {
+    align-self: center;
     width: 30%;
     display: flex;
     flex-direction: row;
@@ -39,6 +41,7 @@ body {
 /* Style the input container */
 
 .input-container {
+    align-self: center;
     width: 67%;
     display: flex;
     flex-direction: row;
@@ -55,7 +58,7 @@ body {
     background: var(--white-color);
     color: var(--pink-color);
     width: 5%;
-    height: 58%;
+    height: 1.22em;
     text-align: center;
     border-radius: 10px 0px 0px 10px;
 }
@@ -148,6 +151,12 @@ p {
         flex-direction: column;
         width: auto;
     }
+    .material-icons {
+        height: 1.21em;
+    }
+    .input-container {
+        padding-right: 1em;
+    }
     #accountlog {
         width: 90%;
         padding: 0.5em 0;
@@ -223,7 +232,10 @@ footer div:first-of-type {
 }
 
 
-/* ---------------------------- modal boxes ---------------------------------- */
+/***************MODAL BOXES******************/
+
+
+/***************MODAL BOXES******************/
 
 <<<<<<< HEAD
 
@@ -346,21 +358,12 @@ footer div:first-of-type {
 #passwordshow {
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
 }
 
 #passwordshow p {
     width: 70%;
 }
 
-=======
-}
-
-#passwordshow p {
-    width: 70%;
-}
-
->>>>>>> master
 #signup #passwordshow input {
     width: 30%;
 }

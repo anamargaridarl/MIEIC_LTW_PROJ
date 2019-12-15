@@ -9,7 +9,7 @@
     drawHead(array("../css/rooms.css", "../css/navfooter.css"), array('../modal_box.js','../show_pass.js', '../search.js'));?>
 
     
-    <?php drawNavBar();
+    <?php drawNavBar(false);
 
     $houses = getRoomsByRegion($_GET['region']);
     

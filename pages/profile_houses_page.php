@@ -15,9 +15,10 @@
 
     drawHead(array("../css/profilehouse.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('modal_box.js','show_pass.js', '../search.js'));
     showMessages();
+    drawNavBar(false);
+?>
 
-    drawNavBar();?>
-    <div class="middle">
+<div class="middle">
 
     <?php
     

@@ -1,10 +1,12 @@
 <?php
-function editHouse($house) {
-$images = getImages($house['hab_id']);?>
+function editHouse($house) { ?>
 <div class="house_page">
   <h1>Edit Information</h1>
-  <form id="editform" action="../actions/action_update_house.php?id=<?=$house['hab_id']?>" method="POST">
-    <div id="house_images">IMAGES</div>
+  <form id="editform" action="../actions/action_update_house.php?id=<?=$house['hab_id']?>" method="POST" enctype="multipart/form-data">
+      <div id="house_images">
+        <label for="h_images">Replace pictures :</label>
+        <input type="file" name="h_images[]" accept=".jpg, .jpeg, .png" multiple title="WARNING: This option will replace all your house photos with the ones selected!">
+      </div>
     <div id="house_info">
       <div id="h_title">
         <label for="title">Title:</label>
@@ -48,6 +50,7 @@ $images = getImages($house['hab_id']);?>
         <div id="h_desc_bot">
         <textarea name="description" rows="3" cols="80" title="Detail your place a little more, what special features does it have: pool, barbecue, jacuzzi, pet friendly, smoking allowed, etc..." required><?= htmlspecialchars($house['description'])?></textarea>
         <div id="save_button">
+          <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
           <input type="submit" name="save" value="Save">
         </div>
         </div>
@@ -61,8 +64,11 @@ $images = getImages($house['hab_id']);?>
 function addHouse() {?>
   <div class="house_page">
     <h1>New House</h1>
-    <form id="addform" action="../actions/action_addhouse.php" method="POST">
-      <div id="house_images">IMAGES</div>
+    <form id="addform" action="../actions/action_addhouse.php" method="POST" enctype="multipart/form-data">
+      <div id="house_images">
+        <label for="h_images">Add pictures:</label>
+        <input type="file" name="h_images[]" accept=".jpg, .jpeg, .png" multiple title="Add some pictures for users to check your house. We required at least one (1) photo of the house and at most ten (10)." required>
+      </div>
       <div id="house_info">
         <div id="h_title">
           <label for="title">Title:</label>
@@ -106,6 +112,7 @@ function addHouse() {?>
           <div id="h_desc_bot">
           <textarea name="description" rows="3" cols="80" title="Detail your place a little more, what special features does it have: pool, barbecue, jacuzzi, pet friendly, smoking allowed, etc..." required></textarea>
           <div id="save_button">
+            <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
             <input type="submit" name="save" value="Save">
           </div>
           </div>

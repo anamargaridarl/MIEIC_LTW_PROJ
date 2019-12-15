@@ -17,7 +17,7 @@
     ?>
 
 
-    <?php drawNavBar();?>
+    <?php drawNavBar(false);?>
   
     <div class="middle">
     

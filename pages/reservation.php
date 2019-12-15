@@ -12,7 +12,7 @@
     }
 
     drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../modal_box.js", "../reservations.js", "../search.js"));
-    drawNavBar();
+    drawNavBar(false);
 
     $house_id = $_GET['id'];
     $checkin = $_GET['checkin'];

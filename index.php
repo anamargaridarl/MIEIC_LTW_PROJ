@@ -1,18 +1,17 @@
 <?php
+  chdir('pages');
   include_once('includes/session.php');
   include_once('templates/nav_bar.php');
   include_once('templates/head.php');
   include_once('templates/footer.php');
-
-  
- include_once('templates/show_messages.php');
-  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js", "search.js"));
+  include_once('templates/show_messages.php');
+  drawHead(array("css/navfooter.css", "css/homepage.css"), array("modal_box.js","show_pass.js","search.js"));
   
   showMessages();
 ?>
    
     <section class="welcome">
-      <?php drawNavBar(); ?>
+      <?php drawNavBar(true); ?>
       <form id="exploreform" action="pages/search_rooms.php" method="GET">
         <h3 id="form_title">Houses of the World!</h3>
         <div id="whereto">
@@ -46,22 +45,22 @@
       <div id="regions">
         <div class="landscape">
           <a id="north"  href="pages/explore_rooms.php?region=north">
-            <img src="/images/porto_explore.jpg" ><p>North</p>
+            <img src="/images/site/porto_explore.jpg" ><p>North</p>
           </a>
         </div>
         <div class="landscape">  
           <a id="center" href="pages/explore_rooms.php?region=center">
-            <img src="/images/viseu_explore.jpg" ><p>Center</p>
+            <img src="/images/site/viseu_explore.jpg" ><p>Center</p>
           </a>
         </div>  
         <div class="landscape">  
           <a id="south" href="pages/explore_rooms.php?region=south">
-            <img src="/images/algarve_explore.jpg" ><p>South</p>
+            <img src="/images/site/algarve_explore.jpg" ><p>South</p>
           </a>
         </div>
         <div class="landscape">
           <a id="islands" href="pages/explore_rooms.php?region=islands">
-            <img src="/images/madeira_explore.jpg" ><p>Islands</p>
+            <img src="/images/site/madeira_explore.jpg" ><p>Islands</p>
           </a>
         </div>
       </div>

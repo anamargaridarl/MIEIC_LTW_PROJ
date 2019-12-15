@@ -18,7 +18,8 @@
       $images = getImages($product_id);
     
     drawHead(array("../css/houses.css","../css/navfooter.css"), array("../carousel.js", "../modal_box.js",'../show_pass.js'));
-    drawNavBar();
+
+    drawNavBar(false);
       
     drawHouse($product_id, $images, $checkin, $checkout, $_SESSION['email'], $_GET['guests']);
     
