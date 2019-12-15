@@ -6,7 +6,14 @@
 <div class="res_page">
 <h1>Reservations</h1>
 
- <?php foreach ($reservations as $reservation): 
+<?php if(empty($reservations)) {?>
+
+
+<p> No reservations associated to this account yet </p>
+
+  <?php } else {
+
+ foreach ($reservations as $reservation): 
   $images = getImages($reservation['hab']);?>
 
 <div class="reservation">
@@ -26,4 +33,7 @@
 
 <?php endforeach ?>
 </div>
- <?php } ?>
+
+
+ <?php }
+ } ?>
