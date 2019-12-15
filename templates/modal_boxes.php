@@ -17,6 +17,8 @@
         <div id="password">
           <p>Password</p>
           <input id="sgnup_pass" type="password" name="password" placeholder="Enter a valid password..." title="In order to be extra-safe choose a good password. It should be of a minimum of 12-14 characters long, containing lower and upper case letters, numbers and some symbols."  required>
+        </div>
+        <div id="passwordshow">
           <p>Show Password:</p>
           <input type="checkbox" id="show_sgn">
         </div>
@@ -37,6 +39,8 @@
         <div id="password">
           <p>Password</p>
           <input id="login_pass" type="password" name="password" placeholder="Enter your password..." required>
+        </div>
+        <div id="passwordshow">
           <p>Show Password:</p>
           <input type="checkbox" id="show_lgn">
         </div>
