@@ -204,3 +204,12 @@ body {
     border-top: 1px solid var(--blue-color);
     margin-top: 0;
 }
+
+#sugestionlist {
+    width: 96%;
+    border: 0.5px solid var(--grey-color);
+}
+
+#suggestions {
+    list-style-type: none;
+}
