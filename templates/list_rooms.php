@@ -4,7 +4,8 @@
         if(empty($houses)) {?>
         <h4> Couldn't match with any house available </h4>
 
-        <?php }else{
+        <?php }
+        else{
        
         foreach ($houses as $house): 
         $images = getImages($house['hab_id'])?>
