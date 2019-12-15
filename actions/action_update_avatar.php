@@ -4,8 +4,8 @@
   include_once('../database/users.php');
 
   $ext = end(explode(".",$_FILES['avatar']['name']));
-  $avatar_path = "../images/avatars/".get_userid($_SESSION['username']). "." . $ext;  
-  $thumbnail_path = "../images/avatars/thumbnails/".get_userid($_SESSION['username']) . "." . $ext; 
+  $avatar_path = "../images/avatars/".get_userid($_SESSION['username']) . "." . $ext;  
+  $thumbnail_path = "../images/avatars/thumbnails/".get_userid($_SESSION['username']). "." . $ext; 
 
   switch($_FILES['avatar']['type']) {
     case 'image/jpeg':
@@ -55,31 +55,11 @@
     break; 
   }
 
-  if(!update_avatar($_SESSION['username'],$_FILES['avatar']['name'])) {
+  if(!update_avatar($_SESSION['username'],get_userid($_SESSION['username']) . "." . $ext)) {
     die(header('Location: ../pages/profile.php'));
   }
 
   $_SESSION['message'] = array('type' => 'success','content' => 'Upload profile pic successfully.');
   header('Location: ../pages/profile.php');
 
-?>
-
-
-  // Move the uploaded file to its final destination
-  move_uploaded_file($_FILES['image']['tmp_name'], $originalFileName);
-
-  // Calculate width and height of medium sized image (max width: 400)
-  $mediumwidth = $width;
-  $mediumheight = $height;
-  if ($mediumwidth > 400) {
-    $mediumwidth = 400;
-    $mediumheight = $mediumheight * ( $mediumwidth / $width );
-  }
-
-  // Create and save a medium image
-  $medium = imagecreatetruecolor($mediumwidth, $mediumheight);
-  imagecopyresized($medium, $original, 0, 0, 0, 0, $mediumwidth, $mediumheight, $width, $height);
-  imagejpeg($medium, $mediumFileName);
-
-  header("Location: index.php");
 ?>

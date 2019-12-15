@@ -14,6 +14,9 @@
             die(header('Location: ../index.php'));
         }
 
+        $user_id = get_userid($username);
+        insert_default_avatar($user_id);
+        
         $_SESSION['email'] = $email;
         $_SESSION['username'] = $username;
         $_SESSION['message'] = array('type' => 'success','content' => 'Created new account successfully.');
