@@ -48,6 +48,7 @@ $images = getImages($house['hab_id']);?>
         <div id="h_desc_bot">
         <textarea name="description" rows="3" cols="80" title="Detail your place a little more, what special features does it have: pool, barbecue, jacuzzi, pet friendly, smoking allowed, etc..." required><?= htmlspecialchars($house['description'])?></textarea>
         <div id="save_button">
+          <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
           <input type="submit" name="save" value="Save">
         </div>
         </div>
@@ -106,6 +107,7 @@ function addHouse() {?>
           <div id="h_desc_bot">
           <textarea name="description" rows="3" cols="80" title="Detail your place a little more, what special features does it have: pool, barbecue, jacuzzi, pet friendly, smoking allowed, etc..." required></textarea>
           <div id="save_button">
+            <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
             <input type="submit" name="save" value="Save">
           </div>
           </div>

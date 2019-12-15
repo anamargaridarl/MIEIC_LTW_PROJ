@@ -40,7 +40,8 @@
 
             <label for="newpassfield">New Password</label>
             <input type="password" name="newpassfield" title="Change your password if you wish, but put your current one before that, in case you forget to signout somewhere...">
-
+            
+            <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
             <input type="submit" name="submit" value="Update profile">
 
         </form>

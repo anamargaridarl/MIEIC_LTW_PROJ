@@ -2,6 +2,11 @@
     include_once('../includes/session.php');
     include_once('../database/houses.php');
 
+    if ($_SESSION['csrf'] !== $_POST['csrf']) {
+        http_response_code(401);
+        die(header('Location: http_error_page.php'));
+    }
+
     $title = $_POST['title'];
     $region = $_POST['region'];
     $location = $_POST['location'];

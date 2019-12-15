@@ -2,6 +2,11 @@
     include_once('../includes/session.php');
     include_once('../database/users.php');
 
+    if ($_SESSION['csrf'] !== $_POST['csrf']) {
+        http_response_code(401);
+        die(header('Location: http_error_page.php'));
+    }
+
     if(!check_email_passwd($_SESSION['email'],$_POST['currpass'])) {
         $_SESSION['message'] = array('type' => 'error', 'content' => 'Failed to edit profile: incorrect password');
         die(header('Location: ../pages/profile.php'));
