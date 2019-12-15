@@ -11,6 +11,12 @@
     width: 55%;
 }
 
+h4 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 2em;
+}
+
 #page-container {
     margin: auto;
 }
