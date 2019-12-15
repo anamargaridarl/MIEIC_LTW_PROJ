@@ -17,7 +17,7 @@
         <div id="whereto">
           <p>Where</p>
           <input id="searchbar" type="text" name="location" autocomplete="off" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
-          <div id="sugestionlist">
+          <div id="suggestionlist">
           <ul id="suggestions">
           </ul>
           </div>
