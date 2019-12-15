@@ -3,9 +3,9 @@
   include_once('../database/getters.php');
   include_once('../database/users.php');
 
-
-  $avatar_path = "../images/avatars/".$_FILES['avatar']['name'];  
-  $thumbnail_path = "../images/avatars/thumbnails/".$_FILES['avatar']['name'];
+  $ext = end(explode(".",$_FILES['avatar']['name']));
+  $avatar_path = "../images/avatars/".get_userid($_SESSION['username']). "." . $ext;  
+  $thumbnail_path = "../images/avatars/thumbnails/".get_userid($_SESSION['username']) . "." . $ext; 
 
   switch($_FILES['avatar']['type']) {
     case 'image/jpeg':

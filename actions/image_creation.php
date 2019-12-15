@@ -1,7 +1,8 @@
 <?php 
   function add_images($n_photos,$hab_id) {
-    for($i = 0; $i < $n_photos; $i++) {
-        if(!(create_image($i) && add_house_image_link($_FILES['h_images']['name'][$i],$hab_id)))
+    for($i = 1; $i <= $n_photos; $i++) {
+        $ext = "." . end(explode(".",$_FILES['h_images']['name'][$i]));
+        if(!(create_image($i,$hab_id) && add_house_image_link($hab_id . "_" . $i . $ext,$hab_id)))
             return false;
     }
     error_log("conas");
@@ -9,8 +10,9 @@
     return true;
   }
 
-  function create_image($i) {
-    $house_path = "../images/houses/".$_FILES['h_images']['name'][$i];  
+  function create_image($i,$hab_id) {
+    $ext = "." . end(explode(".",$_FILES['h_images']['name'][$i]));
+    $house_path = "../images/houses/" . $hab_id . "_" . $i . $ext;  
         
     switch($_FILES['h_images']['type'][$i]) {
         case 'image/jpeg':
