@@ -3,7 +3,11 @@
     include_once('../includes/session.php');
     include_once('getters.php');
 
-   
+   function add_house_image_link($link, $hab_id) {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare('INSERT INTO images( link, hab_id) values( ? , ? )');
+        return $stmt->execute(array($link,$hab_id));
+   }
    
    function new_house($title,$region,$location,$address,$capacity,$n_rooms,$n_bath,$price,$description) {
         $db = Database::instance()->db();
@@ -17,20 +21,21 @@
         $hab_id = $stmt2->fetch();
 
         $date = date('Y-m-d'); 
-        $id = get_ownerid($_SESSION['username']);
+        $id = get_userid($_SESSION['username']);
         
         $stmt3 = $db->prepare('SELECT owner_id FROM owner WHERE owner_id = ?');
-        $stmt3->execute(array($id['user_id']));
+        $stmt3->execute(array($id));
         $owner_id = $stmt3->fetch();
 
         if(empty($owner_id))
         {
             $stmt4 = $db->prepare('INSERT INTO owner(owner_id) values(?)');
-            $stmt4->execute(array($id['user_id']));
+            $stmt4->execute(array($id));
         }
 
         $stmt5 = $db->prepare('INSERT INTO ownership( hab, owner, added_on) values(? , ? , ? )');
-        return $stmt5->execute(array($hab_id['hab_id'], $id['user_id'], $date));
+        $stmt5->execute(array($hab_id['hab_id'], $id, $date));
+        return $hab_id['hab_id'];
    }
 
 ?>

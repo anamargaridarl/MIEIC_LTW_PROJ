@@ -76,7 +76,7 @@
 
     function update_avatar($username, $link_avatar) {
         
-        $user_id = get_ownerid($username);
+        $user_id = get_userid($username);
         $db = Database::instance()->db();
         $stmt = $db->prepare('UPDATE avatar SET link = ? WHERE user_id = ?');
         return $stmt->execute(array($link_avatar,$user_id));

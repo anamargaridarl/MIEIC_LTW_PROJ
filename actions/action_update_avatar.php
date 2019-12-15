@@ -7,8 +7,6 @@
   $avatar_path = "../images/avatars/".$_FILES['avatar']['name'];  
   $thumbnail_path = "../images/avatars/thumbnails/".$_FILES['avatar']['name'];
 
-  $original;
-
   switch($_FILES['avatar']['type']) {
     case 'image/jpeg':
       $original = imagecreatefromjpeg($_FILES['avatar']['tmp_name']);
