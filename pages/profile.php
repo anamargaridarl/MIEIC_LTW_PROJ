@@ -30,6 +30,7 @@
             <p><?= htmlspecialchars($_SESSION['username']) ?></p>
             <form id="upload_avatar" method="post" action="../actions/action_update_avatar.php" enctype="multipart/form-data">
                 <input type="file" name="avatar" accept=".png, .jpg, .jpeg" required>
+                <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
                 <input type="submit" value="Upload avatar">
             </form>
         </section>

@@ -3,6 +3,11 @@
   include_once('../database/getters.php');
   include_once('../database/users.php');
 
+  if ($_SESSION['csrf'] !== $_POST['csrf']) {
+    http_response_code(401);
+    die(header('Location: http_error_page.php'));
+  }
+  
   $ext = end(explode(".",$_FILES['avatar']['name']));
   $avatar_path = "../images/avatars/".get_userid($_SESSION['username']) . "." . $ext;  
   $thumbnail_path = "../images/avatars/thumbnails/".get_userid($_SESSION['username']). "." . $ext; 
