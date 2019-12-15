@@ -19,17 +19,17 @@
       <i class="material-icons">search</i>
       <form id="input" action="search_rooms.php" method ="GET" autocomplete="off">
       <p>
-        <input id='input-field' type="text" placeholder="Local" name="location">
+        <input required id='input-field' type="text" placeholder="Local" name="location">
         <div id="details-form">
           <label for="guests">Guests</label>
-          <input type="number" id="guests" name="guests">
+          <input required type="number" id="guests" name="guests">
 
           <label for="checkin">Checkin date</label>
           <input type="date" id="checkin" name="checkin">
 
           <label for="checkout">Checkout date</label>
           <input type="date" id="checkout" name="checkout">
-          <input type="submit" value="Submit">
+          <input disabled type="submit" id="submit" value="Submit">
         </div>
 
       </p>
