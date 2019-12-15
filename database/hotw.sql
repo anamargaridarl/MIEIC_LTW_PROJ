@@ -72,4 +72,14 @@ CREATE TABLE reservation (
   CHECK (start_date < end_date)
 );
 
+DROP TABLE IF EXISTS cities;
+CREATE TABLE cities (
+  city_id INTEGER PRIMARY KEY,
+  city_name TEXT
+);
+
+-- Possible tables
+-- - messages
+-- - comments
+
 COMMIT TRANSACTION;

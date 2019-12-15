@@ -124,3 +124,7 @@ h1 {
     flex-flow: wrap;
     align-items: flex-end;
 }
+
+#house_images input {
+    padding: 1em 0;
+}
