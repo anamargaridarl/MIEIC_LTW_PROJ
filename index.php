@@ -16,11 +16,19 @@
         <h3 id="form_title">Houses of the World!</h3>
         <div id="whereto">
           <p>Where</p>
+<<<<<<< HEAD
           <input id="searchbar" type="text" name="location" autocomplete="off" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
           <div id="suggestionlist">
           <ul id="suggestions">
           </ul>
+=======
+            <input id="searchbar" type="text" name="location" autocomplete="off" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
+            <div id="sugestionlist">
+              <ul id="suggestions">
+              </ul>
+>>>>>>> 7e9548e7e443e2d73bf6e73caab97896e39243f2
           </div>
+
         </div>
         <div id="check">
         <div id="checkin">

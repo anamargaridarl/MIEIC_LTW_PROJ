@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     width: 19%;
+    min-height: 80vh;
 }
 
 .side-menu a {
@@ -28,6 +29,7 @@
         border-bottom-style: solid;
         border-top-style: solid;
         border-color: var(--white-color);
+        height: 80vh;
     }
     .side-menu a {
         margin: 1em;

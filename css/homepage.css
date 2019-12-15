@@ -206,10 +206,17 @@ body {
 }
 
 #sugestionlist {
-    width: 96%;
+    width: 95.5%;
+    margin: 0;
     border: 0.5px solid var(--grey-color);
 }
 
 #suggestions {
+    padding: 0.1em 0.1em;
+    margin: 0
+}
+
+#suggestions li {
+    padding: 0.15em 0.5em;
     list-style-type: none;
 }
