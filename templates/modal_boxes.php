@@ -45,6 +45,7 @@
           <input type="checkbox" id="show_lgn">
         </div>
         <div id="log">
+          <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
           <input type="submit" value="Login">
         </div>
       </div>
