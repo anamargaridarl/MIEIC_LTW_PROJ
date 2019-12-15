@@ -12,7 +12,7 @@
     function new_house($title,$region,$location,$address,$capacity,$n_rooms,$n_bath,$price,$description) {
         $db = Database::instance()->db();
 
-        $stmt = $db->prepare('INSERT INTO habitation( title, price_per_day, nr_rooms, nr_bathrooms,capacity,location,addr,region,description) values( ? , ? , ? , ? , ? , ?, ?, ?, ?)');
+        $stmt = $db->prepare('INSERT INTO habitation( title, price_per_day, nr_rooms, nr_bathrooms,capacity,location,addr,region,description,active) values( ? , ? , ? , ? , ? , ?, ?, ?, ?,1)');
         if(!$stmt->execute(array($title,$price,$n_rooms,$n_bath, $capacity,$location,$address,$region, $description)))
             return false;
 
