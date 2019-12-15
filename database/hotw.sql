@@ -80,6 +80,12 @@ CREATE TABLE reservation (
   -- check number guest is lower or equal to habitation capacity
 );
 
+DROP TABLE IF EXISTS cities;
+CREATE TABLE cities (
+  city_id INTEGER PRIMARY KEY,
+  city_name TEXT
+);
+
 -- Possible tables
 -- - messages
 -- - comments
