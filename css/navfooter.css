@@ -54,13 +54,12 @@ body {
 /* Style the form icons */
 
 .material-icons {
-    padding: 10px;
     background: var(--white-color);
     color: var(--pink-color);
-    width: 5%;
-    height: 1.22em;
+    width: 2em;
     text-align: center;
     border-radius: 10px 0px 0px 10px;
+    padding-top: 10px;
 }
 
 #details-form {
@@ -151,9 +150,6 @@ p {
         flex-direction: column;
         width: auto;
     }
-    .material-icons {
-        height: 1.21em;
-    }
     .input-container {
         padding-right: 1em;
     }
@@ -230,6 +226,7 @@ footer div {
 footer div:first-of-type {
     margin: 0;
 }
+
 
 /***************MODAL BOXES******************/
 
