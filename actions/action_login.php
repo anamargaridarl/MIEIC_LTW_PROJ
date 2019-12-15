@@ -3,7 +3,11 @@
     include_once('../database/getters.php');
     include_once('../database/users.php');
 
-
+    if ($_SESSION['csrf'] !== $_POST['csrf']) {
+        http_response_code(401);
+        die(header('Location: http_error_page.php'));
+    }
+    
     $email = $_POST['email'];
     $password = $_POST['password'];
 
