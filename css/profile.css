@@ -37,14 +37,6 @@ body {
     padding-top: 1em;
 }
 
-.profile-info input {
-    width: 100%;
-    padding: 6px 6px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-}
-
 .profile-image form input:nth-child(2) {
     margin: 0 0 1em 0;
 }
@@ -59,7 +51,21 @@ body {
     outline: none;
 }
 
+.profile-image input {
+    width: 60%;
+    padding: 0.5em;
+    margin: 0.5em 0 1.25em 0;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    border: none;
+}
+
 .profile-info input:focus {
     transition: 0.5s;
     border: 0.15em solid var(--blue-color);
+}
+
+#avatar img {
+    width: 30vh;
+    height: 30vh;
 }
