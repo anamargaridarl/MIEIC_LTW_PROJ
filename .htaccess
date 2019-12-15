@@ -1,3 +1,6 @@
 ErrorDocument 401 pages/http_error_page.php
 ErrorDocument 404 pages/http_error_page.php
 ErrorDocument 500 pages/http_error_page.php
+
+php_value upload_max_filesize 20M
+php_value post_max_size 22M
