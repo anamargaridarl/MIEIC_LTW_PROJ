@@ -86,11 +86,18 @@
             $nights = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
             $per_day = $house['price_per_day'];
             $total = $per_day  * $nights?>
+
+<?php
+if ($nights > 0){ ?>
       <h2>Nights: <?=$nights?> * <?= $house['price_per_day'] ?> €</h2>
       <h3>Total:  <?= $total ?> € </h3>
       <a href="reservation.php?id=<?= $house_id ?>&checkin=<?= $checkin ?>&checkout=<?= $checkout ?>&guests=<?= $guests ?>">Book Now</a>
+<?php } else{?>
+  <h3>Price per day: <?= $house['price_per_day'] ?> €</h2>
+  <a href="reservation.php?id=<?= $house_id ?>&checkin=<?= $checkin ?>&checkout=<?= $checkout ?>&guests=<?= $guests ?>">Book Now</a>
+<?php } ?>
+    
     </div>
-
     </div>
 
       
