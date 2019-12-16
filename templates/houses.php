@@ -4,7 +4,7 @@
   include_once('footer.php');
   include_once('../database/getters.php');
 
- function drawHouse($house_id, $images, $checkin, $checkout, $user_email, $guests) {
+ function drawHouse($house_id, $images, $checkin, $checkout, $guests) {
    $house = getRoom($house_id);
 ?>
 

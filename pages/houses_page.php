@@ -25,7 +25,7 @@
 
     drawNavBar(false);
       
-    drawHouse($product_id, $images, $checkin, $checkout, $_SESSION['email'], $guests);
+    drawHouse($product_id, $images, $checkin, $checkout, $guests);
     
     drawFooter();
     
