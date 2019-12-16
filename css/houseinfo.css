@@ -80,13 +80,14 @@ h2 {
     padding-bottom: 2em;
 }
 
-
-#h_button , #delete_house{
+#h_button,
+#delete_house {
     text-align: end;
     padding-bottom: 2em;
 }
 
-#editinfo, #delete_btn {
+#editinfo,
+#delete_btn {
     text-decoration: none;
     padding: 0.75em 1em;
     color: var(--white-color);
@@ -94,4 +95,17 @@ h2 {
     border-radius: 10px;
     border: none;
     justify-content: end;
+}
+
+@media (max-width: 800px) {
+    .middle {
+        flex-direction: column;
+    }
+    #h_info {
+        width: 80%;
+    }
+    #h_image {
+        width: 100%;
+        align-content: center;
+    }
 }
