@@ -23,10 +23,20 @@
     if(isset($_GET['region'])) {
       $region = $_GET['region'];
     }
-    
-    $houses = getRooms($_GET['location'], $_GET['checkin'], $_GET['checkout'], $_GET['guests'], $region); # TODO: make it get the rooms based on checkin and checkout dates
 
-    drawRooms($houses, $checkin, $checkout, $_GET['guests']);
+    $location = "";
+    if(isset($_GET['location'])) {
+      $location = $_GET['location'];
+    }
+    
+    $guests = "";
+    if(isset($_GET['guests'])) {
+      $guests = $_GET['guests'];
+    }
+
+    $houses = getRooms($location, $checkin, $checkout, $guests, $region); # TODO: make it get the rooms based on checkin and checkout dates
+
+    drawRooms($houses, $checkin, $checkout, $guests);
     
     drawFooter();
 ?>

@@ -15,13 +15,17 @@
         $checkout = $_GET['checkout'];
       }
 
+      if(isset($_GET['guests'])){
+        $guests = $_GET['guests'];
+      }
+
       $images = getImages($product_id);
     
     drawHead(array("../css/houses.css","../css/navfooter.css"), array("../js/carousel.js", "../js/modal_box.js",'../js/show_pass.js', '../js/search.js'));
 
     drawNavBar(false);
       
-    drawHouse($product_id, $images, $checkin, $checkout, $_SESSION['email'], $_GET['guests']);
+    drawHouse($product_id, $images, $checkin, $checkout, $_SESSION['email'], $guests);
     
     drawFooter();
     
