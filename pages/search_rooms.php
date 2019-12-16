@@ -17,9 +17,14 @@
           $_SESSION['message'] = array('type' => 'error','content' => 'Check-out date cannot come before check-in.');
           die(header('Location: ../index.php'));
         }
-      }
-
-    $houses = getRooms($_GET['location'], $_GET['checkin'], $_GET['checkout'], $_GET['guests'], $_GET['region']); # TODO: make it get the rooms based on checkin and checkout dates
+    }
+    
+    $region = "";
+    if(isset($_GET['region'])) {
+      $region = $_GET['region'];
+    }
+    
+    $houses = getRooms($_GET['location'], $_GET['checkin'], $_GET['checkout'], $_GET['guests'], $region); # TODO: make it get the rooms based on checkin and checkout dates
 
     drawRooms($houses, $checkin, $checkout, $_GET['guests']);
     

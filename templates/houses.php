@@ -41,7 +41,7 @@
 
       </div>
         <div id="owner">
-          <img src="<?= urlencode(getThumbnailLink(get_owner_name($house['hab_id'])))?>" alt="Profile Picture">
+          <img src="<?= getThumbnailLink(get_owner_name($house['hab_id']))?>" alt="Profile Picture">
           <p><?= htmlspecialchars(get_owner_name($house['hab_id']))?></p>
         </div>
 
