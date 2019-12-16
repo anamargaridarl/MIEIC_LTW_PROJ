@@ -4,6 +4,8 @@ João Miguel Ribeiro de Castro Silva Martins up201707311
 
 O trabalho foi igualmente dividido por todos os membros do grupo.
 
+O script de base de dados encontra-se na pasta 'database' e tem o nome 'loaddb.sh'
+
 Algumas credenciais de utilizadores ja existentes:
 ana@mail.com Golden_Biles99
 goncalo@mail.com    SuPErtUx4LiF
