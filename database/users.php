@@ -68,8 +68,18 @@
         $stmt->execute(array($email));
         $user_id = $stmt->fetch()['user_id'];
 
+        $stmt = $db->prepare('SELECT * FROM reservation WHERE hab = ? and (end_date < ? and start_date > ?) or (end_date < ? and start_date > ?)');
+        $stmt->execute(array($hab_id, $checkin, $checkin, $checkout, $checkout));
+        $user_reservations = $stmt->fetchAll();
+
+        if (!empty($user_reservations)) {
+            return -1;
+        }
+
         $stmt = $db->prepare('INSERT INTO reservation (nr_guests,hab,client,start_date,end_date) VALUES (?,?,?,?,?)');
         $stmt->execute(array($guests, $hab_id, $user_id, $checkin, $checkout));
+
+        return 1;
     }
     
     function getProfileAvatarLink($username) {
