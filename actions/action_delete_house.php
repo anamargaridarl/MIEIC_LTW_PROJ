@@ -10,7 +10,7 @@
     }
 
     $house_id = intval($_POST['house_id']);
-    // var_dump($house_id);die();
+
     try {
 
       if(!(set_house_inactive($house_id))) {
@@ -18,6 +18,7 @@
         $_SESSION['message'] = array('type' => 'error','content' => 'Failed to delete house.');
         header('Location: ../pages/profile_houses_page.php');
       } 
+      
       if(!delete_ownership($house_id)) {
         error_log("FAILED TO DELETE OWNERSHIP");
         $_SESSION['message'] = array('type' => 'error','content' => 'Failed to delete house.');
@@ -31,5 +32,4 @@
       http_response_code(500);
       die(header('Location: ../pages/http_error_page.php'));
   }
-
 ?>

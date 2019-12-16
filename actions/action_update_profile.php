@@ -39,11 +39,11 @@
 
             $_SESSION['email'] = $_POST['email'];
         }
-    }
-    catch (PDOException $e) {
+    } catch (PDOException $e) {
         http_response_code(500);
         die(header('Location: http_error_page.php'));
     }
+    
     $_SESSION['message'] = array('type' => 'success','content' => 'Updated profile successfully.');
     header('Location: ../pages/profile.php');
 ?>

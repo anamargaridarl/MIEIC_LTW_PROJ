@@ -26,7 +26,7 @@
     <section class="profile-info">
         <section class="profile-image">
             <div id="avatar">
-            <img src="<?=getProfileAvatarLink($_SESSION['username'])?>" alt="profile picture">
+            <img src="<?=urlencode(getProfileAvatarLink($_SESSION['username']))?>" alt="profile picture">
             </div>
             <p><?= htmlspecialchars($_SESSION['username']) ?></p>
             <form id="upload_avatar" method="post" action="../actions/action_update_avatar.php" enctype="multipart/form-data">

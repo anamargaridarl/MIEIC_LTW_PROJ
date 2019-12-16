@@ -1,4 +1,5 @@
 <?php
+    include_once('../includes/session.php');
     include_once('../templates/head.php');
     include_once('../templates/footer.php');
     include_once('../templates/profile_house.php');

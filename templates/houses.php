@@ -31,24 +31,24 @@
       <div id="titles">
     
         <div class="title">
-          <h1> <?= $house['title'] ?> </h1>
+          <h1> <?= htmlspecialchars($house['title'])?> </h1>
         </div>
 
         <div class="title2">
-          <h2><?= $house['location'] ?></h2>
+          <h2><?= htmlspecialchars($house['location'])?></h2>
           <p> <?= $house['capacity'] ?> guests <?= $house['nr_rooms'] ?> bedrooms <?= $house['nr_bathrooms'] ?> bathrooms </p>
         </div>
 
       </div>
         <div id="owner">
-          <img src="<?= getThumbnailLink(get_owner_name($house['hab_id']))?>" alt="Profile Picture">
-          <p><?= get_owner_name($house['hab_id'])?></p>
+          <img src="<?= urlencode(getThumbnailLink(get_owner_name($house['hab_id'])))?>" alt="Profile Picture">
+          <p><?= htmlspecialchars(get_owner_name($house['hab_id']))?></p>
         </div>
 
     </div>
       
       <div class="texthouse">
-        <p> <?= $house['description'] ?> </p>
+        <p> <?= htmlspecialchars($house['description'])?> </p>
       </div>
           
     </div>

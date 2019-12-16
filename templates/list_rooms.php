@@ -2,7 +2,7 @@
     function drawRooms($houses, $checkin, $checkout, $guests) {
        
         if(empty($houses)) {?>
-        <h4> Couldn't match with any house available </h4>
+        <h4> No matchs found. It's just not in Tinder afterall... </h4>
 
         <?php }
         else{

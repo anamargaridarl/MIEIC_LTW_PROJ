@@ -14,8 +14,8 @@
             <div id="header">
                 <h1>Summary</h1>
             </div>
-            <p><?= $house['title'] ?></p>
-            <p><?= $house['location'] ?></p>
+            <p><?= htmlspecialchars($house['title']) ?></p>
+            <p><?= htmlspecialchars($house['location']) ?></p>
             <section id="reservation-info">
             <?php if ($guests == 1) { ?>
                 <p><?= $guests ?> Guest</p>

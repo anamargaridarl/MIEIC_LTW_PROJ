@@ -35,8 +35,7 @@
         $house = get_owner_house($owner_id,$house_id); //REPLACE WITH VARIABLE
         editHouse($house);
     }
-    else
-    {
+    else {
         addHouse();
     }?>
 
