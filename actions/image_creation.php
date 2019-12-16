@@ -2,7 +2,7 @@
   function add_images($n_photos,$hab_id) {
     for($i = 1; $i <= $n_photos; $i++) {
         $ext = "." . end(explode(".",$_FILES['h_images']['name'][$i]));
-        if(!(create_image($i,$hab_id) && add_house_image_link($hab_id . "_" . $i . $ext,$hab_id)))
+        if(!(create_image($i-1,$hab_id) && add_house_image_link($hab_id . "_" . $i . $ext,$hab_id)))
             return false;
     }
     error_log("conas");

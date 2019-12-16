@@ -29,7 +29,7 @@
             die(header('Location: ../pages/http_error_page.php'));
         }
 
-        if($n_photos > 0) {
+        if($_FILES['h_images']['name'][0] != "") {
             if(!(remove_house_images_links($house_id) && add_images($n_photos,$house_id))) {
                 $_SESSION['message'] = array('type' => 'error','content' => 'Failed to replace images.');
                 header('Location: ../pages/profile_houses_page.php');
