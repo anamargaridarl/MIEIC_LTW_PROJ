@@ -1,9 +1,13 @@
 <?php
-  function drawModal() {
+  function drawModal($index) {
 ?>
 
   <section id="modalSignup">
-    <form method="post" action="../actions/action_signup.php">
+    <?php if($index) {?>
+      <form method="post" action="actions/action_signup.php">
+    <?php } else { ?>
+      <form method="post" action="../actions/action_signup.php">
+    <?php }?>
       <div id="signup">
         <p id="signTitle">Sign Up</p>
         <div id="username">
@@ -29,7 +33,11 @@
     </form>
   </section>
   <section id="modalLogin">
-    <form method="post" action="../actions/action_login.php">
+    <?php if($index) {?>
+      <form method="post" action="actions/action_login.php">
+    <?php } else { ?>
+      <form method="post" action="../actions/action_login.php">
+    <?php }?>
       <div id="login">
         <p id="loginTitle">Sign In</p>
         <div id="email">

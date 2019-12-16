@@ -44,13 +44,15 @@
       <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
       
       <?php if ($index) { ?>
-        <a href="../pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+        <a href="pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+        <a href="actions/action_signout.php" id="signout">Sign Out</a>
+
       <?php } else {?>
         <a href="../pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+        <a href="../actions/action_signout.php" id="signout">Sign Out</a>
 
       <?php } ?>
 
-        <a href="../actions/action_signout.php" id="signout">Sign Out</a>
     </div>
     <?php } else { ?>
       <div id="account">
