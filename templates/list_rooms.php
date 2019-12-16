@@ -18,7 +18,7 @@
             </section>
             <section class="house_price">
                 <p><?= htmlspecialchars($house['price_per_day'])?>€/day</p>
-                <a href="houses_page.php?id=<?= urlencode($house['hab_id'])?>&checkin=<?=urlencode($checkin)?>&checkout=<?= urlencode($checkout)?>&guests=<?= $guests ?>"">Check availability</a>
+                <a href="houses_page.php?id=<?= urlencode($house['hab_id'])?>&checkin=<?=urlencode($checkin)?>&checkout=<?= urlencode($checkout)?>&guests=<?= $guests ?>">Check availability</a>
             </section>
             </section>
         </section>

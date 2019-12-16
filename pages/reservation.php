@@ -9,7 +9,7 @@
 
     if (!isset($_SESSION['email']) || empty($_GET['id'])) {
         http_response_code(401);
-        die(header('Location: /index.php'));
+        die(header('Location: ../index.php'));
     }
 
     drawHead(array("../css/navfooter.css", "../css/reservation.css"), array("../js/modal_box.js", "../js/reservations.js", "../js/search.js"));

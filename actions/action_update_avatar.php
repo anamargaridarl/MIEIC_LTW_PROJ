@@ -5,7 +5,7 @@
 
   if ($_SESSION['csrf'] !== $_POST['csrf']) {
     http_response_code(401);
-    die(header('Location: http_error_page.php'));
+    die(header('Location: ../pages/http_error_page.php'));
   }
   
   $ext = end(explode(".",$_FILES['avatar']['name']));

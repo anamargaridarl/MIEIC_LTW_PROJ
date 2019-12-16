@@ -9,7 +9,7 @@
 
     if (!isset($_SESSION['email'])) {
         http_response_code(401);
-        die(header('Location: /index.php'));
+        die(header('Location: ../index.php'));
     }
 
     drawHead(array("../css/houseinfoedit.css", "../css/profile_sidemenu.css","../css/navfooter.css"), array('../js/modal_box.js','../js/show_pass.js', '../js/search.js'));

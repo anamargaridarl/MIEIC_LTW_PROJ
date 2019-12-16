@@ -13,7 +13,7 @@
     <section class="welcome">
       <?php drawNavBar(true); ?>
       <form id="exploreform" action="pages/search_rooms.php" method="GET">
-        <h3 id="form_title">Houses of the World!</h3>
+        <h3 id="form_title">Dolce Cabbana</h3>
         <div id="whereto">
           <p>Where</p>
             <input id="searchbar" type="text" name="location" autocomplete="off" placeholder="Choose your next destination..." title="Where do you want to go for your next adventure? Search for some location and sail away!" required>
@@ -50,22 +50,22 @@
       <div id="regions">
         <div class="landscape">
           <a id="north"  href="pages/explore_rooms.php?region=North">
-            <img src="/images/site/porto_explore.jpg" ><p>North</p>
+            <img src="images/site/porto_explore.jpg" ><p>North</p>
           </a>
         </div>
         <div class="landscape">  
           <a id="center" href="pages/explore_rooms.php?region=Center">
-            <img src="/images/site/viseu_explore.jpg" ><p>Center</p>
+            <img src="images/site/viseu_explore.jpg" ><p>Center</p>
           </a>
         </div>  
         <div class="landscape">  
           <a id="south" href="pages/explore_rooms.php?region=South">
-            <img src="/images/site/algarve_explore.jpg" ><p>South</p>
+            <img src="images/site/algarve_explore.jpg" ><p>South</p>
           </a>
         </div>
         <div class="landscape">
           <a id="islands" href="pages/explore_rooms.php?region=Islands">
-            <img src="/images/site/madeira_explore.jpg" ><p>Islands</p>
+            <img src="images/site/madeira_explore.jpg" ><p>Islands</p>
           </a>
         </div>
       </div>

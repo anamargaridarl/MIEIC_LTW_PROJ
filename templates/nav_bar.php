@@ -17,7 +17,7 @@
 
     <div class="input-container">
       <i class="material-icons">search</i>
-      <form id="input" action="search_rooms.php" method ="GET" autocomplete="off">
+      <form id="input" action="../pages/search_rooms.php" method ="GET" autocomplete="off">
       <p>
         <input required id='input-field' type="text" placeholder="Local" name="location">
         <div id="details-form">
@@ -44,9 +44,9 @@
       <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
       
       <?php if ($index) { ?>
-        <a href="pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+        <a href="../pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
       <?php } else {?>
-        <a href="profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
+        <a href="../pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
 
       <?php } ?>
 
