@@ -12,3 +12,12 @@ templates/modal_boxes.php & templates/nav_bar
 
 actions/action_login.php & database/users.php & templates/houses.php & templates/nav_bar.php
     fixed resources paths
+
+getters.php
+	fixed problem with query (reservation and house query needed to be split)
+
+image_creation.php 
+	fixed start value in variable in function
+
+database/users.php & includes/session.php && actions/action_reservation.php
+	add verification when trying to add a reservation to an already booked date
