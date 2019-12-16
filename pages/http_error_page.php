@@ -18,9 +18,6 @@
     case 500:
       draw500();
     break;
-    case 200:
-      header('Location: ../index.php'); //not supposed to come here
-    break;
     default:
       drawError();
     break;
