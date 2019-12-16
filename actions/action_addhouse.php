@@ -5,7 +5,7 @@
 
     if ($_SESSION['csrf'] !== $_POST['csrf']) {
         http_response_code(401);
-        die(header('Location: ../pages/http_error_page.php'));
+        die(header('Location: ../pages/http_error_401.php'));
     }
 
     $title = $_POST['title'];
@@ -25,7 +25,7 @@
         $hab_id = new_house($title,$region,$location,$address,$capacity,$n_rooms,$n_bath,$price,$description);
         if(!$hab_id) {
             http_response_code(500);
-            die(header('Location: ../pages/http_error_page.php'));
+            die(header('Location: ../pages/http_error_500.php'));
         }
 
         if(!add_images($n_photos,$hab_id)) {
@@ -35,7 +35,7 @@
         error_log("ananana");
     } catch (PDOException $e) {
         http_response_code(500);
-        die(header('Location: ../pages/http_error_page.php'));
+        die(header('Location: ../pages/http_error_500.php'));
     }
 
     $_SESSION['message'] = array('type' => 'success','content' => 'Added new house successfully.');

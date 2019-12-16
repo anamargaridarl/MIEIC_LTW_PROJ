@@ -6,7 +6,7 @@
 
     if ($_SESSION['csrf'] !== $_POST['csrf']) {
         http_response_code(401);
-        die(header('Location: ../pages/http_error_page.php'));
+        die(header('Location: ../pages/http_error_401.php'));
     }
 
     $house_id = intval($_POST['house_id']);
@@ -30,6 +30,6 @@
     
     } catch (PDOException $e) {
       http_response_code(500);
-      die(header('Location: ../pages/http_error_page.php'));
+      die(header('Location: ../pages/http_error_500.php'));
   }
 ?>
