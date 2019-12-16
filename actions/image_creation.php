@@ -1,9 +1,10 @@
 <?php 
   function add_images($n_photos,$hab_id) {
 
-    for($i = 0; $i <= $n_photos; $i++) {
-        $ext = "." . end(explode(".",$_FILES['h_images']['name'][$i]));
-        if(!(create_image($i-1,$hab_id) && add_house_image_link($hab_id . "_" . $i . $ext,$hab_id)))
+    for($i = 0; $i < $n_photos; $i++) {
+        $tmp = explode(".",$_FILES['h_images']['name'][$i]);
+        $ext = "." . end($tmp);
+        if(!(create_image($i,$hab_id) && add_house_image_link($hab_id . "_" . $i+1 . $ext,$hab_id)))
             return false;
     }
 
@@ -11,8 +12,9 @@
   }
 
   function create_image($i,$hab_id) {
-    $ext = "." . end(explode(".",$_FILES['h_images']['name'][$i]));
-    $house_path = "../images/houses/" . $hab_id . "_" . $i . $ext;  
+    $tmp = explode(".",$_FILES['h_images']['name'][$i]);
+    $ext = "." . end($tmp);
+    $house_path = "../images/houses/" . $hab_id . "_" . $i+1 . $ext;  
         
     switch($_FILES['h_images']['type'][$i]) {
         case 'image/jpeg':
