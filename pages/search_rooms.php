@@ -9,6 +9,8 @@
 
     drawNavBar(false);
     
+    $checkin = "";
+    $checkout = "";
     if(isset($_GET['checkin']) && isset($_GET['checkout']) ){
         $checkin = $_GET['checkin'];
         $checkout = $_GET['checkout'];
