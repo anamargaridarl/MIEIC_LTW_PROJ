@@ -1,0 +1,14 @@
+includes/session.php line 3 
+    session_set_cookie_params - secure connection set to true
+
+css/houseinfo.css & css/houseinfoedit.css
+    fixed responsiveness for smaller screens
+
+pages/houses_page.php & templates/houses.php
+    removed unnecessary argument in drawHouse() function
+
+templates/modal_boxes.php & templates/nav_bar
+    added argument to check if parent page is index (pathing issues)
+
+actions/action_login.php & database/users.php & templates/houses.php & templates/nav_bar.php
+    fixed resources paths
