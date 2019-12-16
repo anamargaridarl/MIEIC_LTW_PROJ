@@ -82,7 +82,7 @@
     }
 
     function getThumbnailLink($username) {
-        $thumbnail_avatar_path = "../images/avatars/thumbnails/";
+        $thumbnail_avatar_path = "images/avatars/thumbnails/";
         $db = Database::instance()->db();
         $stmt = $db->prepare('SELECT link FROM avatar, user WHERE username = ? and avatar.user_id = user.user_id');
         $stmt->execute(array($username));

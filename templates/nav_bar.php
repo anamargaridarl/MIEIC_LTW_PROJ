@@ -41,13 +41,14 @@
 
   <?php if(isset($_SESSION['email'])) {?>
     <div id="logged">
-      <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
       
       <?php if ($index) { ?>
+        <div><img src="<?=getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
         <a href="pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
         <a href="actions/action_signout.php" id="signout">Sign Out</a>
 
       <?php } else {?>
+        <div><img src="<?="../".getThumbnailLink($_SESSION['username'])?>" class="profilepic"></div>
         <a href="../pages/profile.php"><?= htmlspecialchars($_SESSION['username'])?></a>
         <a href="../actions/action_signout.php" id="signout">Sign Out</a>
 
@@ -64,6 +65,6 @@
 </nav>
 
 <?php 
-    drawModal();
+    drawModal($index);
   } 
 ?>
