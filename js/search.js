@@ -1,12 +1,21 @@
 document.getElementById('input-field').addEventListener('focus', (event) => {
-    document.getElementById('details-form').style.visibility = 'visible'
+    document.getElementById('details-form').style.display = 'flex';
+    document.getElementById('details-form').style.visibility = 'visible';
 })
+
+window.addEventListener('click', function(event) {
+    const form = document.querySelector('#details-form');
+
+    if (event.target == form) {
+      event.target.style.display = 'none';
+    }
+});
 
 let houses = document.getElementsByClassName('house')
 
 for (let i = 0; i < houses.length; ++i) {
     houses.item(i).addEventListener('click', (event) => {
-        document.getElementById('details-form').style.visibility = 'hidden'
+        document.getElementById('details-form').style.visibility = 'hidden';
     })
 }
 
