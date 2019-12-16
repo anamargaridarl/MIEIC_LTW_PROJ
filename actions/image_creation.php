@@ -4,7 +4,8 @@
     for($i = 0; $i < $n_photos; $i++) {
         $tmp = explode(".",$_FILES['h_images']['name'][$i]);
         $ext = "." . end($tmp);
-        if(!(create_image($i,$hab_id) && add_house_image_link($hab_id . "_" . $i+1 . $ext,$hab_id)))
+        $num = $i + 1;
+        if(!(create_image($i,$hab_id) && add_house_image_link($hab_id . "_" . $num . $ext,$hab_id)))
             return false;
     }
 
@@ -14,7 +15,8 @@
   function create_image($i,$hab_id) {
     $tmp = explode(".",$_FILES['h_images']['name'][$i]);
     $ext = "." . end($tmp);
-    $house_path = "../images/houses/" . $hab_id . "_" . $i+1 . $ext;  
+    $num = $i +1;
+    $house_path = "../images/houses/" . $hab_id . "_" . $num . $ext;  
         
     switch($_FILES['h_images']['type'][$i]) {
         case 'image/jpeg':

@@ -32,7 +32,6 @@
             $_SESSION['message'] = array('type' => 'error','content' => 'Failed to upload images.');
             header('Location: ../pages/profile_houses_page.php');
         }
-        error_log("ananana");
     } catch (PDOException $e) {
         http_response_code(500);
         die(header('Location: ../pages/http_error_500.php'));
