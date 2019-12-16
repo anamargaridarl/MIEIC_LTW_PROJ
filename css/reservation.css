@@ -48,7 +48,7 @@
     border-radius: 1em;
 }
 
-input {
+.reservation input {
     padding: 0.5em;
     width: 95%;
     font-size: 1em;
